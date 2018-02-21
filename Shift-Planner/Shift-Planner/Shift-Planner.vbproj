@@ -93,6 +93,18 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="overtime_calendar.Designer.vb">
+      <DependentUpon>overtime_calendar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="overtime_calendar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="overtime_list.Designer.vb">
+      <DependentUpon>overtime_list.vb</DependentUpon>
+    </Compile>
+    <Compile Include="overtime_list.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -100,6 +112,12 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="overtime_calendar.resx">
+      <DependentUpon>overtime_calendar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="overtime_list.resx">
+      <DependentUpon>overtime_list.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
