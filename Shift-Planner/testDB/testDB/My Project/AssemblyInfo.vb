@@ -8,17 +8,17 @@ Imports System.Runtime.InteropServices
 
 ' Review the values of the assembly attributes
 
-<Assembly: AssemblyTitle("Shift-Planner")>
+<Assembly: AssemblyTitle("testDB")>
 <Assembly: AssemblyDescription("")>
 <Assembly: AssemblyCompany("")>
-<Assembly: AssemblyProduct("Shift-Planner")>
+<Assembly: AssemblyProduct("testDB")>
 <Assembly: AssemblyCopyright("Copyright ©  2018")>
 <Assembly: AssemblyTrademark("")>
 
 <Assembly: ComVisible(False)>
 
 'The following GUID is for the ID of the typelib if this project is exposed to COM
-<Assembly: Guid("d830a828-a083-4411-a9c9-6c9229c17fb7")>
+<Assembly: Guid("67424d73-4070-47b9-96cd-dd8871d0fbdd")>
 
 ' Version information for an assembly consists of the following four values:
 '
