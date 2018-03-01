@@ -1,7 +1,7 @@
 ﻿Public Class frmHoliday
     Private Sub frmHoliday_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        'gets the employeeID of the user that is logged on
+        'Gets the employee ID of the user that is currently logged on
         txtEmployeeID.Text = ds.Tables("tblLogOn").Rows(0).Item("employeeID")
 
 
@@ -11,9 +11,9 @@
 
     Private Sub btnAddTimeOff_Click(sender As Object, e As EventArgs) Handles btnAddTimeOff.Click
 
+        'Creates a new holiday request
 
-
-        sql = "INSERT INTO tblTimeOff (employeeID, timeOffStartDate, timeOffEndDate, timeOffReason) VALUES ("
+        sql = "INSERT INTO TIMEOFF (employeeID, timeOffStartDate, timeOffEndDate, timeOffReason) VALUES ("
         sql &= "'" & txtEmployeeID.Text & "',"
         sql &= "'" & dtStart.Value & "',"
         sql &= "'" & dtEnd.Value & "',"
@@ -24,6 +24,14 @@
         con.Close()
 
         MessageBox.Show("Holiday has been sent for approval")
+
+    End Sub
+
+    Private Sub lstBoxPendHol_SelectedIndexChanged(sender As Object, e As EventArgs) Handles lstBoxPendHol.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub txtEmployeeID_TextChanged(sender As Object, e As EventArgs) Handles txtEmployeeID.TextChanged
 
     End Sub
 End Class

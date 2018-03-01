@@ -94,6 +94,7 @@ Partial Class frmLogOn
         '
         Me.txtPassword.Location = New System.Drawing.Point(88, 36)
         Me.txtPassword.Name = "txtPassword"
+        Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(8226)
         Me.txtPassword.Size = New System.Drawing.Size(100, 20)
         Me.txtPassword.TabIndex = 4
         '
@@ -108,6 +109,7 @@ Partial Class frmLogOn
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnLogOn)
         Me.Name = "frmLogOn"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Log On"
         CType(Me.TblEmployeeBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TestDBDataSet, System.ComponentModel.ISupportInitialize).EndInit()

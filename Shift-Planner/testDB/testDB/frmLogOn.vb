@@ -12,7 +12,7 @@
         employeeID = CUInt(txtEmpID.Text)
         password = txtPassword.Text
 
-        sql = "SELECT employeeID, password, admin FROM tblEmployee WHERE employeeID = " & employeeID & " and password = '" + password + "'"
+        sql = "SELECT employeeID, password, admin FROM EMPLOYEE WHERE employeeID = " & employeeID & " and password = '" + password + "'"
         da = New OleDb.OleDbDataAdapter(sql, con)
         da.Fill(ds, "tblLogOn")
 
@@ -24,20 +24,20 @@
             'If admin, then the admin form will load, if not, then the employee form will load.
             If ds.Tables("tblLogOn").Rows(0).Item("admin") = True Then
 
-                MessageBox.Show("Log on successful!")
+                MessageBox.Show("Log on successful as admin.")
                 frmAdmin.Show()
                 Me.Hide()
 
             Else
 
-                MessageBox.Show(" not admin")
+                MessageBox.Show("Log on successful as employee.")
                 frmEmployee.Show()
                 Me.Hide()
 
             End If
 
         Else
-            MessageBox.Show("Incorrect Username and/or Password.")
+            MessageBox.Show("Incorrect username and/or password, try again.")
 
         End If
 

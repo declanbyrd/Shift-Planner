@@ -134,7 +134,7 @@ Partial Class frmHoliday
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(559, 449)
+        Me.ClientSize = New System.Drawing.Size(486, 449)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.lstBoxPendHol)
         Me.Controls.Add(Me.btnAddTimeOff)
@@ -147,6 +147,7 @@ Partial Class frmHoliday
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Name = "frmHoliday"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Holiday"
         Me.ResumeLayout(False)
         Me.PerformLayout()
