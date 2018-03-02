@@ -36,14 +36,14 @@ Partial Class frmAdmin
         Me.txtSName.Location = New System.Drawing.Point(75, 32)
         Me.txtSName.Name = "txtSName"
         Me.txtSName.Size = New System.Drawing.Size(100, 20)
-        Me.txtSName.TabIndex = 9
+        Me.txtSName.TabIndex = 2
         '
         'txtFName
         '
         Me.txtFName.Location = New System.Drawing.Point(75, 6)
         Me.txtFName.Name = "txtFName"
         Me.txtFName.Size = New System.Drawing.Size(100, 20)
-        Me.txtFName.TabIndex = 8
+        Me.txtFName.TabIndex = 0
         '
         'Label2
         '
@@ -69,7 +69,7 @@ Partial Class frmAdmin
         Me.btnAddDB.Location = New System.Drawing.Point(75, 85)
         Me.btnAddDB.Name = "btnAddDB"
         Me.btnAddDB.Size = New System.Drawing.Size(100, 23)
-        Me.btnAddDB.TabIndex = 5
+        Me.btnAddDB.TabIndex = 4
         Me.btnAddDB.Text = "Add To Database"
         Me.btnAddDB.UseVisualStyleBackColor = True
         '
@@ -79,7 +79,7 @@ Partial Class frmAdmin
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(8226)
         Me.txtPassword.Size = New System.Drawing.Size(100, 20)
-        Me.txtPassword.TabIndex = 10
+        Me.txtPassword.TabIndex = 3
         '
         'Labelll
         '
@@ -94,7 +94,7 @@ Partial Class frmAdmin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(244, 168)
+        Me.ClientSize = New System.Drawing.Size(301, 178)
         Me.Controls.Add(Me.Labelll)
         Me.Controls.Add(Me.txtPassword)
         Me.Controls.Add(Me.txtSName)

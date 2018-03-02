@@ -61,7 +61,7 @@ Partial Class frmLogOn
         Me.btnLogOn.Location = New System.Drawing.Point(113, 62)
         Me.btnLogOn.Name = "btnLogOn"
         Me.btnLogOn.Size = New System.Drawing.Size(75, 23)
-        Me.btnLogOn.TabIndex = 0
+        Me.btnLogOn.TabIndex = 2
         Me.btnLogOn.Text = "Log On"
         Me.btnLogOn.UseVisualStyleBackColor = True
         '
@@ -88,7 +88,7 @@ Partial Class frmLogOn
         Me.txtEmpID.Location = New System.Drawing.Point(88, 10)
         Me.txtEmpID.Name = "txtEmpID"
         Me.txtEmpID.Size = New System.Drawing.Size(100, 20)
-        Me.txtEmpID.TabIndex = 3
+        Me.txtEmpID.TabIndex = 0
         '
         'txtPassword
         '
@@ -96,7 +96,7 @@ Partial Class frmLogOn
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(8226)
         Me.txtPassword.Size = New System.Drawing.Size(100, 20)
-        Me.txtPassword.TabIndex = 4
+        Me.txtPassword.TabIndex = 1
         '
         'frmLogOn
         '
