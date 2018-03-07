@@ -3,7 +3,7 @@
 
     End Sub
 
-    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
-        Label2.Text = ComboBox1.SelectedItem.Text
+    Private Sub Overtime_list_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        txtEmployeeID.Text = ds.Tables("tblLogOn").Rows(0).Item("employeeID")
     End Sub
 End Class
