@@ -6,7 +6,8 @@
     End Sub
 
     Private Sub Overtime_list_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        txtEmployeeID.Text = ds.Tables("tblLogOn").Rows(0).Item("employeeID")
+        DBConnect()
+        'txtEmployeeID.Text = ds.Tables("tblLogOn").Rows(0).Item("employeeID")
     End Sub
 
     Private Sub ListBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListBox1.SelectedIndexChanged
@@ -17,8 +18,8 @@
         con.Close()
 
 
-        For Each row In ds.Tables("tblOvertime")
-            ListBox1.Items.Add(New ListItem(ds.Tables("tblOvertime").Rows(row).Item("overtimeDate"), ds.Tables("tblOvertime").Rows(row).Item("overtimePay")))
-        Next
+        'For Each row In ds.Tables("tblOvertime")
+        'ListBox1.Items.Add(New ListItem(ds.Tables("tblOvertime").Rows(row).Item("overtimeDate"), ds.Tables("tblOvertime").Rows(row).Item("overtimePay")))
+        'Next
     End Sub
 End Class

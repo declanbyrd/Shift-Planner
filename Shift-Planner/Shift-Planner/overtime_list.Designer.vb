@@ -34,59 +34,64 @@ Partial Class overtime_list
         Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Items.AddRange(New Object() {"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"})
-        Me.ComboBox1.Location = New System.Drawing.Point(286, 21)
+        Me.ComboBox1.Location = New System.Drawing.Point(214, 17)
+        Me.ComboBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(121, 24)
+        Me.ComboBox1.Size = New System.Drawing.Size(92, 21)
         Me.ComboBox1.TabIndex = 0
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(13, 21)
+        Me.Label1.Location = New System.Drawing.Point(10, 17)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(257, 25)
+        Me.Label1.Size = New System.Drawing.Size(207, 20)
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Available Overtime Shifts for"
         '
         'ListBox1
         '
         Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.ItemHeight = 16
-        Me.ListBox1.Location = New System.Drawing.Point(18, 85)
+        Me.ListBox1.Location = New System.Drawing.Point(14, 69)
+        Me.ListBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(459, 644)
+        Me.ListBox1.Size = New System.Drawing.Size(345, 524)
         Me.ListBox1.TabIndex = 4
         '
         'TextBox1
         '
         Me.TextBox1.BackColor = System.Drawing.SystemColors.Control
         Me.TextBox1.Enabled = False
-        Me.TextBox1.Location = New System.Drawing.Point(546, 85)
+        Me.TextBox1.Location = New System.Drawing.Point(410, 69)
+        Me.TextBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TextBox1.Multiline = True
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(485, 344)
+        Me.TextBox1.Size = New System.Drawing.Size(365, 280)
         Me.TextBox1.TabIndex = 5
         '
         'txtEmployeeID
         '
         Me.txtEmployeeID.AutoSize = True
-        Me.txtEmployeeID.Location = New System.Drawing.Point(952, 21)
+        Me.txtEmployeeID.Location = New System.Drawing.Point(714, 17)
+        Me.txtEmployeeID.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.txtEmployeeID.Name = "txtEmployeeID"
-        Me.txtEmployeeID.Size = New System.Drawing.Size(12, 17)
+        Me.txtEmployeeID.Size = New System.Drawing.Size(10, 13)
         Me.txtEmployeeID.TabIndex = 6
         Me.txtEmployeeID.Text = " "
         '
         'overtime_list
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1073, 834)
+        Me.ClientSize = New System.Drawing.Size(805, 635)
         Me.Controls.Add(Me.txtEmployeeID)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.ListBox1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.ComboBox1)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "overtime_list"
         Me.Text = "Overtime Shifts"
         Me.ResumeLayout(False)

@@ -2,7 +2,7 @@
     Private calendarDate As Date
 
     Private Sub MonthCalendar1_DateChanged(sender As Object, e As DateRangeEventArgs) Handles MonthCalendar1.DateChanged
-        calendarDate = SelectionRange.Start
+        'calendarDate = SelectionRange.Start
 
     End Sub
 
