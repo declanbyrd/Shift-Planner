@@ -15,10 +15,10 @@ Module Module1
 
         dbProvider = "Provider = Microsoft.ACE.OLEDB.12.0;"
         'david's machine
-        dbSource = "Data Source = C:\Users\User\Documents\GitHub\Shift-Planner\Shift-Planner\testDB.accdb"
+        'dbSource = "Data Source = C:\Users\User\Documents\GitHub\Shift-Planner\Shift-Planner\testDB.accdb"
         'alex's machine
-        dbSource = "Data Source = C:\Users\alexg\Documents\GitHub\Shift-Planner\Shift-Planner\testDB.accdb"
-
+        'dbSource = "Data Source = C:\Users\alexg\Documents\GitHub\Shift-Planner\Shift-Planner\testDB.accdb"
+        dbSource = "Data Source =..\..\testDB.accdb"
         con.ConnectionString = dbProvider & dbSource
 
         con.Open()
