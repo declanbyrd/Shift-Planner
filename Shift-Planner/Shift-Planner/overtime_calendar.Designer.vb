@@ -38,6 +38,7 @@ Partial Class overtime_calendar
         '
         Me.MonthCalendar1.CalendarDimensions = New System.Drawing.Size(1, 2)
         Me.MonthCalendar1.Location = New System.Drawing.Point(18, 18)
+        Me.MonthCalendar1.MaxSelectionCount = 1
         Me.MonthCalendar1.Name = "MonthCalendar1"
         Me.MonthCalendar1.TabIndex = 3
         '

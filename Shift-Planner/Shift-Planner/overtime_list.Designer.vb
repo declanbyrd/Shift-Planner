@@ -26,6 +26,7 @@ Partial Class overtime_list
         Me.Label1 = New System.Windows.Forms.Label()
         Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtEmployeeID = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'ComboBox1
@@ -67,11 +68,21 @@ Partial Class overtime_list
         Me.TextBox1.Size = New System.Drawing.Size(485, 344)
         Me.TextBox1.TabIndex = 5
         '
+        'txtEmployeeID
+        '
+        Me.txtEmployeeID.AutoSize = True
+        Me.txtEmployeeID.Location = New System.Drawing.Point(952, 21)
+        Me.txtEmployeeID.Name = "txtEmployeeID"
+        Me.txtEmployeeID.Size = New System.Drawing.Size(12, 17)
+        Me.txtEmployeeID.TabIndex = 6
+        Me.txtEmployeeID.Text = " "
+        '
         'overtime_list
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1073, 834)
+        Me.Controls.Add(Me.txtEmployeeID)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.ListBox1)
         Me.Controls.Add(Me.Label1)
@@ -87,4 +98,5 @@ Partial Class overtime_list
     Friend WithEvents Label1 As Label
     Friend WithEvents ListBox1 As ListBox
     Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtEmployeeID As Label
 End Class
