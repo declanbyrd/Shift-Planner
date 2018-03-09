@@ -28,22 +28,20 @@ Partial Class LoginRegister
         Me.txtLUser = New System.Windows.Forms.TextBox()
         Me.txtLPass = New System.Windows.Forms.TextBox()
         Me.btnSignin = New System.Windows.Forms.Button()
-        Me.grpRegister = New System.Windows.Forms.GroupBox()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.txtRPass = New System.Windows.Forms.TextBox()
         Me.txtRUser = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.txtRefCode = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.btnReset = New System.Windows.Forms.Button()
         Me.btnRegister = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
-        Me.grpRegister.SuspendLayout()
+        Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.btnReset)
         Me.GroupBox1.Controls.Add(Me.btnSignin)
         Me.GroupBox1.Controls.Add(Me.txtLPass)
         Me.GroupBox1.Controls.Add(Me.txtLUser)
@@ -98,21 +96,21 @@ Partial Class LoginRegister
         Me.btnSignin.Text = "sign in"
         Me.btnSignin.UseVisualStyleBackColor = True
         '
-        'grpRegister
+        'GroupBox2
         '
-        Me.grpRegister.Controls.Add(Me.btnRegister)
-        Me.grpRegister.Controls.Add(Me.txtRefCode)
-        Me.grpRegister.Controls.Add(Me.Label5)
-        Me.grpRegister.Controls.Add(Me.txtRPass)
-        Me.grpRegister.Controls.Add(Me.txtRUser)
-        Me.grpRegister.Controls.Add(Me.Label3)
-        Me.grpRegister.Controls.Add(Me.Label4)
-        Me.grpRegister.Location = New System.Drawing.Point(369, 12)
-        Me.grpRegister.Name = "grpRegister"
-        Me.grpRegister.Size = New System.Drawing.Size(351, 219)
-        Me.grpRegister.TabIndex = 6
-        Me.grpRegister.TabStop = False
-        Me.grpRegister.Text = "Register"
+        Me.GroupBox2.Controls.Add(Me.btnRegister)
+        Me.GroupBox2.Controls.Add(Me.txtRefCode)
+        Me.GroupBox2.Controls.Add(Me.Label5)
+        Me.GroupBox2.Controls.Add(Me.txtRPass)
+        Me.GroupBox2.Controls.Add(Me.txtRUser)
+        Me.GroupBox2.Controls.Add(Me.Label3)
+        Me.GroupBox2.Controls.Add(Me.Label4)
+        Me.GroupBox2.Location = New System.Drawing.Point(369, 12)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(351, 219)
+        Me.GroupBox2.TabIndex = 6
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "Register"
         '
         'txtRPass
         '
@@ -164,15 +162,6 @@ Partial Class LoginRegister
         Me.Label5.TabIndex = 6
         Me.Label5.Text = "Ref Code"
         '
-        'btnReset
-        '
-        Me.btnReset.Location = New System.Drawing.Point(205, 175)
-        Me.btnReset.Name = "btnReset"
-        Me.btnReset.Size = New System.Drawing.Size(127, 26)
-        Me.btnReset.TabIndex = 5
-        Me.btnReset.Text = "request reset"
-        Me.btnReset.UseVisualStyleBackColor = True
-        '
         'btnRegister
         '
         Me.btnRegister.Location = New System.Drawing.Point(205, 175)
@@ -187,26 +176,25 @@ Partial Class LoginRegister
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(732, 243)
-        Me.Controls.Add(Me.grpRegister)
+        Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "LoginRegister"
         Me.Text = "LoginRegister"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
-        Me.grpRegister.ResumeLayout(False)
-        Me.grpRegister.PerformLayout()
+        Me.GroupBox2.ResumeLayout(False)
+        Me.GroupBox2.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents btnReset As Button
     Friend WithEvents btnSignin As Button
     Friend WithEvents txtLPass As TextBox
     Friend WithEvents txtLUser As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents grpRegister As GroupBox
+    Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents btnRegister As Button
     Friend WithEvents txtRefCode As TextBox
     Friend WithEvents Label5 As Label
