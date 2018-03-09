@@ -11,16 +11,20 @@ Every team member will be assigned features to implement in the application. Eac
 
 Insert getting started here...
 
+### System Requirements
+
+Do we need those?
+
 ### Prerequisites
 
-What do we need?
+For the softare to wwork properly, the host machine must have the following tools installed:
 
 ```
 Microsoft Access 2016
 ```
 
 ```
-OLEdb thing 32 bit is definitelly needed (will fix name later)
+Microsoft Access Database Engine 2010 Redistributable
 ```
 
 ### Installing
@@ -76,19 +80,23 @@ Contributing is done by etc etc
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning.
+We use [SemVer](http://semver.org/) for versioning. At least I think.
 
 ## Authors
 
 INSERT YOUR UP NUMBERS IN THE SAME FORMAT I DID.
+* **UP807742** - *Overtime, general development, documentation* - [UP807742](https://github.com/UP807742)
+* **UP839643** - *Database, general development, documentation* - [UP839643](https://github.com/UP839643)
 * **UP786633** - *Database, general development, documentation* - [UP786633](https://github.com/up786633)
+* **up834338** - *Login-dashboard, general development* - [UP834338](https://github.com/up834338)
+* **up822338** - *Holiday, general development* - [UP822338](https://github.com/up822338)
 
 Here is a list of [contributors](https://github.com/UP807742/Shift-Planner/graphs/contributors).
 
 ## License
 
-This project is licensed under the ISC License - see the [LICENSE.md](LICENSE.md) file for details *THIS NEEDS TO BE DONE*
+This project is licensed under the ISC License - see the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgments
 
-* Thanks to <insert name> for <insert reason>
+* Thanks to INSERT NAME for INSERT REASON.
