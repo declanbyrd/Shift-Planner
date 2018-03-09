@@ -18,6 +18,9 @@ Public Class LoginRegister
             MsgBox("Enter a password which contains at least one number.")
         Else
             'check username is in the database
+            'this should be the first check
+            'change password in db
+            'close form and open dashboard
         End If
     End Sub
 
