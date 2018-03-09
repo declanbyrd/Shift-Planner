@@ -35,7 +35,7 @@ Partial Class overtime_list
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Items.AddRange(New Object() {"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"})
         Me.ComboBox1.Location = New System.Drawing.Point(214, 17)
-        Me.ComboBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.ComboBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(92, 21)
         Me.ComboBox1.TabIndex = 0
@@ -55,7 +55,8 @@ Partial Class overtime_list
         '
         Me.ListBox1.FormattingEnabled = True
         Me.ListBox1.Location = New System.Drawing.Point(14, 69)
-        Me.ListBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.ListBox1.Margin = New System.Windows.Forms.Padding(2)
+        Me.ListBox1.MultiColumn = True
         Me.ListBox1.Name = "ListBox1"
         Me.ListBox1.Size = New System.Drawing.Size(345, 524)
         Me.ListBox1.TabIndex = 4
@@ -65,7 +66,7 @@ Partial Class overtime_list
         Me.TextBox1.BackColor = System.Drawing.SystemColors.Control
         Me.TextBox1.Enabled = False
         Me.TextBox1.Location = New System.Drawing.Point(410, 69)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TextBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.TextBox1.Multiline = True
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(365, 280)
@@ -91,7 +92,7 @@ Partial Class overtime_list
         Me.Controls.Add(Me.ListBox1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.ComboBox1)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "overtime_list"
         Me.Text = "Overtime Shifts"
         Me.ResumeLayout(False)
