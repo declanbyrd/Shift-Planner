@@ -20,6 +20,7 @@ Public Class LoginRegister
             MsgBox("Enter a password which contains at least one number.")
         Else
             'link to database and check that the refCode is valid
+
         End If
     End Sub
 
