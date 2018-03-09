@@ -15,4 +15,9 @@
         'go to database and fetch announcements
         'populate the listbox with announcements
     End Sub
+
+    Private Sub btnChangePass_Click(sender As Object, e As EventArgs) Handles btnChangePass.Click
+        Me.Enabled = False
+        PasswordChange.Show()
+    End Sub
 End Class

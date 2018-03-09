@@ -23,12 +23,13 @@ Partial Class EmployeeDashboard
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.lstShifts = New System.Windows.Forms.ListBox()
+        Me.calShifts = New System.Windows.Forms.MonthCalendar()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.lstAnnouncements = New System.Windows.Forms.ListBox()
         Me.btnTimeOff = New System.Windows.Forms.Button()
         Me.btnOvertime = New System.Windows.Forms.Button()
-        Me.calShifts = New System.Windows.Forms.MonthCalendar()
-        Me.lstShifts = New System.Windows.Forms.ListBox()
-        Me.lstAnnouncements = New System.Windows.Forms.ListBox()
+        Me.btnChangePass = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
@@ -44,6 +45,22 @@ Partial Class EmployeeDashboard
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Shifts"
         '
+        'lstShifts
+        '
+        Me.lstShifts.FormattingEnabled = True
+        Me.lstShifts.ItemHeight = 16
+        Me.lstShifts.Location = New System.Drawing.Point(287, 49)
+        Me.lstShifts.Name = "lstShifts"
+        Me.lstShifts.Size = New System.Drawing.Size(659, 212)
+        Me.lstShifts.TabIndex = 1
+        '
+        'calShifts
+        '
+        Me.calShifts.Location = New System.Drawing.Point(12, 51)
+        Me.calShifts.MinDate = New Date(2018, 1, 1, 0, 0, 0, 0)
+        Me.calShifts.Name = "calShifts"
+        Me.calShifts.TabIndex = 0
+        '
         'GroupBox2
         '
         Me.GroupBox2.Controls.Add(Me.lstAnnouncements)
@@ -53,6 +70,15 @@ Partial Class EmployeeDashboard
         Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Announcements"
+        '
+        'lstAnnouncements
+        '
+        Me.lstAnnouncements.FormattingEnabled = True
+        Me.lstAnnouncements.ItemHeight = 16
+        Me.lstAnnouncements.Location = New System.Drawing.Point(12, 27)
+        Me.lstAnnouncements.Name = "lstAnnouncements"
+        Me.lstAnnouncements.Size = New System.Drawing.Size(934, 244)
+        Me.lstAnnouncements.TabIndex = 2
         '
         'btnTimeOff
         '
@@ -72,36 +98,21 @@ Partial Class EmployeeDashboard
         Me.btnOvertime.Text = "Overtime shifts"
         Me.btnOvertime.UseVisualStyleBackColor = True
         '
-        'calShifts
+        'btnChangePass
         '
-        Me.calShifts.Location = New System.Drawing.Point(12, 51)
-        Me.calShifts.MinDate = New Date(2018, 1, 1, 0, 0, 0, 0)
-        Me.calShifts.Name = "calShifts"
-        Me.calShifts.TabIndex = 0
-        '
-        'lstShifts
-        '
-        Me.lstShifts.FormattingEnabled = True
-        Me.lstShifts.ItemHeight = 16
-        Me.lstShifts.Location = New System.Drawing.Point(287, 51)
-        Me.lstShifts.Name = "lstShifts"
-        Me.lstShifts.Size = New System.Drawing.Size(659, 212)
-        Me.lstShifts.TabIndex = 1
-        '
-        'lstAnnouncements
-        '
-        Me.lstAnnouncements.FormattingEnabled = True
-        Me.lstAnnouncements.ItemHeight = 16
-        Me.lstAnnouncements.Location = New System.Drawing.Point(12, 51)
-        Me.lstAnnouncements.Name = "lstAnnouncements"
-        Me.lstAnnouncements.Size = New System.Drawing.Size(934, 228)
-        Me.lstAnnouncements.TabIndex = 2
+        Me.btnChangePass.Location = New System.Drawing.Point(12, 604)
+        Me.btnChangePass.Name = "btnChangePass"
+        Me.btnChangePass.Size = New System.Drawing.Size(199, 33)
+        Me.btnChangePass.TabIndex = 5
+        Me.btnChangePass.Text = "Change password"
+        Me.btnChangePass.UseVisualStyleBackColor = True
         '
         'EmployeeDashboard
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(985, 645)
+        Me.Controls.Add(Me.btnChangePass)
         Me.Controls.Add(Me.btnOvertime)
         Me.Controls.Add(Me.btnTimeOff)
         Me.Controls.Add(Me.GroupBox2)
@@ -121,4 +132,5 @@ Partial Class EmployeeDashboard
     Friend WithEvents btnTimeOff As Button
     Friend WithEvents btnOvertime As Button
     Friend WithEvents lstAnnouncements As ListBox
+    Friend WithEvents btnChangePass As Button
 End Class
