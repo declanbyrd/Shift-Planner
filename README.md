@@ -13,14 +13,18 @@ Insert getting started here...
 
 ### System Requirements
 
-Do we need those?
+Microsoft Windows 7 or later
 
 ### Prerequisites
 
-For the softare to wwork properly, the host machine must have the following tools installed:
+For the softare to work properly, the host machine must have the following tools installed:
 
 ```
 Microsoft Access 2016
+```
+
+```
+.NET Framework 4.6.1
 ```
 
 ```
@@ -84,18 +88,17 @@ We use [SemVer](http://semver.org/) for versioning. At least I think.
 
 ## Authors
 
-INSERT YOUR UP NUMBERS IN THE SAME FORMAT I DID.
 * **UP807742** - *Overtime, general development, documentation* - [UP807742](https://github.com/UP807742)
 * **UP839643** - *Database, general development, documentation* - [UP839643](https://github.com/UP839643)
 * **UP786633** - *Database, general development, documentation* - [UP786633](https://github.com/up786633)
-* **up834338** - *Login-dashboard, general development* - [UP834338](https://github.com/up834338)
-* **up822338** - *Holiday, general development* - [UP822338](https://github.com/up822338)
+* **UP834338** - *Login-dashboard, general development* - [UP834338](https://github.com/up834338)
+* **UP822338** - *Holiday, general development* - [UP822338](https://github.com/up822338)
 
 Here is a list of [contributors](https://github.com/UP807742/Shift-Planner/graphs/contributors).
 
 ## License
 
-This project is licensed under the ISC License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgments
 
