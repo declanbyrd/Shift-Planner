@@ -1,2 +1,2 @@
 language: csharp
-solution: Shift-Planner.sln
+solution: Shift-Planner/Shift-Planner.sln
