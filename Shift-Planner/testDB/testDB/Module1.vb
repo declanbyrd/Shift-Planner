@@ -12,7 +12,8 @@ Module Module1
     Public Sub DBConnect()
 
         dbProvider = "Provider = Microsoft.ACE.OLEDB.12.0;"
-        dbSource = "Data Source =..\..\testDB.accdb"
+        'dbSource = "Data Source =..\..\testDB.accdb"
+        dbSource = "Data Source = C:\Users\User\Documents\GitHub\Shift-Planner\Shift-Planner\testDB\testDB\testDB.accdb"
         con.ConnectionString = dbProvider & dbSource
 
         con.Open()
