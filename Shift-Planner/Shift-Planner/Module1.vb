@@ -17,7 +17,7 @@ Module Module1
         'david's machine
         'dbSource = "Data Source = C:\Users\User\Documents\GitHub\Shift-Planner\Shift-Planner\testDB.accdb"
         'alex's machine
-        dbSource = "Data Source = C:\Users\alexg\Documents\GitHub\Shift-Planner\Shift-Planner\testDB.accdb"
+        dbSource = "Data Source = C:\Users\alexg\Documents\GitHub\Shift-Planner\testDB.accdb"
 
         con.ConnectionString = dbProvider & dbSource
 
