@@ -16,7 +16,7 @@
 
         DBConnect()
 
-        sqlQuery = "SELECT overtimeDate, overtimePay FROM otTest"
+        sqlQuery = "SELECT overtimeDate, overtimePay, overtimeType, overtimeStart, overtimeEnd FROM otTest"
 
         da = New OleDb.OleDbDataAdapter(sqlQuery, con)
         da.Fill(ds, "tblOvertime")
