@@ -1,5 +1,8 @@
 ﻿Public Class Holiday
     Private Sub Holiday_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        DBConnect()
+
         Dim employeeID As Integer
 
         'Gets the employee ID of the user that is currently logged on
@@ -9,9 +12,9 @@
         txtEmployeeID.Text = employeeID
 
         'SQL statement that gets the information on pending holidays
-        Sql = "SELECT timeOffStartDate, timeOffEndDate, timeOffReason FROM TIMEOFF where employeeID = " & employeeID & " and approved = no"
+        sql = "SELECT timeOffStartDate, timeOffEndDate, timeOffReason FROM TIMEOFF where employeeID = " & employeeID & " and approved = no"
 
-        da = New OleDb.OleDbDataAdapter(Sql, con)
+        da = New OleDb.OleDbDataAdapter(sql, con)
         da.Fill(ds, "tblPendHol")
 
         'Loops through all of the values in the 'Pending Holiday' dataset and inserts them into a list box
@@ -21,9 +24,9 @@
         Next
 
         'SQL statement that gets the information on pending holidays
-        Sql = "SELECT timeOffStartDate, timeOffEndDate, timeOffReason FROM TIMEOFF where employeeID = " & employeeID & " and approved = yes"
+        sql = "SELECT timeOffStartDate, timeOffEndDate, timeOffReason FROM TIMEOFF where employeeID = " & employeeID & " and approved = yes"
 
-        da = New OleDb.OleDbDataAdapter(Sql, con)
+        da = New OleDb.OleDbDataAdapter(sql, con)
         da.Fill(ds, "tblAccHol")
 
         'Loops through all of the values in the 'Accepted Holiday' dataset and inserts them into a list box
