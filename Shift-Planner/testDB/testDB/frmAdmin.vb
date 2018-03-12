@@ -19,4 +19,8 @@
     Private Sub frmAdmin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
+
+    Private Sub btnViewHoliday_Click(sender As Object, e As EventArgs) Handles btnViewHoliday.Click
+        frmViewHol.Show()
+    End Sub
 End Class

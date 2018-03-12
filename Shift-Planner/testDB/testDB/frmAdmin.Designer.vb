@@ -29,6 +29,7 @@ Partial Class frmAdmin
         Me.btnAddDB = New System.Windows.Forms.Button()
         Me.txtPassword = New System.Windows.Forms.TextBox()
         Me.Labelll = New System.Windows.Forms.Label()
+        Me.btnViewHoliday = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'txtSName
@@ -90,11 +91,21 @@ Partial Class frmAdmin
         Me.Labelll.TabIndex = 11
         Me.Labelll.Text = "Password:"
         '
+        'btnViewHoliday
+        '
+        Me.btnViewHoliday.Location = New System.Drawing.Point(254, 85)
+        Me.btnViewHoliday.Name = "btnViewHoliday"
+        Me.btnViewHoliday.Size = New System.Drawing.Size(101, 23)
+        Me.btnViewHoliday.TabIndex = 12
+        Me.btnViewHoliday.Text = "View Holiday"
+        Me.btnViewHoliday.UseVisualStyleBackColor = True
+        '
         'frmAdmin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(301, 178)
+        Me.ClientSize = New System.Drawing.Size(396, 122)
+        Me.Controls.Add(Me.btnViewHoliday)
         Me.Controls.Add(Me.Labelll)
         Me.Controls.Add(Me.txtPassword)
         Me.Controls.Add(Me.txtSName)
@@ -117,4 +128,5 @@ Partial Class frmAdmin
     Friend WithEvents btnAddDB As Button
     Friend WithEvents txtPassword As TextBox
     Friend WithEvents Labelll As Label
+    Friend WithEvents btnViewHoliday As Button
 End Class
