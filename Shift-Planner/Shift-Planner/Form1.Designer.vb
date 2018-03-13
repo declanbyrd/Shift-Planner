@@ -27,19 +27,21 @@ Partial Class Form1
         '
         'btnLoginForm
         '
-        Me.btnLoginForm.Location = New System.Drawing.Point(49, 90)
+        Me.btnLoginForm.Location = New System.Drawing.Point(37, 73)
+        Me.btnLoginForm.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnLoginForm.Name = "btnLoginForm"
-        Me.btnLoginForm.Size = New System.Drawing.Size(208, 45)
+        Me.btnLoginForm.Size = New System.Drawing.Size(156, 37)
         Me.btnLoginForm.TabIndex = 0
         Me.btnLoginForm.Text = "test login form"
         Me.btnLoginForm.UseVisualStyleBackColor = True
         '
         'Form1
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(282, 253)
+        Me.ClientSize = New System.Drawing.Size(212, 206)
         Me.Controls.Add(Me.btnLoginForm)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "Form1"
         Me.Text = "Form1"
         Me.ResumeLayout(False)

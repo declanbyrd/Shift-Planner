@@ -1,5 +1,6 @@
 
-﻿Imports System.Text.RegularExpressions
+
+Imports System.Text.RegularExpressions
 
 Public Class LoginRegister
     Private Sub btnRegister_Click(sender As Object, e As EventArgs) Handles btnRegister.Click
@@ -8,6 +9,7 @@ Public Class LoginRegister
         Dim password As String = txtRPass.Text
         Dim patternCap As String = "[A-Za-z0-9]*[A-Z]+[A-Za-z0-9]*"
         Dim patternNum As String = "[A-Za-z0-9]*[0-9]+[A-Za-z0-9]*"
+        Dim regex As Regex
         Dim matchCap As Boolean = Regex.IsMatch(password, patternCap)
         Dim matchNum As Boolean = Regex.IsMatch(password, patternNum)
 
@@ -32,7 +34,8 @@ Public Class LoginRegister
         'link to database and check that the username and password are correct
         'if first login then enable register box and disable login box
     End Sub
-=======
-﻿Public Class LoginRegister
 
+    Private Sub LoginRegister_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class
