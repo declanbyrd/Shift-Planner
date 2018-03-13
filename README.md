@@ -17,7 +17,7 @@ Microsoft Windows 7 or later
 
 ### Prerequisites
 
-For the softare to work properly, the host machine must have the following tools installed:
+For the software to work properly, the host machine must have the following tools installed:
 
 ```
 Microsoft Access 2016
