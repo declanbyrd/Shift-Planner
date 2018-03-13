@@ -1,3 +1,4 @@
+
 ﻿Imports System.Text.RegularExpressions
 
 Public Class LoginRegister
@@ -31,4 +32,7 @@ Public Class LoginRegister
         'link to database and check that the username and password are correct
         'if first login then enable register box and disable login box
     End Sub
+=======
+﻿Public Class LoginRegister
+
 End Class

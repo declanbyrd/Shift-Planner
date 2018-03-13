@@ -180,4 +180,9 @@ Partial Class LoginRegister
     Friend WithEvents txtRUser As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
+=======
+        components = New System.ComponentModel.Container
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.Text = "LoginRegister"
+    End Sub
 End Class
