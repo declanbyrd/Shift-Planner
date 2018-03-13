@@ -19,11 +19,18 @@ Public Class PasswordChange
         ElseIf Not (newPassword = confirmPassword) Then
             MsgBox("Passwords do not match")
         Else
-            'check username is in the database
-            'this should be the first check
-            'changed password in db
-            'close form
-            're-enable dashboard
+            sql = "UPDATE EMPLOYEE SET password = '" & newPassword & "' WHERE employeeID =" & currentEmployeeID
+            Console.WriteLine(sql)
+            da = New OleDb.OleDbDataAdapter(sql, con)
+
+            da.Fill(ds, "EMPLOYEE")
+            If currentAdmin Then
+                AdminDashboard.Enabled = True
+                Me.Close()
+            Else
+                EmployeeDashboard.Enabled = True
+                Me.Close()
+            End If
         End If
     End Sub
 End Class

@@ -28,14 +28,7 @@ Partial Class LoginRegister
         Me.txtLUser = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.grpRegister = New System.Windows.Forms.GroupBox()
-        Me.btnRegister = New System.Windows.Forms.Button()
-        Me.txtRPass = New System.Windows.Forms.TextBox()
-        Me.txtRUser = New System.Windows.Forms.TextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
         Me.grpLogin.SuspendLayout()
-        Me.grpRegister.SuspendLayout()
         Me.SuspendLayout()
         '
         'grpLogin
@@ -99,82 +92,17 @@ Partial Class LoginRegister
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Username"
         '
-        'grpRegister
-        '
-        Me.grpRegister.Controls.Add(Me.btnRegister)
-        Me.grpRegister.Controls.Add(Me.txtRPass)
-        Me.grpRegister.Controls.Add(Me.txtRUser)
-        Me.grpRegister.Controls.Add(Me.Label3)
-        Me.grpRegister.Controls.Add(Me.Label4)
-        Me.grpRegister.Enabled = False
-        Me.grpRegister.Location = New System.Drawing.Point(369, 12)
-        Me.grpRegister.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.grpRegister.Name = "grpRegister"
-        Me.grpRegister.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.grpRegister.Size = New System.Drawing.Size(351, 191)
-        Me.grpRegister.TabIndex = 6
-        Me.grpRegister.TabStop = False
-        Me.grpRegister.Text = "Register"
-        '
-        'btnRegister
-        '
-        Me.btnRegister.Location = New System.Drawing.Point(205, 132)
-        Me.btnRegister.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.btnRegister.Name = "btnRegister"
-        Me.btnRegister.Size = New System.Drawing.Size(127, 26)
-        Me.btnRegister.TabIndex = 8
-        Me.btnRegister.Text = "register"
-        Me.btnRegister.UseVisualStyleBackColor = True
-        '
-        'txtRPass
-        '
-        Me.txtRPass.Location = New System.Drawing.Point(135, 95)
-        Me.txtRPass.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.txtRPass.Name = "txtRPass"
-        Me.txtRPass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtRPass.Size = New System.Drawing.Size(197, 22)
-        Me.txtRPass.TabIndex = 3
-        '
-        'txtRUser
-        '
-        Me.txtRUser.Location = New System.Drawing.Point(135, 53)
-        Me.txtRUser.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.txtRUser.Name = "txtRUser"
-        Me.txtRUser.Size = New System.Drawing.Size(197, 22)
-        Me.txtRUser.TabIndex = 2
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(28, 98)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(69, 17)
-        Me.Label3.TabIndex = 1
-        Me.Label3.Text = "Password"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(28, 57)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(73, 17)
-        Me.Label4.TabIndex = 0
-        Me.Label4.Text = "Username"
-        '
         'LoginRegister
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(732, 215)
-        Me.Controls.Add(Me.grpRegister)
+        Me.ClientSize = New System.Drawing.Size(375, 215)
         Me.Controls.Add(Me.grpLogin)
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "LoginRegister"
         Me.Text = "LoginRegister"
         Me.grpLogin.ResumeLayout(False)
         Me.grpLogin.PerformLayout()
-        Me.grpRegister.ResumeLayout(False)
-        Me.grpRegister.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -185,10 +113,4 @@ Partial Class LoginRegister
     Friend WithEvents txtLUser As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents grpRegister As GroupBox
-    Friend WithEvents btnRegister As Button
-    Friend WithEvents txtRPass As TextBox
-    Friend WithEvents txtRUser As TextBox
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label4 As Label
 End Class
