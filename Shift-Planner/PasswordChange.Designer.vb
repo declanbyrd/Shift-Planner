@@ -36,7 +36,7 @@ Partial Class PasswordChange
         Me.btnChange.Location = New System.Drawing.Point(218, 144)
         Me.btnChange.Name = "btnChange"
         Me.btnChange.Size = New System.Drawing.Size(127, 26)
-        Me.btnChange.TabIndex = 13
+        Me.btnChange.TabIndex = 14
         Me.btnChange.Text = "change password"
         Me.btnChange.UseVisualStyleBackColor = True
         '
@@ -79,7 +79,7 @@ Partial Class PasswordChange
         Me.txtConfirmPass.Name = "txtConfirmPass"
         Me.txtConfirmPass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtConfirmPass.Size = New System.Drawing.Size(197, 22)
-        Me.txtConfirmPass.TabIndex = 15
+        Me.txtConfirmPass.TabIndex = 13
         '
         'Label1
         '

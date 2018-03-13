@@ -1,6 +1,11 @@
 ﻿Imports System.Text.RegularExpressions
 
 Public Class PasswordChange
+    Private Sub PasswordChange_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        If firstLogin Then
+            txtCurrentPass.Enabled = False
+        End If
+    End Sub
     Private Sub btnChange_Click(sender As Object, e As EventArgs) Handles btnChange.Click
         Dim currentPassword As String = txtCurrentPass.Text
         Dim newPassword As String = txtNewPass.Text
@@ -22,8 +27,9 @@ Public Class PasswordChange
             sql = "UPDATE EMPLOYEE SET password = '" & newPassword & "' WHERE employeeID =" & currentEmployeeID
             Console.WriteLine(sql)
             da = New OleDb.OleDbDataAdapter(sql, con)
-
             da.Fill(ds, "EMPLOYEE")
+            firstLogin = False
+
             If currentAdmin Then
                 AdminDashboard.Enabled = True
                 Me.Close()

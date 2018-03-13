@@ -11,12 +11,10 @@ Public Class LoginRegister
         da = New OleDb.OleDbDataAdapter(sql, con)
         da.Fill(ds, "tblLogOn")
 
-        currentAdmin = If(ds.Tables("tblLogOn").Rows(0).Item("admin") = True, True, False)
-
         'Checks to see if there is an employee with that username and password
         If ds.Tables("tblLogOn").Rows.Count > 0 Then
             'Checks to see whether the user is an admin or employee.
-            'If admin, then the admin form will load, if not, then the employee form will load.
+            currentAdmin = If(ds.Tables("tblLogOn").Rows(0).Item("admin") = True, True, False)
             If ds.Tables("tblLogOn").Rows(0).Item("password") = "changeme" Then
                 If currentAdmin Then
                     AdminDashboard.Show()
@@ -26,8 +24,9 @@ Public Class LoginRegister
                     EmployeeDashboard.Enabled = False
                 End If
 
+                firstLogin = True
                 PasswordChange.Show()
-                currentEmployeeID = ds.Tables("tblLogOn").Rows(0).Item("emlpoyeeID")
+                currentEmployeeID = ds.Tables("tblLogOn").Rows(0).Item("employeeID")
                 MsgBox("Change your password from the default value.")
                 Me.Close()
             ElseIf currentAdmin Then
