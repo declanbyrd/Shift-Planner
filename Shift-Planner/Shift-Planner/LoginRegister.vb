@@ -28,14 +28,34 @@ Public Class LoginRegister
     End Sub
 
     Private Sub btnSignin_Click(sender As Object, e As EventArgs) Handles btnSignin.Click
-        Dim username As String = txtLUser.Text
+        Dim employeeID As Integer = CUInt(txtLUser.Text)
         Dim password As String = txtLPass.Text
 
-        'link to database and check that the username and password are correct
-        'if first login then enable register box and disable login box
-    End Sub
+        sql = "SELECT employeeID, password, admin FROM EMPLOYEE WHERE employeeID = " & employeeID & " and password = '" + password + "'"
+        da = New OleDb.OleDbDataAdapter(sql, con)
+        da.Fill(ds, "tblLogOn")
 
-    Private Sub LoginRegister_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'Checks to see if there is an employee with that username and password
+        If ds.Tables("tblLogOn").Rows.Count > 0 Then
+            'Checks to see whether the user is an admin or employee.
+            'If admin, then the admin form will load, if not, then the employee form will load.
+            If ds.Tables("tblLogOn").Rows(0).Item("admin") = True Then
+                MessageBox.Show("Log on successful as admin.")
+                AdminDashboard.Show()
+                Me.Close()
+            Else
+                MessageBox.Show("Log on successful as employee.")
+                EmployeeDashboard.Show()
+                Me.Close()
 
+            End If
+
+        Else
+            MessageBox.Show("Incorrect username and/or password, try again.")
+
+        End If
+
+        con.Close()
+        ds.Clear()
     End Sub
 End Class

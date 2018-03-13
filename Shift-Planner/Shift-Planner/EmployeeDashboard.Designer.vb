@@ -30,6 +30,7 @@ Partial Class EmployeeDashboard
         Me.btnTimeOff = New System.Windows.Forms.Button()
         Me.btnOvertime = New System.Windows.Forms.Button()
         Me.btnChangePass = New System.Windows.Forms.Button()
+        Me.btnLogout = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
@@ -49,9 +50,9 @@ Partial Class EmployeeDashboard
         '
         Me.lstShifts.FormattingEnabled = True
         Me.lstShifts.ItemHeight = 16
-        Me.lstShifts.Location = New System.Drawing.Point(287, 49)
+        Me.lstShifts.Location = New System.Drawing.Point(339, 49)
         Me.lstShifts.Name = "lstShifts"
-        Me.lstShifts.Size = New System.Drawing.Size(659, 212)
+        Me.lstShifts.Size = New System.Drawing.Size(607, 212)
         Me.lstShifts.TabIndex = 1
         '
         'calShifts
@@ -107,11 +108,21 @@ Partial Class EmployeeDashboard
         Me.btnChangePass.Text = "Change password"
         Me.btnChangePass.UseVisualStyleBackColor = True
         '
+        'btnLogout
+        '
+        Me.btnLogout.Location = New System.Drawing.Point(233, 604)
+        Me.btnLogout.Name = "btnLogout"
+        Me.btnLogout.Size = New System.Drawing.Size(199, 33)
+        Me.btnLogout.TabIndex = 6
+        Me.btnLogout.Text = "Log out"
+        Me.btnLogout.UseVisualStyleBackColor = True
+        '
         'EmployeeDashboard
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(985, 645)
+        Me.Controls.Add(Me.btnLogout)
         Me.Controls.Add(Me.btnChangePass)
         Me.Controls.Add(Me.btnOvertime)
         Me.Controls.Add(Me.btnTimeOff)
@@ -133,4 +144,5 @@ Partial Class EmployeeDashboard
     Friend WithEvents btnOvertime As Button
     Friend WithEvents lstAnnouncements As ListBox
     Friend WithEvents btnChangePass As Button
+    Friend WithEvents btnLogout As Button
 End Class

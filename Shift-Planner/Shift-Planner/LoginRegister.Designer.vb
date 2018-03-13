@@ -45,59 +45,57 @@ Partial Class LoginRegister
         Me.grpLogin.Controls.Add(Me.txtLUser)
         Me.grpLogin.Controls.Add(Me.Label2)
         Me.grpLogin.Controls.Add(Me.Label1)
-        Me.grpLogin.Location = New System.Drawing.Point(9, 10)
-        Me.grpLogin.Margin = New System.Windows.Forms.Padding(2)
+        Me.grpLogin.Location = New System.Drawing.Point(12, 12)
+        Me.grpLogin.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.grpLogin.Name = "grpLogin"
-        Me.grpLogin.Padding = New System.Windows.Forms.Padding(2)
-        Me.grpLogin.Size = New System.Drawing.Size(263, 155)
+        Me.grpLogin.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.grpLogin.Size = New System.Drawing.Size(351, 191)
         Me.grpLogin.TabIndex = 0
         Me.grpLogin.TabStop = False
         Me.grpLogin.Text = "Login"
         '
         'btnSignin
         '
-        Me.btnSignin.Location = New System.Drawing.Point(154, 107)
-        Me.btnSignin.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnSignin.Location = New System.Drawing.Point(205, 132)
+        Me.btnSignin.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnSignin.Name = "btnSignin"
-        Me.btnSignin.Size = New System.Drawing.Size(95, 21)
+        Me.btnSignin.Size = New System.Drawing.Size(127, 26)
         Me.btnSignin.TabIndex = 4
         Me.btnSignin.Text = "sign in"
         Me.btnSignin.UseVisualStyleBackColor = True
         '
         'txtLPass
         '
-        Me.txtLPass.Location = New System.Drawing.Point(101, 77)
-        Me.txtLPass.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtLPass.Location = New System.Drawing.Point(135, 95)
+        Me.txtLPass.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtLPass.Name = "txtLPass"
         Me.txtLPass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtLPass.Size = New System.Drawing.Size(149, 20)
+        Me.txtLPass.Size = New System.Drawing.Size(197, 22)
         Me.txtLPass.TabIndex = 3
         '
         'txtLUser
         '
-        Me.txtLUser.Location = New System.Drawing.Point(101, 43)
-        Me.txtLUser.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtLUser.Location = New System.Drawing.Point(135, 53)
+        Me.txtLUser.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtLUser.Name = "txtLUser"
-        Me.txtLUser.Size = New System.Drawing.Size(149, 20)
+        Me.txtLUser.Size = New System.Drawing.Size(197, 22)
         Me.txtLUser.TabIndex = 2
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(22, 80)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label2.Location = New System.Drawing.Point(29, 98)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(53, 13)
+        Me.Label2.Size = New System.Drawing.Size(69, 17)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Password"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(22, 46)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label1.Location = New System.Drawing.Point(29, 57)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(55, 13)
+        Me.Label1.Size = New System.Drawing.Size(73, 17)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Username"
         '
@@ -109,70 +107,68 @@ Partial Class LoginRegister
         Me.grpRegister.Controls.Add(Me.Label3)
         Me.grpRegister.Controls.Add(Me.Label4)
         Me.grpRegister.Enabled = False
-        Me.grpRegister.Location = New System.Drawing.Point(277, 10)
-        Me.grpRegister.Margin = New System.Windows.Forms.Padding(2)
+        Me.grpRegister.Location = New System.Drawing.Point(369, 12)
+        Me.grpRegister.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.grpRegister.Name = "grpRegister"
-        Me.grpRegister.Padding = New System.Windows.Forms.Padding(2)
-        Me.grpRegister.Size = New System.Drawing.Size(263, 155)
+        Me.grpRegister.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.grpRegister.Size = New System.Drawing.Size(351, 191)
         Me.grpRegister.TabIndex = 6
         Me.grpRegister.TabStop = False
         Me.grpRegister.Text = "Register"
         '
         'btnRegister
         '
-        Me.btnRegister.Location = New System.Drawing.Point(154, 107)
-        Me.btnRegister.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnRegister.Location = New System.Drawing.Point(205, 132)
+        Me.btnRegister.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnRegister.Name = "btnRegister"
-        Me.btnRegister.Size = New System.Drawing.Size(95, 21)
+        Me.btnRegister.Size = New System.Drawing.Size(127, 26)
         Me.btnRegister.TabIndex = 8
         Me.btnRegister.Text = "register"
         Me.btnRegister.UseVisualStyleBackColor = True
         '
         'txtRPass
         '
-        Me.txtRPass.Location = New System.Drawing.Point(101, 77)
-        Me.txtRPass.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtRPass.Location = New System.Drawing.Point(135, 95)
+        Me.txtRPass.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtRPass.Name = "txtRPass"
         Me.txtRPass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtRPass.Size = New System.Drawing.Size(149, 20)
+        Me.txtRPass.Size = New System.Drawing.Size(197, 22)
         Me.txtRPass.TabIndex = 3
         '
         'txtRUser
         '
-        Me.txtRUser.Location = New System.Drawing.Point(101, 43)
-        Me.txtRUser.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtRUser.Location = New System.Drawing.Point(135, 53)
+        Me.txtRUser.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtRUser.Name = "txtRUser"
-        Me.txtRUser.Size = New System.Drawing.Size(149, 20)
+        Me.txtRUser.Size = New System.Drawing.Size(197, 22)
         Me.txtRUser.TabIndex = 2
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(21, 80)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label3.Location = New System.Drawing.Point(28, 98)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(53, 13)
+        Me.Label3.Size = New System.Drawing.Size(69, 17)
         Me.Label3.TabIndex = 1
         Me.Label3.Text = "Password"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(21, 46)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label4.Location = New System.Drawing.Point(28, 57)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(55, 13)
+        Me.Label4.Size = New System.Drawing.Size(73, 17)
         Me.Label4.TabIndex = 0
         Me.Label4.Text = "Username"
         '
         'LoginRegister
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(549, 175)
+        Me.ClientSize = New System.Drawing.Size(732, 215)
         Me.Controls.Add(Me.grpRegister)
         Me.Controls.Add(Me.grpLogin)
-        Me.Margin = New System.Windows.Forms.Padding(2)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "LoginRegister"
         Me.Text = "LoginRegister"
         Me.grpLogin.ResumeLayout(False)

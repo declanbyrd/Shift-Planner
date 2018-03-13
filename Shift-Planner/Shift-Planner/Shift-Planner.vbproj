@@ -86,6 +86,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminDashboard.Designer.vb">
+      <DependentUpon>AdminDashboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminDashboard.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="EmployeeDashboard.Designer.vb">
       <DependentUpon>EmployeeDashboard.vb</DependentUpon>
     </Compile>
@@ -129,6 +135,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AdminDashboard.resx">
+      <DependentUpon>AdminDashboard.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EmployeeDashboard.resx">
       <DependentUpon>EmployeeDashboard.vb</DependentUpon>
     </EmbeddedResource>

@@ -1,5 +1,4 @@
 ﻿Public Class EmployeeDashboard
-    'test commit
     Private Sub btnOvertime_Click(sender As Object, e As EventArgs) Handles btnOvertime.Click
         'open overtime form
         Me.Close()
@@ -20,5 +19,10 @@
     Private Sub btnChangePass_Click(sender As Object, e As EventArgs) Handles btnChangePass.Click
         Me.Enabled = False
         PasswordChange.Show()
+    End Sub
+
+    Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
+        LoginRegister.Show()
+        Me.Close()
     End Sub
 End Class
