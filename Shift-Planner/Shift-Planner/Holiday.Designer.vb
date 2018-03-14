@@ -35,6 +35,7 @@ Partial Class Holiday
         Me.btnAddTimeOff = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
+        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.SuspendLayout()
         '
         'Label1
@@ -49,7 +50,7 @@ Partial Class Holiday
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(7, 43)
+        Me.Label2.Location = New System.Drawing.Point(7, 44)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(75, 13)
         Me.Label2.TabIndex = 1
@@ -58,7 +59,7 @@ Partial Class Holiday
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(7, 79)
+        Me.Label3.Location = New System.Drawing.Point(7, 77)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(72, 13)
         Me.Label3.TabIndex = 2
@@ -67,7 +68,7 @@ Partial Class Holiday
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(32, 117)
+        Me.Label4.Location = New System.Drawing.Point(32, 114)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(47, 13)
         Me.Label4.TabIndex = 3
@@ -77,52 +78,54 @@ Partial Class Holiday
         '
         Me.txtEmployeeID.Location = New System.Drawing.Point(88, 6)
         Me.txtEmployeeID.Name = "txtEmployeeID"
-        Me.txtEmployeeID.Size = New System.Drawing.Size(74, 20)
+        Me.txtEmployeeID.ReadOnly = True
+        Me.txtEmployeeID.Size = New System.Drawing.Size(182, 20)
         Me.txtEmployeeID.TabIndex = 4
         '
         'dtStart
         '
         Me.dtStart.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtStart.Location = New System.Drawing.Point(88, 37)
+        Me.dtStart.Location = New System.Drawing.Point(88, 40)
         Me.dtStart.Name = "dtStart"
-        Me.dtStart.Size = New System.Drawing.Size(152, 20)
+        Me.dtStart.Size = New System.Drawing.Size(182, 20)
         Me.dtStart.TabIndex = 5
         '
         'dtEnd
         '
         Me.dtEnd.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtEnd.Location = New System.Drawing.Point(88, 73)
+        Me.dtEnd.Location = New System.Drawing.Point(88, 74)
         Me.dtEnd.Name = "dtEnd"
-        Me.dtEnd.Size = New System.Drawing.Size(152, 20)
+        Me.dtEnd.Size = New System.Drawing.Size(182, 20)
         Me.dtEnd.TabIndex = 6
         '
         'txtReason
         '
-        Me.txtReason.Location = New System.Drawing.Point(88, 114)
+        Me.txtReason.Location = New System.Drawing.Point(88, 110)
         Me.txtReason.Multiline = True
         Me.txtReason.Name = "txtReason"
-        Me.txtReason.Size = New System.Drawing.Size(152, 71)
+        Me.txtReason.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.txtReason.Size = New System.Drawing.Size(182, 71)
         Me.txtReason.TabIndex = 7
         '
         'lstBoxAccHoll
         '
         Me.lstBoxAccHoll.FormattingEnabled = True
-        Me.lstBoxAccHoll.Location = New System.Drawing.Point(314, 37)
+        Me.lstBoxAccHoll.Location = New System.Drawing.Point(309, 29)
         Me.lstBoxAccHoll.Name = "lstBoxAccHoll"
-        Me.lstBoxAccHoll.Size = New System.Drawing.Size(447, 173)
+        Me.lstBoxAccHoll.Size = New System.Drawing.Size(422, 186)
         Me.lstBoxAccHoll.TabIndex = 8
         '
         'lstBoxPendHol
         '
         Me.lstBoxPendHol.FormattingEnabled = True
-        Me.lstBoxPendHol.Location = New System.Drawing.Point(314, 270)
+        Me.lstBoxPendHol.Location = New System.Drawing.Point(309, 248)
         Me.lstBoxPendHol.Name = "lstBoxPendHol"
-        Me.lstBoxPendHol.Size = New System.Drawing.Size(447, 173)
+        Me.lstBoxPendHol.Size = New System.Drawing.Size(422, 186)
         Me.lstBoxPendHol.TabIndex = 9
         '
         'btnAddTimeOff
         '
-        Me.btnAddTimeOff.Location = New System.Drawing.Point(165, 191)
+        Me.btnAddTimeOff.Location = New System.Drawing.Point(195, 187)
         Me.btnAddTimeOff.Name = "btnAddTimeOff"
         Me.btnAddTimeOff.Size = New System.Drawing.Size(75, 23)
         Me.btnAddTimeOff.TabIndex = 10
@@ -132,7 +135,7 @@ Partial Class Holiday
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(311, 9)
+        Me.Label5.Location = New System.Drawing.Point(307, 8)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(99, 13)
         Me.Label5.TabIndex = 11
@@ -141,17 +144,26 @@ Partial Class Holiday
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(311, 234)
+        Me.Label6.Location = New System.Drawing.Point(307, 226)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(92, 13)
         Me.Label6.TabIndex = 12
         Me.Label6.Text = "Pending Holidays:"
         '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Me.Panel1.Location = New System.Drawing.Point(290, 3)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(1, 437)
+        Me.Panel1.TabIndex = 13
+        '
         'Holiday
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(773, 456)
+        Me.ClientSize = New System.Drawing.Size(741, 442)
+        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.btnAddTimeOff)
@@ -185,4 +197,5 @@ Partial Class Holiday
     Friend WithEvents btnAddTimeOff As Button
     Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
+    Friend WithEvents Panel1 As Panel
 End Class

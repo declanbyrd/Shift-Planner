@@ -1,16 +1,20 @@
-﻿Public Class Holiday
+﻿' Holiday class - this form allows employees to
+' apply for time off and see any pending and
+' aproved time off.
+Public Class Holiday
+    ' Form load function, will connect to the database,
+    ' take the employeeID of the currently logged in
+    ' employee and store it in a variable. Will then
+    ' populate 2 list boxes with timeoff data from the db
+    ' for that particular employee.
     Private Sub Holiday_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-        'connect to database
-        DBConnect()
 
         Dim employeeID As Integer
 
-        'Gets the employee ID of the user that is currently logged on
+        'Gets the employee ID of the user that Is currently logged on
 
-        'employeeID = ds.Tables("tblLogOn").Rows(0).Item("employeeID")
+        employeeID = ds.Tables("tblLogOn").Rows(0).Item("employeeID")
 
-        employeeID = 2
 
         txtEmployeeID.Text = employeeID
 
@@ -20,10 +24,9 @@
         da = New OleDb.OleDbDataAdapter(sql, con)
         da.Fill(ds, "tblPendHol")
 
-        'Loops through all of the values in the 'Pending Holiday' dataset and inserts them into a list box
-        'So the employee can see which holiday hasn't been accepted yet
+        'populate listbox with pending timeoff data
         For i = 0 To ds.Tables("tblPendHol").Rows.Count - 1
-            lstBoxPendHol.Items.Add("Reason: " + ds.Tables("tblPendHol").Rows(i).Item("timeOffReason") + " Start Date: " + ds.Tables("tblPendHol").Rows(i).Item("timeOffStartDate") + " End Date: " + ds.Tables("tblPendHol").Rows(i).Item("timeOffEndDate"))
+            lstBoxPendHol.Items.Add("Reason: " + ds.Tables("tblPendHol").Rows(i).Item("timeOffReason") + "     Start Date: " + ds.Tables("tblPendHol").Rows(i).Item("timeOffStartDate") + "     End Date: " + ds.Tables("tblPendHol").Rows(i).Item("timeOffEndDate"))
         Next
 
         'SQL statement that gets the information on pending holidays
@@ -32,23 +35,26 @@
         da = New OleDb.OleDbDataAdapter(sql, con)
         da.Fill(ds, "tblAccHol")
 
-        'Loops through all of the values in the 'Accepted Holiday' dataset and inserts them into a list box
-        'So the employee can see which holiday has been accepted 
+        'populate listbox with accepted timeoff data
         For i = 0 To ds.Tables("tblAccHol").Rows.Count - 1
-            lstBoxAccHoll.Items.Add("Reason: " + ds.Tables("tblPendHol").Rows(i).Item("timeOffReason") + " Start Date: " + ds.Tables("tblPendHol").Rows(i).Item("timeOffStartDate") + " End Date: " + ds.Tables("tblPendHol").Rows(i).Item("timeOffEndDate"))
+            lstBoxAccHoll.Items.Add("Reason: " + ds.Tables("tblAccHol").Rows(i).Item("timeOffReason") + "     Start Date: " + ds.Tables("tblAccHol").Rows(i).Item("timeOffStartDate") + "     End Date: " + ds.Tables("tblAccHol").Rows(i).Item("timeOffEndDate"))
         Next
     End Sub
 
+    ' Contains new time off request forms which allows
+    ' employees to send timeoff requests for admins to review
+    ' Data will be taken from inputs and be sent to the db
+    ' upon clicking "Apply"
     Private Sub btnAddTimeOff_Click(sender As Object, e As EventArgs) Handles btnAddTimeOff.Click
         'Creates a new holiday request
 
-        Sql = "INSERT INTO TIMEOFF (employeeID, timeOffStartDate, timeOffEndDate, timeOffReason) VALUES ("
-        Sql &= "'" & txtEmployeeID.Text & "',"
-        Sql &= "'" & dtStart.Value & "',"
-        Sql &= "'" & dtEnd.Value & "',"
-        Sql &= "'" & txtReason.Text & "')"
+        sql = "INSERT INTO TIMEOFF (employeeID, timeOffStartDate, timeOffEndDate, timeOffReason) VALUES ("
+        sql &= "'" & txtEmployeeID.Text & "',"
+        sql &= "'" & dtStart.Value.Date & "',"
+        sql &= "'" & dtEnd.Value.Date & "',"
+        sql &= "'" & txtReason.Text & "')"
 
-        da = New OleDb.OleDbDataAdapter(Sql, con)
+        da = New OleDb.OleDbDataAdapter(sql, con)
         da.Fill(ds, "tblAddHoliday")
         con.Close()
 
