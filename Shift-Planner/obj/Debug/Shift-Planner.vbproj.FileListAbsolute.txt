@@ -2,9 +2,7 @@ C:\Users\ximas\Documents\GitHub\Shift-Planner\Shift-Planner\Shift-Planner\bin\De
 C:\Users\ximas\Documents\GitHub\Shift-Planner\Shift-Planner\Shift-Planner\bin\Debug\Shift-Planner.exe
 C:\Users\ximas\Documents\GitHub\Shift-Planner\Shift-Planner\Shift-Planner\bin\Debug\Shift-Planner.pdb
 C:\Users\ximas\Documents\GitHub\Shift-Planner\Shift-Planner\Shift-Planner\bin\Debug\Shift-Planner.xml
-C:\Users\ximas\Documents\GitHub\Shift-Planner\Shift-Planner\Shift-Planner\obj\Debug\Shift-Planner.vbprojResolveAssemblyReference.cache
 C:\Users\ximas\Documents\GitHub\Shift-Planner\Shift-Planner\Shift-Planner\obj\Debug\Shift_Planner.EmployeeDashboard.resources
-C:\Users\ximas\Documents\GitHub\Shift-Planner\Shift-Planner\Shift-Planner\obj\Debug\Shift_Planner.Form1.resources
 C:\Users\ximas\Documents\GitHub\Shift-Planner\Shift-Planner\Shift-Planner\obj\Debug\Shift_Planner.LoginRegister.resources
 C:\Users\ximas\Documents\GitHub\Shift-Planner\Shift-Planner\Shift-Planner\obj\Debug\Shift_Planner.Resources.resources
 C:\Users\ximas\Documents\GitHub\Shift-Planner\Shift-Planner\Shift-Planner\obj\Debug\Shift_Planner.PasswordChange.resources
@@ -44,3 +42,4 @@ C:\Users\User\Documents\GitHub\Shift-Planner\Shift-Planner\obj\Debug\Shift-Plann
 C:\Users\User\Documents\GitHub\Shift-Planner\Shift-Planner\obj\Debug\Shift-Planner.exe
 C:\Users\User\Documents\GitHub\Shift-Planner\Shift-Planner\obj\Debug\Shift-Planner.xml
 C:\Users\User\Documents\GitHub\Shift-Planner\Shift-Planner\obj\Debug\Shift-Planner.pdb
+C:\Users\ximas\Documents\GitHub\Shift-Planner\Shift-Planner\Shift-Planner\obj\Debug\Shift-Planner.vbprojResolveAssemblyReference.cache

@@ -13,6 +13,7 @@ Public Class LoginRegister
 
         'Checks to see if there is an employee with that username and password
         If ds.Tables("tblLogOn").Rows.Count > 0 Then
+            currentEmployeeID = employeeID
             'Checks to see whether the user is an admin or employee.
             currentAdmin = If(ds.Tables("tblLogOn").Rows(0).Item("admin") = True, True, False)
             If ds.Tables("tblLogOn").Rows(0).Item("password") = "changeme" Then
@@ -26,7 +27,6 @@ Public Class LoginRegister
 
                 firstLogin = True
                 PasswordChange.Show()
-                currentEmployeeID = ds.Tables("tblLogOn").Rows(0).Item("employeeID")
                 MsgBox("Change your password from the default value.")
                 Me.Close()
             ElseIf currentAdmin Then
@@ -47,5 +47,9 @@ Public Class LoginRegister
 
         con.Close()
         ds.Clear()
+    End Sub
+
+    Private Sub LoginRegister_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        DBConnect()
     End Sub
 End Class
