@@ -27,65 +27,95 @@ Partial Class Overtime_calendar
         Me.currentUserLabel = New System.Windows.Forms.Label()
         Me.shiftDetailsTxtBox = New System.Windows.Forms.TextBox()
         Me.selectedDate = New System.Windows.Forms.Label()
+        Me.applyForShiftBtn = New System.Windows.Forms.Button()
+        Me.changeView = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'calendar
         '
-        Me.calendar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.calendar.Location = New System.Drawing.Point(45, 74)
+        Me.calendar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.calendar.Location = New System.Drawing.Point(119, 74)
         Me.calendar.MaxSelectionCount = 1
         Me.calendar.Name = "calendar"
         Me.calendar.TabIndex = 3
         '
         'listOfShifts
         '
+        Me.listOfShifts.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.listOfShifts.FormattingEnabled = True
-        Me.listOfShifts.ItemHeight = 16
-        Me.listOfShifts.Location = New System.Drawing.Point(440, 100)
+        Me.listOfShifts.ItemHeight = 25
+        Me.listOfShifts.Location = New System.Drawing.Point(471, 74)
         Me.listOfShifts.Name = "listOfShifts"
-        Me.listOfShifts.Size = New System.Drawing.Size(537, 244)
+        Me.listOfShifts.ScrollAlwaysVisible = True
+        Me.listOfShifts.Size = New System.Drawing.Size(733, 229)
         Me.listOfShifts.TabIndex = 4
         '
         'currentUserLabel
         '
         Me.currentUserLabel.AutoSize = True
         Me.currentUserLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.currentUserLabel.Location = New System.Drawing.Point(874, 18)
+        Me.currentUserLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.currentUserLabel.Location = New System.Drawing.Point(827, 21)
         Me.currentUserLabel.Name = "currentUserLabel"
-        Me.currentUserLabel.Size = New System.Drawing.Size(14, 19)
+        Me.currentUserLabel.Size = New System.Drawing.Size(102, 27)
         Me.currentUserLabel.TabIndex = 7
-        Me.currentUserLabel.Text = " "
+        Me.currentUserLabel.Text = "Welcome "
         '
         'shiftDetailsTxtBox
         '
+        Me.shiftDetailsTxtBox.BackColor = System.Drawing.Color.White
         Me.shiftDetailsTxtBox.Enabled = False
-        Me.shiftDetailsTxtBox.Location = New System.Drawing.Point(45, 373)
+        Me.shiftDetailsTxtBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.shiftDetailsTxtBox.Location = New System.Drawing.Point(471, 375)
         Me.shiftDetailsTxtBox.Multiline = True
         Me.shiftDetailsTxtBox.Name = "shiftDetailsTxtBox"
         Me.shiftDetailsTxtBox.ReadOnly = True
-        Me.shiftDetailsTxtBox.Size = New System.Drawing.Size(496, 338)
+        Me.shiftDetailsTxtBox.Size = New System.Drawing.Size(537, 338)
         Me.shiftDetailsTxtBox.TabIndex = 8
         '
         'selectedDate
         '
         Me.selectedDate.AutoSize = True
-        Me.selectedDate.Location = New System.Drawing.Point(440, 58)
+        Me.selectedDate.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.selectedDate.Location = New System.Drawing.Point(466, 37)
         Me.selectedDate.Name = "selectedDate"
-        Me.selectedDate.Size = New System.Drawing.Size(12, 17)
+        Me.selectedDate.Size = New System.Drawing.Size(17, 25)
         Me.selectedDate.TabIndex = 9
         Me.selectedDate.Text = " "
         '
-        'overtime_calendar
+        'applyForShiftBtn
+        '
+        Me.applyForShiftBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.applyForShiftBtn.Location = New System.Drawing.Point(841, 652)
+        Me.applyForShiftBtn.Name = "applyForShiftBtn"
+        Me.applyForShiftBtn.Size = New System.Drawing.Size(153, 45)
+        Me.applyForShiftBtn.TabIndex = 10
+        Me.applyForShiftBtn.Text = "Apply for Shift"
+        Me.applyForShiftBtn.UseVisualStyleBackColor = True
+        '
+        'changeView
+        '
+        Me.changeView.Location = New System.Drawing.Point(171, 293)
+        Me.changeView.Name = "changeView"
+        Me.changeView.Size = New System.Drawing.Size(138, 42)
+        Me.changeView.TabIndex = 11
+        Me.changeView.Text = "CHANGE TO LIST VIEW"
+        Me.changeView.UseVisualStyleBackColor = True
+        '
+        'Overtime_calendar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1073, 834)
+        Me.BackColor = System.Drawing.Color.White
+        Me.ClientSize = New System.Drawing.Size(1260, 834)
+        Me.Controls.Add(Me.changeView)
+        Me.Controls.Add(Me.applyForShiftBtn)
         Me.Controls.Add(Me.selectedDate)
         Me.Controls.Add(Me.shiftDetailsTxtBox)
         Me.Controls.Add(Me.currentUserLabel)
         Me.Controls.Add(Me.listOfShifts)
         Me.Controls.Add(Me.calendar)
-        Me.Name = "overtime_calendar"
+        Me.Name = "Overtime_calendar"
         Me.Text = "Overtime Shifts"
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -96,4 +126,6 @@ Partial Class Overtime_calendar
     Friend WithEvents currentUserLabel As Label
     Friend WithEvents shiftDetailsTxtBox As TextBox
     Friend WithEvents selectedDate As Label
+    Friend WithEvents applyForShiftBtn As Button
+    Friend WithEvents changeView As Button
 End Class

@@ -25,9 +25,9 @@ Partial Class overtime_list
         Me.listLabel = New System.Windows.Forms.Label()
         Me.listOfShifts = New System.Windows.Forms.ListBox()
         Me.shiftDetailsTxtBox = New System.Windows.Forms.TextBox()
-        Me.txtEmployeeID = New System.Windows.Forms.Label()
         Me.applybtn = New System.Windows.Forms.Button()
         Me.currentUserLabel = New System.Windows.Forms.Label()
+        Me.changeView = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'listLabel
@@ -42,22 +42,23 @@ Partial Class overtime_list
         '
         'listOfShifts
         '
+        Me.listOfShifts.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.listOfShifts.FormattingEnabled = True
-        Me.listOfShifts.ItemHeight = 16
+        Me.listOfShifts.ItemHeight = 20
         Me.listOfShifts.Location = New System.Drawing.Point(19, 85)
         Me.listOfShifts.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.listOfShifts.MultiColumn = True
         Me.listOfShifts.Name = "listOfShifts"
-        Me.listOfShifts.Size = New System.Drawing.Size(459, 644)
+        Me.listOfShifts.Size = New System.Drawing.Size(663, 624)
         Me.listOfShifts.TabIndex = 4
         '
         'shiftDetailsTxtBox
         '
-        Me.shiftDetailsTxtBox.BackColor = System.Drawing.SystemColors.Control
+        Me.shiftDetailsTxtBox.BackColor = System.Drawing.Color.White
         Me.shiftDetailsTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.shiftDetailsTxtBox.Enabled = False
-        Me.shiftDetailsTxtBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.shiftDetailsTxtBox.Location = New System.Drawing.Point(547, 85)
+        Me.shiftDetailsTxtBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.shiftDetailsTxtBox.Location = New System.Drawing.Point(742, 85)
         Me.shiftDetailsTxtBox.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.shiftDetailsTxtBox.Multiline = True
         Me.shiftDetailsTxtBox.Name = "shiftDetailsTxtBox"
@@ -65,18 +66,9 @@ Partial Class overtime_list
         Me.shiftDetailsTxtBox.Size = New System.Drawing.Size(485, 279)
         Me.shiftDetailsTxtBox.TabIndex = 5
         '
-        'txtEmployeeID
-        '
-        Me.txtEmployeeID.AutoSize = True
-        Me.txtEmployeeID.Location = New System.Drawing.Point(952, 21)
-        Me.txtEmployeeID.Name = "txtEmployeeID"
-        Me.txtEmployeeID.Size = New System.Drawing.Size(12, 17)
-        Me.txtEmployeeID.TabIndex = 6
-        Me.txtEmployeeID.Text = " "
-        '
         'applybtn
         '
-        Me.applybtn.Location = New System.Drawing.Point(560, 312)
+        Me.applybtn.Location = New System.Drawing.Point(1096, 312)
         Me.applybtn.Name = "applybtn"
         Me.applybtn.Size = New System.Drawing.Size(121, 41)
         Me.applybtn.TabIndex = 7
@@ -86,20 +78,32 @@ Partial Class overtime_list
         'currentUserLabel
         '
         Me.currentUserLabel.AutoSize = True
-        Me.currentUserLabel.Location = New System.Drawing.Point(846, 20)
+        Me.currentUserLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.currentUserLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.currentUserLabel.Location = New System.Drawing.Point(1000, 28)
         Me.currentUserLabel.Name = "currentUserLabel"
-        Me.currentUserLabel.Size = New System.Drawing.Size(12, 17)
+        Me.currentUserLabel.Size = New System.Drawing.Size(86, 22)
         Me.currentUserLabel.TabIndex = 8
-        Me.currentUserLabel.Text = " "
+        Me.currentUserLabel.Text = " Welcome"
+        '
+        'changeView
+        '
+        Me.changeView.Location = New System.Drawing.Point(917, 540)
+        Me.changeView.Name = "changeView"
+        Me.changeView.Size = New System.Drawing.Size(136, 55)
+        Me.changeView.TabIndex = 9
+        Me.changeView.Text = "CHANGE TO CALENDAR VIEW"
+        Me.changeView.UseVisualStyleBackColor = True
         '
         'overtime_list
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1073, 782)
+        Me.BackColor = System.Drawing.Color.White
+        Me.ClientSize = New System.Drawing.Size(1260, 834)
+        Me.Controls.Add(Me.changeView)
         Me.Controls.Add(Me.currentUserLabel)
         Me.Controls.Add(Me.applybtn)
-        Me.Controls.Add(Me.txtEmployeeID)
         Me.Controls.Add(Me.shiftDetailsTxtBox)
         Me.Controls.Add(Me.listOfShifts)
         Me.Controls.Add(Me.listLabel)
@@ -113,7 +117,7 @@ Partial Class overtime_list
     Friend WithEvents listLabel As Label
     Friend WithEvents listOfShifts As ListBox
     Friend WithEvents shiftDetailsTxtBox As TextBox
-    Friend WithEvents txtEmployeeID As Label
     Friend WithEvents applybtn As Button
     Friend WithEvents currentUserLabel As Label
+    Friend WithEvents changeView As Button
 End Class

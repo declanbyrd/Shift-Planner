@@ -26,6 +26,10 @@
         da.Fill(ds, "tblOvertime")
         con.Close()
 
+        If ds.Tables("tblOvertime").Rows().Count = 0 Then
+            listOfShifts.Items.Add("No available shifts for this day.")
+        End If
+
         'Populate the list box with overtime shifts from the database
         For i = 0 To ds.Tables("tblOvertime").Rows.Count() - 1
             listOfShifts.Items.Add("Date:   " + ds.Tables("tblOvertime").Rows(i).Item("overtimeDate") + "    " + "Start: " + ds.Tables("tblOvertime").Rows(i).Item("overtimeStart") + "    " + "Finish:   " + ds.Tables("tblOvertime").Rows(i).Item("overtimeEnd"))
@@ -64,5 +68,10 @@
         da = New OleDb.OleDbDataAdapter(sqlQuery, con)
         da.Fill(ds, "tblOvertime")
         con.Close()
+    End Sub
+
+    Private Sub changeView_Click(sender As Object, e As EventArgs) Handles changeView.Click
+        Overtime_calendar.Show()
+        Me.Hide()
     End Sub
 End Class

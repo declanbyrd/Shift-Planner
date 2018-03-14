@@ -34,6 +34,9 @@
         For i = 0 To ds.Tables("tblOvertime").Rows.Count() - 1
             listOfShifts.Items.Add("Date:   " + ds.Tables("tblOvertime").Rows(i).Item("overtimeDate") + "    " + "Start: " + ds.Tables("tblOvertime").Rows(i).Item("overtimeStart") + "    " + "Finish:   " + ds.Tables("tblOvertime").Rows(i).Item("overtimeEnd"))
         Next
+
+        shiftDetailsTxtBox.Text = "No shift selected"
+        applyForShiftBtn.Enabled = False
     End Sub
 
     Private Sub ListOfShifts_SelectedIndexChanged(sender As Object, e As EventArgs) Handles listOfShifts.SelectedIndexChanged
@@ -49,6 +52,7 @@
         'Updates text box to show the details of the selected shift.
         shiftDetailsTxtBox.Text = "Would you like to apply for the following shift? " & Environment.NewLine & Environment.NewLine & "Position:  " & otType & Environment.NewLine & "Date:  " & otDate & Environment.NewLine & "Start Time:  " & otStart & Environment.NewLine & "End Time:  " & otEnd & Environment.NewLine & "Pay (per hour):  £" & otPay
 
+        applyForShiftBtn.Enabled = True
     End Sub
     Private Sub MonthCalendar1_DateChanged(sender As Object, e As DateRangeEventArgs) Handles calendar.DateChanged
 
@@ -77,5 +81,29 @@
         For i = 0 To ds.Tables("tblOvertime").Rows.Count() - 1
             listOfShifts.Items.Add("Date:   " + ds.Tables("tblOvertime").Rows(i).Item("overtimeDate") + "    " + "Start: " + ds.Tables("tblOvertime").Rows(i).Item("overtimeStart") + "    " + "Finish:   " + ds.Tables("tblOvertime").Rows(i).Item("overtimeEnd"))
         Next
+    End Sub
+
+    Private Sub ApplyForShiftBtn_Click(sender As Object, e As EventArgs) Handles applyForShiftBtn.Click
+        'connect to the database
+        DBConnect()
+
+        'Insert query to allow the current user to apply for the selected shift.
+        sqlQuery = "INSERT INTO tblovertime (employeeID, overtimeType, overtimeDate, overTimePay, overtimeStart, overtimeEnd) VALUES ("
+        sql& = "'" & currentUser & "',"
+        sql& = "'" & otType & "',"
+        sql& = "'" & otDate & "',"
+        sql& = "'" & otStart & "',"
+        sql& = "'" & otEnd & "',"
+        sql& = "'" & otPay & "')"
+
+        'Updates the table with the sql query. Closes connection to database.
+        da = New OleDb.OleDbDataAdapter(sqlQuery, con)
+        da.Fill(ds, "tblOvertime")
+        con.Close()
+    End Sub
+
+    Private Sub changeView_Click(sender As Object, e As EventArgs) Handles changeView.Click
+        overtime_list.Show()
+        Me.Hide()
     End Sub
 End Class
