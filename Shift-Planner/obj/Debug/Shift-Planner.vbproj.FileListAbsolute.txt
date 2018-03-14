@@ -36,7 +36,6 @@ C:\Users\User\Documents\GitHub\Shift-Planner\Shift-Planner\bin\Debug\Shift-Plann
 C:\Users\User\Documents\GitHub\Shift-Planner\Shift-Planner\bin\Debug\Shift-Planner.xml
 C:\Users\User\Documents\GitHub\Shift-Planner\Shift-Planner\obj\Debug\Shift_Planner.AdminDashboard.resources
 C:\Users\User\Documents\GitHub\Shift-Planner\Shift-Planner\obj\Debug\Shift_Planner.EmployeeDashboard.resources
-C:\Users\User\Documents\GitHub\Shift-Planner\Shift-Planner\obj\Debug\Shift_Planner.Form1.resources
 C:\Users\User\Documents\GitHub\Shift-Planner\Shift-Planner\obj\Debug\Shift_Planner.LoginRegister.resources
 C:\Users\User\Documents\GitHub\Shift-Planner\Shift-Planner\obj\Debug\Shift_Planner.Resources.resources
 C:\Users\User\Documents\GitHub\Shift-Planner\Shift-Planner\obj\Debug\Shift_Planner.PasswordChange.resources
