@@ -20,10 +20,12 @@ Public Class LoginRegister
             If ds.Tables("tblLogOn").Rows(0).Item("password") = "changeme" Then
                 If currentAdmin Then
                     currentUser = ds.Tables("tblLogOn").Rows(0).Item("employeeID")
+                    currentEmployeeID = ds.Tables("tblLogOn").Rows(0).Item("employeeID")
                     AdminDashboard.Show()
                     AdminDashboard.Enabled = False
                 Else
                     currentUser = ds.Tables("tblLogOn").Rows(0).Item("employeeID")
+                    currentEmployeeID = ds.Tables("tblLogOn").Rows(0).Item("employeeID")
                     EmployeeDashboard.Show()
                     EmployeeDashboard.Enabled = False
                 End If
@@ -36,11 +38,13 @@ Public Class LoginRegister
             ElseIf currentAdmin Then
                 MessageBox.Show("Log on successful as admin.")
                 currentUser = ds.Tables("tblLogOn").Rows(0).Item("employeeID")
+                currentEmployeeID = ds.Tables("tblLogOn").Rows(0).Item("employeeID")
                 AdminDashboard.Show()
                 Me.Close()
             Else
                 MessageBox.Show("Log on successful as employee.")
                 currentUser = ds.Tables("tblLogOn").Rows(0).Item("employeeID")
+                currentEmployeeID = ds.Tables("tblLogOn").Rows(0).Item("employeeID")
                 EmployeeDashboard.Show()
                 Me.Close()
 

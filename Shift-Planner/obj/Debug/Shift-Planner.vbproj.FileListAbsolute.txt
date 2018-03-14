@@ -45,3 +45,6 @@ C:\Users\Declan\Documents\GitHub\Shift-Planner\Shift-Planner\obj\Debug\Shift-Pla
 C:\Users\Declan\Documents\GitHub\Shift-Planner\Shift-Planner\obj\Debug\Shift-Planner.exe
 C:\Users\Declan\Documents\GitHub\Shift-Planner\Shift-Planner\obj\Debug\Shift-Planner.xml
 C:\Users\Declan\Documents\GitHub\Shift-Planner\Shift-Planner\obj\Debug\Shift-Planner.pdb
+C:\Users\alexg\Documents\GitHub\Shift-Planner\Shift-Planner\obj\Debug\Shift-Planner.vbprojResolveAssemblyReference.cache
+C:\Users\alexg\Documents\GitHub\Shift-Planner\Shift-Planner\obj\Debug\Shift_Planner.Overtime_calendar.resources
+C:\Users\alexg\Documents\GitHub\Shift-Planner\Shift-Planner\obj\Debug\Shift_Planner.overtime_list.resources
