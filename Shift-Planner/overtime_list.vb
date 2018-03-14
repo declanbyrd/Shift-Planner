@@ -12,7 +12,7 @@
     Private Sub Overtime_list_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         'Gets the employee ID of the user that is currently logged on and sets the label to the users ID
-        currentUser = LoginRegister.currentUser
+        currentUser = currentEmployeeID
         currentUserLabel.Text = "Logged in as: " & currentUser
 
         'connect to the database
@@ -68,6 +68,8 @@
         da = New OleDb.OleDbDataAdapter(sqlQuery, con)
         da.Fill(ds, "tblOvertime")
         con.Close()
+
+        MessageBox.Show("Your response to this shift has been sent.")
     End Sub
 
     Private Sub changeView_Click(sender As Object, e As EventArgs) Handles changeView.Click

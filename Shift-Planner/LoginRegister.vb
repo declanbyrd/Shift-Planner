@@ -3,7 +3,6 @@
 Imports System.Text.RegularExpressions
 
 Public Class LoginRegister
-    Public currentUser As Integer
     Private Sub btnSignin_Click(sender As Object, e As EventArgs) Handles btnSignin.Click
 
         Dim employeeID As Integer = CUInt(txtLUser.Text)
@@ -19,17 +18,14 @@ Public Class LoginRegister
             currentAdmin = If(ds.Tables("tblLogOn").Rows(0).Item("admin") = True, True, False)
             If ds.Tables("tblLogOn").Rows(0).Item("password") = "changeme" Then
                 If currentAdmin Then
-                    currentUser = ds.Tables("tblLogOn").Rows(0).Item("employeeID")
                     currentEmployeeID = ds.Tables("tblLogOn").Rows(0).Item("employeeID")
                     AdminDashboard.Show()
                     AdminDashboard.Enabled = False
                 Else
-                    currentUser = ds.Tables("tblLogOn").Rows(0).Item("employeeID")
                     currentEmployeeID = ds.Tables("tblLogOn").Rows(0).Item("employeeID")
                     EmployeeDashboard.Show()
                     EmployeeDashboard.Enabled = False
                 End If
-
                 firstLogin = True
                 PasswordChange.Show()
                 currentEmployeeID = ds.Tables("tblLogOn").Rows(0).Item("employeeID")
@@ -37,13 +33,11 @@ Public Class LoginRegister
                 Me.Close()
             ElseIf currentAdmin Then
                 MessageBox.Show("Log on successful as admin.")
-                currentUser = ds.Tables("tblLogOn").Rows(0).Item("employeeID")
                 currentEmployeeID = ds.Tables("tblLogOn").Rows(0).Item("employeeID")
                 AdminDashboard.Show()
                 Me.Close()
             Else
                 MessageBox.Show("Log on successful as employee.")
-                currentUser = ds.Tables("tblLogOn").Rows(0).Item("employeeID")
                 currentEmployeeID = ds.Tables("tblLogOn").Rows(0).Item("employeeID")
                 EmployeeDashboard.Show()
                 Me.Close()
