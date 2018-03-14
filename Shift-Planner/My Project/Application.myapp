@@ -1,11 +1,7 @@
-﻿<?xml version="1.0" encoding="utf-16"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <MyApplicationData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <MySubMain>true</MySubMain>
-<<<<<<< HEAD:Shift-Planner/My Project/Application.myapp
   <MainForm>LoginRegister</MainForm>
-=======
-  <MainForm>Overtime_calendar</MainForm>
->>>>>>> overtime:Shift-Planner/Shift-Planner/My Project/Application.myapp
   <SingleInstance>false</SingleInstance>
   <ShutdownMode>1</ShutdownMode>
   <EnableVisualStyles>true</EnableVisualStyles>
