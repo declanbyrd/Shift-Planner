@@ -5,8 +5,6 @@ Imports System.Text.RegularExpressions
 Public Class LoginRegister
     Private Sub btnSignin_Click(sender As Object, e As EventArgs) Handles btnSignin.Click
 
-
-
         Dim employeeID As Integer = CUInt(txtLUser.Text)
         Dim password As String = txtLPass.Text
 
@@ -52,7 +50,9 @@ Public Class LoginRegister
         ds.Clear()
     End Sub
 
+
     Private Sub LoginRegister_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         DBConnect()
     End Sub
+
 End Class
