@@ -19,8 +19,6 @@
         currentUser = currentEmployeeID
         currentUserLabel.Text = "Logged in as: " & currentUser
 
-        'connect to the database
-        DBConnect()
 
         'Sql query to get the required values from the overtime table
         sqlQuery = "SELECT * FROM OVERTIME WHERE overtimeDate = " & calendarDate & ""
@@ -41,18 +39,26 @@
 
     Private Sub ListOfShifts_SelectedIndexChanged(sender As Object, e As EventArgs) Handles listOfShifts.SelectedIndexChanged
 
-        'Stores properties of the selected shift as local variables.
 
-        otType = ds.Tables("tblOvertime").Rows(listOfShifts.SelectedIndex).Item("overtimeType")
-        otDate = ds.Tables("tblOvertime").Rows(listOfShifts.SelectedIndex).Item("overtimeDate")
-        otStart = ds.Tables("tblOvertime").Rows(listOfShifts.SelectedIndex).Item("overtimeStart")
-        otEnd = ds.Tables("tblOvertime").Rows(listOfShifts.SelectedIndex).Item("overtimeEnd")
-        otPay = ds.Tables("tblOvertime").Rows(listOfShifts.SelectedIndex).Item("overtimePay")
+        'Validation for if the listbox contains no shifts
+        If listOfShifts.Text = "No available shifts for this day." Then
+            MessageBox.Show("There are no overtime shifts available for today. Please select another day")
+        Else
+            'Stores properties of the selected shift as local variables.
+            otType = ds.Tables("tblOvertime").Rows(listOfShifts.SelectedIndex).Item("overtimeType")
+            otDate = ds.Tables("tblOvertime").Rows(listOfShifts.SelectedIndex).Item("overtimeDate")
+            otStart = ds.Tables("tblOvertime").Rows(listOfShifts.SelectedIndex).Item("overtimeStart")
+            otEnd = ds.Tables("tblOvertime").Rows(listOfShifts.SelectedIndex).Item("overtimeEnd")
+            otPay = ds.Tables("tblOvertime").Rows(listOfShifts.SelectedIndex).Item("overtimePay")
 
-        'Updates text box to show the details of the selected shift.
-        shiftDetailsTxtBox.Text = "Would you like to apply for the following shift? " & Environment.NewLine & Environment.NewLine & "Position:  " & otType & Environment.NewLine & "Date:  " & otDate & Environment.NewLine & "Start Time:  " & otStart & Environment.NewLine & "End Time:  " & otEnd & Environment.NewLine & "Pay (per hour):  £" & otPay
+            'Updates text box to show the details of the selected shift.
+            shiftDetailsTxtBox.Text = "Would you like to apply for the following shift? " & Environment.NewLine & Environment.NewLine & "Position:  " & otType & Environment.NewLine & "Date:  " & otDate & Environment.NewLine & "Start Time:  " & otStart & Environment.NewLine & "End Time:  " & otEnd & Environment.NewLine & "Pay (per hour):  £" & otPay
 
-        applyForShiftBtn.Enabled = True
+            'Enables the button allowing for someone to take the shift
+            applyForShiftBtn.Enabled = True
+        End If
+
+
     End Sub
     Private Sub MonthCalendar1_DateChanged(sender As Object, e As DateRangeEventArgs) Handles calendar.DateChanged
 

@@ -68,4 +68,9 @@ Public Class Holiday
     Private Sub lstBoxPendHol_SelectedIndexChanged(sender As Object, e As EventArgs) Handles lstBoxPendHol.SelectedIndexChanged
 
     End Sub
+
+    Private Sub btnRetDash_Click(sender As Object, e As EventArgs) Handles btnRetDash.Click
+        Me.Hide()
+        EmployeeDashboard.Show()
+    End Sub
 End Class

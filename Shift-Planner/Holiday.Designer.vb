@@ -36,6 +36,7 @@ Partial Class Holiday
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.btnRetDash = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label1
@@ -158,11 +159,21 @@ Partial Class Holiday
         Me.Panel1.Size = New System.Drawing.Size(1, 437)
         Me.Panel1.TabIndex = 13
         '
+        'btnRetDash
+        '
+        Me.btnRetDash.Location = New System.Drawing.Point(145, 407)
+        Me.btnRetDash.Name = "btnRetDash"
+        Me.btnRetDash.Size = New System.Drawing.Size(125, 23)
+        Me.btnRetDash.TabIndex = 14
+        Me.btnRetDash.Text = "Return to Dashboard"
+        Me.btnRetDash.UseVisualStyleBackColor = True
+        '
         'Holiday
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(741, 442)
+        Me.Controls.Add(Me.btnRetDash)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
@@ -198,4 +209,5 @@ Partial Class Holiday
     Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents Panel1 As Panel
+    Friend WithEvents btnRetDash As Button
 End Class
