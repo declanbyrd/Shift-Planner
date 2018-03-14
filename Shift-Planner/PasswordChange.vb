@@ -24,11 +24,21 @@ Public Class PasswordChange
         ElseIf Not (newPassword = confirmPassword) Then
             MsgBox("Passwords do not match")
         Else
+<<<<<<< HEAD
             sql = "UPDATE TABLE EMPLOYEE SET password = 'testest1A' WHERE employeeID = 3"
             Console.WriteLine(sql)
+=======
+
+
+            sql = "UPDATE [EMPLOYEE] SET [password] = '" & newPassword & "' WHERE [employeeID] = " & currentEmployeeID & ""
+
+            'Console.WriteLine(sql)
+>>>>>>> 3655bb2dd73921e6ec4bcb2a8b78ce2b0f71e7bc
             da = New OleDb.OleDbDataAdapter(sql, con)
             da.Fill(ds, "EMPLOYEE")
             firstLogin = False
+
+            MessageBox.Show("Password Changed Successfully!")
 
             If currentAdmin Then
                 AdminDashboard.Enabled = True
