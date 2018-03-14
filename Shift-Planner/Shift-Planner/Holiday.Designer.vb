@@ -77,7 +77,7 @@ Partial Class Holiday
         '
         Me.txtEmployeeID.Location = New System.Drawing.Point(88, 6)
         Me.txtEmployeeID.Name = "txtEmployeeID"
-        Me.txtEmployeeID.Size = New System.Drawing.Size(152, 20)
+        Me.txtEmployeeID.Size = New System.Drawing.Size(74, 20)
         Me.txtEmployeeID.TabIndex = 4
         '
         'dtStart

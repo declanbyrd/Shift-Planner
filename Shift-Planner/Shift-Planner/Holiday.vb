@@ -1,13 +1,16 @@
 ﻿Public Class Holiday
     Private Sub Holiday_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+        'connect to database
         DBConnect()
 
         Dim employeeID As Integer
 
         'Gets the employee ID of the user that is currently logged on
 
-        employeeID = ds.Tables("tblLogOn").Rows(0).Item("employeeID")
+        'employeeID = ds.Tables("tblLogOn").Rows(0).Item("employeeID")
+
+        employeeID = 2
 
         txtEmployeeID.Text = employeeID
 
