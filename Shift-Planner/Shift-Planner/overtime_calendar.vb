@@ -51,19 +51,27 @@
 
     End Sub
     Private Sub MonthCalendar1_DateChanged(sender As Object, e As DateRangeEventArgs) Handles calendar.DateChanged
+
+        listOfShifts.Items.Clear()
+        ds.Clear()
+
         calendarDate = calendar.SelectionRange.Start.ToShortDateString
         selectedDate.Text = calendar.SelectionRange.Start.ToLongDateString
 
-        'connect to the database
-        DBConnect()
+
 
         'Sql query to get the required values from the overtime table
-        sqlQuery = "SELECT * FROM otTest WHERE overtimeDate = " & calendarDate & ""
+        sqlQuery = "SELECT * FROM otTest WHERE overtimeDate = #" & calendarDate & "#"
 
         'Creates a dataset with the results of the query. Closes database connection.
         da = New OleDb.OleDbDataAdapter(sqlQuery, con)
         da.Fill(ds, "tblOvertime")
+
         con.Close()
+
+        If ds.Tables("tblOvertime").Rows().Count = 0 Then
+            listOfShifts.Items.Add("No available shifts for this day.")
+        End If
 
         'Populate the list box with overtime shifts from the database
         For i = 0 To ds.Tables("tblOvertime").Rows.Count() - 1
