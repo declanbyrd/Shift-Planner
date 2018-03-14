@@ -12,3 +12,17 @@ C:\Users\User\Documents\GitHub\Shift-Planner\Shift-Planner\obj\Debug\Shift-Plann
 C:\Users\User\Documents\GitHub\Shift-Planner\Shift-Planner\obj\Debug\Shift-Planner.exe
 C:\Users\User\Documents\GitHub\Shift-Planner\Shift-Planner\obj\Debug\Shift-Planner.xml
 C:\Users\User\Documents\GitHub\Shift-Planner\Shift-Planner\obj\Debug\Shift-Planner.pdb
+C:\Users\alexg\Documents\GitHub\Shift-Planner\Shift-Planner\bin\Debug\Shift-Planner.exe.config
+C:\Users\alexg\Documents\GitHub\Shift-Planner\Shift-Planner\bin\Debug\Shift-Planner.exe
+C:\Users\alexg\Documents\GitHub\Shift-Planner\Shift-Planner\bin\Debug\Shift-Planner.pdb
+C:\Users\alexg\Documents\GitHub\Shift-Planner\Shift-Planner\bin\Debug\Shift-Planner.xml
+C:\Users\alexg\Documents\GitHub\Shift-Planner\Shift-Planner\obj\Debug\Shift_Planner.AdminDashboard.resources
+C:\Users\alexg\Documents\GitHub\Shift-Planner\Shift-Planner\obj\Debug\Shift_Planner.EmployeeDashboard.resources
+C:\Users\alexg\Documents\GitHub\Shift-Planner\Shift-Planner\obj\Debug\Shift_Planner.LoginRegister.resources
+C:\Users\alexg\Documents\GitHub\Shift-Planner\Shift-Planner\obj\Debug\Shift_Planner.Resources.resources
+C:\Users\alexg\Documents\GitHub\Shift-Planner\Shift-Planner\obj\Debug\Shift_Planner.PasswordChange.resources
+C:\Users\alexg\Documents\GitHub\Shift-Planner\Shift-Planner\obj\Debug\Shift-Planner.vbproj.GenerateResource.Cache
+C:\Users\alexg\Documents\GitHub\Shift-Planner\Shift-Planner\obj\Debug\Shift-Planner.vbproj.CoreCompileInputs.cache
+C:\Users\alexg\Documents\GitHub\Shift-Planner\Shift-Planner\obj\Debug\Shift-Planner.exe
+C:\Users\alexg\Documents\GitHub\Shift-Planner\Shift-Planner\obj\Debug\Shift-Planner.xml
+C:\Users\alexg\Documents\GitHub\Shift-Planner\Shift-Planner\obj\Debug\Shift-Planner.pdb
