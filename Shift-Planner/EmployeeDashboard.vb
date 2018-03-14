@@ -5,7 +5,7 @@
     End Sub
 
     Private Sub btnTimeOff_Click(sender As Object, e As EventArgs) Handles btnTimeOff.Click
-        'open time off form
+        Holiday.Show()
         Me.Close()
     End Sub
 

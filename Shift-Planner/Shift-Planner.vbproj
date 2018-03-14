@@ -98,6 +98,12 @@
     <Compile Include="EmployeeDashboard.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Holiday.Designer.vb">
+      <DependentUpon>Holiday.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Holiday.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Settings.vb" />
     <Compile Include="LoginRegister.Designer.vb">
       <DependentUpon>LoginRegister.vb</DependentUpon>
@@ -134,6 +140,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EmployeeDashboard.resx">
       <DependentUpon>EmployeeDashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Holiday.resx">
+      <DependentUpon>Holiday.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginRegister.resx">
       <DependentUpon>LoginRegister.vb</DependentUpon>

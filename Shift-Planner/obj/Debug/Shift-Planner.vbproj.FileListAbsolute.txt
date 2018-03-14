@@ -26,3 +26,4 @@ C:\Users\alexg\Documents\GitHub\Shift-Planner\Shift-Planner\obj\Debug\Shift-Plan
 C:\Users\alexg\Documents\GitHub\Shift-Planner\Shift-Planner\obj\Debug\Shift-Planner.exe
 C:\Users\alexg\Documents\GitHub\Shift-Planner\Shift-Planner\obj\Debug\Shift-Planner.xml
 C:\Users\alexg\Documents\GitHub\Shift-Planner\Shift-Planner\obj\Debug\Shift-Planner.pdb
+C:\Users\alexg\Documents\GitHub\Shift-Planner\Shift-Planner\obj\Debug\Shift_Planner.Holiday.resources
