@@ -24,7 +24,7 @@ Public Class PasswordChange
         ElseIf Not (newPassword = confirmPassword) Then
             MsgBox("Passwords do not match")
         Else
-            sql = "UPDATE EMPLOYEE SET password = '" & newPassword & "' WHERE employeeID =" & currentEmployeeID
+            sql = "UPDATE TABLE EMPLOYEE SET password = 'testest1A' WHERE employeeID = 3"
             Console.WriteLine(sql)
             da = New OleDb.OleDbDataAdapter(sql, con)
             da.Fill(ds, "EMPLOYEE")
