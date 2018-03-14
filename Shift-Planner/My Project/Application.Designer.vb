@@ -32,7 +32,11 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
+<<<<<<< HEAD:Shift-Planner/My Project/Application.Designer.vb
             Me.MainForm = Global.Shift_Planner.LoginRegister
+=======
+            Me.MainForm = Global.Shift_Planner.Overtime_calendar
+>>>>>>> overtime:Shift-Planner/Shift-Planner/My Project/Application.Designer.vb
         End Sub
     End Class
 End Namespace

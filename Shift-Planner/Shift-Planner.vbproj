@@ -98,6 +98,7 @@
     <Compile Include="EmployeeDashboard.vb">
       <SubType>Form</SubType>
     </Compile>
+<<<<<<< HEAD:Shift-Planner/Shift-Planner.vbproj
     <Compile Include="Settings.vb" />
     <Compile Include="LoginRegister.Designer.vb">
       <DependentUpon>LoginRegister.vb</DependentUpon>
@@ -105,6 +106,8 @@
     <Compile Include="LoginRegister.vb">
       <SubType>Form</SubType>
     </Compile>
+=======
+>>>>>>> overtime:Shift-Planner/Shift-Planner/Shift-Planner.vbproj
     <Compile Include="Module1.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -121,10 +124,23 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+<<<<<<< HEAD:Shift-Planner/Shift-Planner.vbproj
     <Compile Include="PasswordChange.Designer.vb">
       <DependentUpon>PasswordChange.vb</DependentUpon>
     </Compile>
     <Compile Include="PasswordChange.vb">
+=======
+    <Compile Include="overtime_calendar.Designer.vb">
+      <DependentUpon>overtime_calendar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="overtime_calendar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="overtime_list.Designer.vb">
+      <DependentUpon>overtime_list.vb</DependentUpon>
+    </Compile>
+    <Compile Include="overtime_list.vb">
+>>>>>>> overtime:Shift-Planner/Shift-Planner/Shift-Planner.vbproj
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
@@ -144,8 +160,16 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+<<<<<<< HEAD:Shift-Planner/Shift-Planner.vbproj
     <EmbeddedResource Include="PasswordChange.resx">
       <DependentUpon>PasswordChange.vb</DependentUpon>
+=======
+    <EmbeddedResource Include="overtime_calendar.resx">
+      <DependentUpon>overtime_calendar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="overtime_list.resx">
+      <DependentUpon>overtime_list.vb</DependentUpon>
+>>>>>>> overtime:Shift-Planner/Shift-Planner/Shift-Planner.vbproj
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
