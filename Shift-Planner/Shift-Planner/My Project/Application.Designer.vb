@@ -32,7 +32,7 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.Shift_Planner.overtime_list
+            Me.MainForm = Global.Shift_Planner.Overtime_calendar
         End Sub
     End Class
 End Namespace

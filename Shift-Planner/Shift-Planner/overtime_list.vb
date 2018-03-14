@@ -1,25 +1,25 @@
 ﻿Public Class overtime_list
 
-    Public sqlQuery As String
-    Public i As Integer
-    Public currentUser As Integer
-    Public otType As String
-    Public otDate As String
-    Public otStart As String
-    Public otEnd As String
-    Public otPay As Decimal
+    Private sqlQuery As String
+    Private i As Integer
+    Private currentUser As Integer
+    Private otType As String
+    Private otDate As String
+    Private otStart As String
+    Private otEnd As String
+    Private otPay As Decimal
 
     Private Sub Overtime_list_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         'Gets the employee ID of the user that is currently logged on and sets the label to the users ID
-        currentUser = ds.Tables("tblLogOn").Rows(0).Item("employeeID")
-        currentUserLabel.Text = "Logged in as: " + currentUser
+        'currentUser = ds.Tables("tblLogOn").Rows(0).Item("employeeID")
+        'currentUserLabel.Text = "Logged in as: " + currentUser
 
         'connect to the database
         DBConnect()
 
         'Sql query to get the required values from the overtime table
-        sqlQuery = "SELECT overtimeDate, overtimePay, overtimeType, overtimeStart, overtimeEnd FROM otTest"
+        sqlQuery = "SELECT * FROM otTest"
 
         'Creates a dataset with the results of the query. Closes database connection.
         da = New OleDb.OleDbDataAdapter(sqlQuery, con)

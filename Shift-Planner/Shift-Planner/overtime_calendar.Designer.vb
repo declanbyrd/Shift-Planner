@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class overtime_calendar
+Partial Class Overtime_calendar
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,91 +22,78 @@ Partial Class overtime_calendar
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Monday = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Tuesday = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Wednesday = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Thursday = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Friday = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Saturday = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Sunday = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.calendar = New System.Windows.Forms.MonthCalendar()
+        Me.listOfShifts = New System.Windows.Forms.ListBox()
+        Me.currentUserLabel = New System.Windows.Forms.Label()
+        Me.shiftDetailsTxtBox = New System.Windows.Forms.TextBox()
+        Me.selectedDate = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
-        'MonthCalendar1
+        'calendar
         '
-        Me.MonthCalendar1.CalendarDimensions = New System.Drawing.Size(1, 2)
-        Me.MonthCalendar1.Location = New System.Drawing.Point(18, 18)
-        Me.MonthCalendar1.MaxSelectionCount = 1
-        Me.MonthCalendar1.Name = "MonthCalendar1"
-        Me.MonthCalendar1.TabIndex = 3
+        Me.calendar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.calendar.Location = New System.Drawing.Point(45, 74)
+        Me.calendar.MaxSelectionCount = 1
+        Me.calendar.Name = "calendar"
+        Me.calendar.TabIndex = 3
         '
-        'DataGridView1
+        'listOfShifts
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Monday, Me.Tuesday, Me.Wednesday, Me.Thursday, Me.Friday, Me.Saturday, Me.Sunday})
-        Me.DataGridView1.Location = New System.Drawing.Point(308, 18)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(753, 150)
-        Me.DataGridView1.TabIndex = 4
+        Me.listOfShifts.FormattingEnabled = True
+        Me.listOfShifts.ItemHeight = 16
+        Me.listOfShifts.Location = New System.Drawing.Point(440, 100)
+        Me.listOfShifts.Name = "listOfShifts"
+        Me.listOfShifts.Size = New System.Drawing.Size(537, 244)
+        Me.listOfShifts.TabIndex = 4
         '
-        'Monday
+        'currentUserLabel
         '
-        Me.Monday.HeaderText = "Monday"
-        Me.Monday.Name = "Monday"
+        Me.currentUserLabel.AutoSize = True
+        Me.currentUserLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.currentUserLabel.Location = New System.Drawing.Point(874, 18)
+        Me.currentUserLabel.Name = "currentUserLabel"
+        Me.currentUserLabel.Size = New System.Drawing.Size(14, 19)
+        Me.currentUserLabel.TabIndex = 7
+        Me.currentUserLabel.Text = " "
         '
-        'Tuesday
+        'shiftDetailsTxtBox
         '
-        Me.Tuesday.HeaderText = "Tuesday"
-        Me.Tuesday.Name = "Tuesday"
+        Me.shiftDetailsTxtBox.Enabled = False
+        Me.shiftDetailsTxtBox.Location = New System.Drawing.Point(45, 373)
+        Me.shiftDetailsTxtBox.Multiline = True
+        Me.shiftDetailsTxtBox.Name = "shiftDetailsTxtBox"
+        Me.shiftDetailsTxtBox.ReadOnly = True
+        Me.shiftDetailsTxtBox.Size = New System.Drawing.Size(496, 338)
+        Me.shiftDetailsTxtBox.TabIndex = 8
         '
-        'Wednesday
+        'selectedDate
         '
-        Me.Wednesday.HeaderText = "Wednesday"
-        Me.Wednesday.Name = "Wednesday"
-        '
-        'Thursday
-        '
-        Me.Thursday.HeaderText = "Thursday"
-        Me.Thursday.Name = "Thursday"
-        '
-        'Friday
-        '
-        Me.Friday.HeaderText = "Friday"
-        Me.Friday.Name = "Friday"
-        '
-        'Saturday
-        '
-        Me.Saturday.HeaderText = "Saturday"
-        Me.Saturday.Name = "Saturday"
-        '
-        'Sunday
-        '
-        Me.Sunday.HeaderText = "Sunday"
-        Me.Sunday.Name = "Sunday"
+        Me.selectedDate.AutoSize = True
+        Me.selectedDate.Location = New System.Drawing.Point(440, 58)
+        Me.selectedDate.Name = "selectedDate"
+        Me.selectedDate.Size = New System.Drawing.Size(12, 17)
+        Me.selectedDate.TabIndex = 9
+        Me.selectedDate.Text = " "
         '
         'overtime_calendar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1073, 834)
-        Me.Controls.Add(Me.DataGridView1)
-        Me.Controls.Add(Me.MonthCalendar1)
+        Me.Controls.Add(Me.selectedDate)
+        Me.Controls.Add(Me.shiftDetailsTxtBox)
+        Me.Controls.Add(Me.currentUserLabel)
+        Me.Controls.Add(Me.listOfShifts)
+        Me.Controls.Add(Me.calendar)
         Me.Name = "overtime_calendar"
         Me.Text = "Overtime Shifts"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
-    Friend WithEvents MonthCalendar1 As MonthCalendar
-    Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents Monday As DataGridViewTextBoxColumn
-    Friend WithEvents Tuesday As DataGridViewTextBoxColumn
-    Friend WithEvents Wednesday As DataGridViewTextBoxColumn
-    Friend WithEvents Thursday As DataGridViewTextBoxColumn
-    Friend WithEvents Friday As DataGridViewTextBoxColumn
-    Friend WithEvents Saturday As DataGridViewTextBoxColumn
-    Friend WithEvents Sunday As DataGridViewTextBoxColumn
+    Friend WithEvents calendar As MonthCalendar
+    Friend WithEvents listOfShifts As ListBox
+    Friend WithEvents currentUserLabel As Label
+    Friend WithEvents shiftDetailsTxtBox As TextBox
+    Friend WithEvents selectedDate As Label
 End Class
