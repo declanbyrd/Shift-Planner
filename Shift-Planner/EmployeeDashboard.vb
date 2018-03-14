@@ -1,12 +1,13 @@
 ﻿Public Class EmployeeDashboard
     Private Sub btnOvertime_Click(sender As Object, e As EventArgs) Handles btnOvertime.Click
         'open overtime form
-        Me.Close()
+        Overtime_calendar.Show()
+        Me.Hide()
     End Sub
 
     Private Sub btnTimeOff_Click(sender As Object, e As EventArgs) Handles btnTimeOff.Click
         Holiday.Show()
-        Me.Close()
+        Me.Hide()
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Load
@@ -23,6 +24,6 @@
 
     Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
         LoginRegister.Show()
-        Me.Close()
+        Me.Hide()
     End Sub
 End Class

@@ -16,14 +16,14 @@
         Me.calendar.ShowToday = False
 
         'Gets the employee ID of the user that is currently logged on and sets the label to the users ID
-        'currentUser = ds.Tables("tblLogOn").Rows(0).Item("employeeID")
-        'currentUserLabel.Text = "Logged in as: " + currentUser
+        currentUser = LoginRegister.currentUser
+        currentUserLabel.Text = "Logged in as: " & currentUser
 
         'connect to the database
         DBConnect()
 
         'Sql query to get the required values from the overtime table
-        sqlQuery = "SELECT * FROM otTest WHERE overtimeDate = " & calendarDate & ""
+        sqlQuery = "SELECT * FROM OVERTIME WHERE overtimeDate = " & calendarDate & ""
 
         'Creates a dataset with the results of the query. Closes database connection.
         da = New OleDb.OleDbDataAdapter(sqlQuery, con)
@@ -65,7 +65,7 @@
 
 
         'Sql query to get the required values from the overtime table
-        sqlQuery = "SELECT * FROM otTest WHERE overtimeDate = #" & calendarDate & "#"
+        sqlQuery = "SELECT * FROM OVERTIME WHERE overtimeDate = #" & calendarDate & "#"
 
         'Creates a dataset with the results of the query. Closes database connection.
         da = New OleDb.OleDbDataAdapter(sqlQuery, con)
@@ -104,6 +104,11 @@
 
     Private Sub changeView_Click(sender As Object, e As EventArgs) Handles changeView.Click
         overtime_list.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub rtrnToDshBtn_Click(sender As Object, e As EventArgs) Handles rtrnToDshBtn.Click
+        EmployeeDashboard.Show()
         Me.Hide()
     End Sub
 End Class

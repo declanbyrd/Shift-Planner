@@ -29,12 +29,13 @@ Partial Class Overtime_calendar
         Me.selectedDate = New System.Windows.Forms.Label()
         Me.applyForShiftBtn = New System.Windows.Forms.Button()
         Me.changeView = New System.Windows.Forms.Button()
+        Me.rtrnToDshBtn = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'calendar
         '
         Me.calendar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.calendar.Location = New System.Drawing.Point(119, 74)
+        Me.calendar.Location = New System.Drawing.Point(18, 60)
         Me.calendar.MaxSelectionCount = 1
         Me.calendar.Name = "calendar"
         Me.calendar.TabIndex = 3
@@ -44,10 +45,10 @@ Partial Class Overtime_calendar
         Me.listOfShifts.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.listOfShifts.FormattingEnabled = True
         Me.listOfShifts.ItemHeight = 25
-        Me.listOfShifts.Location = New System.Drawing.Point(471, 74)
+        Me.listOfShifts.Location = New System.Drawing.Point(423, 60)
         Me.listOfShifts.Name = "listOfShifts"
         Me.listOfShifts.ScrollAlwaysVisible = True
-        Me.listOfShifts.Size = New System.Drawing.Size(733, 229)
+        Me.listOfShifts.Size = New System.Drawing.Size(618, 229)
         Me.listOfShifts.TabIndex = 4
         '
         'currentUserLabel
@@ -55,7 +56,7 @@ Partial Class Overtime_calendar
         Me.currentUserLabel.AutoSize = True
         Me.currentUserLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.currentUserLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.currentUserLabel.Location = New System.Drawing.Point(827, 21)
+        Me.currentUserLabel.Location = New System.Drawing.Point(18, 9)
         Me.currentUserLabel.Name = "currentUserLabel"
         Me.currentUserLabel.Size = New System.Drawing.Size(102, 27)
         Me.currentUserLabel.TabIndex = 7
@@ -64,9 +65,10 @@ Partial Class Overtime_calendar
         'shiftDetailsTxtBox
         '
         Me.shiftDetailsTxtBox.BackColor = System.Drawing.Color.White
+        Me.shiftDetailsTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.shiftDetailsTxtBox.Enabled = False
         Me.shiftDetailsTxtBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.shiftDetailsTxtBox.Location = New System.Drawing.Point(471, 375)
+        Me.shiftDetailsTxtBox.Location = New System.Drawing.Point(423, 322)
         Me.shiftDetailsTxtBox.Multiline = True
         Me.shiftDetailsTxtBox.Name = "shiftDetailsTxtBox"
         Me.shiftDetailsTxtBox.ReadOnly = True
@@ -86,7 +88,7 @@ Partial Class Overtime_calendar
         'applyForShiftBtn
         '
         Me.applyForShiftBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.applyForShiftBtn.Location = New System.Drawing.Point(841, 652)
+        Me.applyForShiftBtn.Location = New System.Drawing.Point(795, 605)
         Me.applyForShiftBtn.Name = "applyForShiftBtn"
         Me.applyForShiftBtn.Size = New System.Drawing.Size(153, 45)
         Me.applyForShiftBtn.TabIndex = 10
@@ -95,19 +97,29 @@ Partial Class Overtime_calendar
         '
         'changeView
         '
-        Me.changeView.Location = New System.Drawing.Point(171, 293)
+        Me.changeView.Location = New System.Drawing.Point(18, 375)
         Me.changeView.Name = "changeView"
         Me.changeView.Size = New System.Drawing.Size(138, 42)
         Me.changeView.TabIndex = 11
         Me.changeView.Text = "CHANGE TO LIST VIEW"
         Me.changeView.UseVisualStyleBackColor = True
         '
+        'rtrnToDshBtn
+        '
+        Me.rtrnToDshBtn.Location = New System.Drawing.Point(18, 433)
+        Me.rtrnToDshBtn.Name = "rtrnToDshBtn"
+        Me.rtrnToDshBtn.Size = New System.Drawing.Size(138, 49)
+        Me.rtrnToDshBtn.TabIndex = 12
+        Me.rtrnToDshBtn.Text = "Return to Dashboard"
+        Me.rtrnToDshBtn.UseVisualStyleBackColor = True
+        '
         'Overtime_calendar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1260, 834)
+        Me.ClientSize = New System.Drawing.Size(1084, 672)
+        Me.Controls.Add(Me.rtrnToDshBtn)
         Me.Controls.Add(Me.changeView)
         Me.Controls.Add(Me.applyForShiftBtn)
         Me.Controls.Add(Me.selectedDate)
@@ -128,4 +140,5 @@ Partial Class Overtime_calendar
     Friend WithEvents selectedDate As Label
     Friend WithEvents applyForShiftBtn As Button
     Friend WithEvents changeView As Button
+    Friend WithEvents rtrnToDshBtn As Button
 End Class

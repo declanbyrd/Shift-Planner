@@ -28,6 +28,7 @@ Partial Class overtime_list
         Me.applybtn = New System.Windows.Forms.Button()
         Me.currentUserLabel = New System.Windows.Forms.Label()
         Me.changeView = New System.Windows.Forms.Button()
+        Me.rtrnToDshBtn = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'listLabel
@@ -95,12 +96,22 @@ Partial Class overtime_list
         Me.changeView.Text = "CHANGE TO CALENDAR VIEW"
         Me.changeView.UseVisualStyleBackColor = True
         '
+        'rtrnToDshBtn
+        '
+        Me.rtrnToDshBtn.Location = New System.Drawing.Point(915, 619)
+        Me.rtrnToDshBtn.Name = "rtrnToDshBtn"
+        Me.rtrnToDshBtn.Size = New System.Drawing.Size(138, 49)
+        Me.rtrnToDshBtn.TabIndex = 13
+        Me.rtrnToDshBtn.Text = "Return to Dashboard"
+        Me.rtrnToDshBtn.UseVisualStyleBackColor = True
+        '
         'overtime_list
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1260, 834)
+        Me.Controls.Add(Me.rtrnToDshBtn)
         Me.Controls.Add(Me.changeView)
         Me.Controls.Add(Me.currentUserLabel)
         Me.Controls.Add(Me.applybtn)
@@ -120,4 +131,5 @@ Partial Class overtime_list
     Friend WithEvents applybtn As Button
     Friend WithEvents currentUserLabel As Label
     Friend WithEvents changeView As Button
+    Friend WithEvents rtrnToDshBtn As Button
 End Class

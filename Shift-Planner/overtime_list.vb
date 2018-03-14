@@ -12,14 +12,14 @@
     Private Sub Overtime_list_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         'Gets the employee ID of the user that is currently logged on and sets the label to the users ID
-        'currentUser = ds.Tables("tblLogOn").Rows(0).Item("employeeID")
-        'currentUserLabel.Text = "Logged in as: " + currentUser
+        currentUser = LoginRegister.currentUser
+        currentUserLabel.Text = "Logged in as: " & currentUser
 
         'connect to the database
         DBConnect()
 
         'Sql query to get the required values from the overtime table
-        sqlQuery = "SELECT * FROM otTest"
+        sqlQuery = "SELECT * FROM OVERTIME"
 
         'Creates a dataset with the results of the query. Closes database connection.
         da = New OleDb.OleDbDataAdapter(sqlQuery, con)
@@ -27,7 +27,7 @@
         con.Close()
 
         If ds.Tables("tblOvertime").Rows().Count = 0 Then
-            listOfShifts.Items.Add("No available shifts for this day.")
+            listOfShifts.Items.Add("No available shifts.")
         End If
 
         'Populate the list box with overtime shifts from the database
