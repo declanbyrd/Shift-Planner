@@ -1,4 +1,8 @@
 ﻿Public Class EmployeeDashboard
+    'when this is set to True, the first index of the listbox will always be an overtime announcement
+    Dim overtimeAnnouncement As Boolean = False
+    'each item will correspond to an approved holiday which hasn't been seen
+    Dim holidayIndexes(100) As Integer
     Private Sub btnOvertime_Click(sender As Object, e As EventArgs) Handles btnOvertime.Click
         'open overtime form
         Overtime_calendar.Show()
@@ -10,7 +14,10 @@
         Me.Hide()
     End Sub
 
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Load
+    Private Sub refreshPage()
+        lstAnnouncements.Items.Clear()
+        lstShifts.Items.Clear()
+
         'go to database and fetch user's current shifts
         sql = "SELECT * FROM SHIFT WHERE employeeID = " & currentEmployeeID
 
@@ -33,7 +40,7 @@
         Next
 
         'populate the calendar and listbox with the shift data
-        'go to database and fetch announcements
+
         'populate the listbox with announcements
         'ovetime available
         sql = "SELECT * FROM CREATEOVERTIME WHERE taken = no"
@@ -43,7 +50,8 @@
         con.Close()
 
         If ds.Tables("tblOvertimeAn").Rows.Count > 0 Then
-            lstAnnouncements.Items.Add("New overtime is available")
+            lstAnnouncements.Items.Add("Overtime is available")
+            overtimeAnnouncement = True
         End If
 
         'approved holidays :
@@ -56,7 +64,14 @@
         For i = 0 To ds.Tables("tblTimeoff").Rows.Count - 1
             lstAnnouncements.Items.Add("Your holiday from " & ds.Tables("tblTimeoff").Rows(i).Item("timeOffStartDate") &
                                 " to " & ds.Tables("tblTimeoff").Rows(i).Item("timeOffEndDate") & " has been approved")
+            holidayIndexes(i) = ds.Tables("tblTimeoff").Rows(i).Item("timeOffID")
         Next
+
+        ds.Clear()
+    End Sub
+
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Load
+        refreshPage()
     End Sub
 
     Private Sub btnChangePass_Click(sender As Object, e As EventArgs) Handles btnChangePass.Click
@@ -67,5 +82,25 @@
     Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
         LoginRegister.Show()
         Me.Hide()
+    End Sub
+
+    Private Sub lstAnnouncements_SelectedIndexChanged(sender As Object, e As EventArgs) Handles lstAnnouncements.SelectedIndexChanged
+        'if there is new overtime in the announcements then the first index of the 
+        'holiday announcements will be 1 istead of 0
+        Dim timeOffIndexAddition As Integer = If(overtimeAnnouncement, 1, 0)
+        Dim result As Integer
+        If lstAnnouncements.SelectedIndex > timeOffIndexAddition - 1 Then
+            result = MessageBox.Show("Remove this announcement?", "caption", MessageBoxButtons.OKCancel)
+            If result = DialogResult.OK Then
+                sql = "UPDATE TIMEOFF set seen = yes WHERE timeOffID =" &
+                    holidayIndexes(lstAnnouncements.SelectedIndex - timeOffIndexAddition)
+
+                da = New OleDb.OleDbDataAdapter(sql, con)
+                da.Fill(ds, "tblTimeoff")
+                con.Close()
+
+                refreshPage()
+            End If
+        End If
     End Sub
 End Class
