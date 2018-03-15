@@ -19,7 +19,7 @@
         lstShifts.Items.Clear()
 
         'go to database and fetch user's current shifts
-        sql = "SELECT * FROM SHIFT WHERE employeeID = " & currentEmployeeID
+        sql = "SELECT * FROM SHIFT where employeeID = " & currentEmployeeID
 
         da = New OleDb.OleDbDataAdapter(sql, con)
         da.Fill(ds, "tblShift")
@@ -42,6 +42,7 @@
         'populate the calendar and listbox with the shift data
 
         'populate the listbox with announcements
+<<<<<<< HEAD
         'ovetime available
         sql = "SELECT * FROM CREATEOVERTIME WHERE taken = no"
 
@@ -72,6 +73,8 @@
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Load
         refreshPage()
+=======
+>>>>>>> 03a397505c316ca628d349164136fae1a0719937
     End Sub
 
     Private Sub btnChangePass_Click(sender As Object, e As EventArgs) Handles btnChangePass.Click
