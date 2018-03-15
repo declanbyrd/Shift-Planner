@@ -36,16 +36,21 @@
 
     Private Sub ListOfShifts_SelectedIndexChanged(sender As Object, e As EventArgs) Handles listOfShifts2.SelectedIndexChanged
 
-        'Stores properties of the selected shift as local variables.
+        If listOfShifts2.Text = "No available shifts." Then
+            MessageBox.Show("No shifts available")
+        Else
+            'Stores properties of the selected shift as local variables.
 
-        otType = ds.Tables("tblOvertime").Rows(listOfShifts2.SelectedIndex + 1).Item("overtimeType")
-        otDate = ds.Tables("tblOvertime").Rows(listOfShifts2.SelectedIndex + 1).Item("overtimeDate")
-        otStart = ds.Tables("tblOvertime").Rows(listOfShifts2.SelectedIndex + 1).Item("overtimeStartTime")
-        otEnd = ds.Tables("tblOvertime").Rows(listOfShifts2.SelectedIndex + 1).Item("overtimeEndTime")
-        otPay = ds.Tables("tblOvertime").Rows(listOfShifts2.SelectedIndex + 1).Item("overtimePay")
+            otType = ds.Tables("tblOvertime").Rows(listOfShifts2.SelectedIndex + 1).Item("overtimeType")
+            otDate = ds.Tables("tblOvertime").Rows(listOfShifts2.SelectedIndex + 1).Item("overtimeDate")
+            otStart = ds.Tables("tblOvertime").Rows(listOfShifts2.SelectedIndex + 1).Item("overtimeStartTime")
+            otEnd = ds.Tables("tblOvertime").Rows(listOfShifts2.SelectedIndex + 1).Item("overtimeEndTime")
+            otPay = ds.Tables("tblOvertime").Rows(listOfShifts2.SelectedIndex + 1).Item("overtimePay")
 
-        'Updates text box to show the details of the selected shift.
-        shiftDetailsTxtBox.Text = "Would you like to apply for the following shift? " & Environment.NewLine & Environment.NewLine & "Position:  " & otType & Environment.NewLine & "Date:  " & otDate & Environment.NewLine & "Start Time:  " & otStart & Environment.NewLine & "End Time:  " & otEnd & Environment.NewLine & "Pay (per hour):  £" & otPay
+            'Updates text box to show the details of the selected shift.
+            shiftDetailsTxtBox.Text = "Would you like to apply for the following shift? " & Environment.NewLine & Environment.NewLine & "Position:  " & otType & Environment.NewLine & "Date:  " & otDate & Environment.NewLine & "Start Time:  " & otStart & Environment.NewLine & "End Time:  " & otEnd & Environment.NewLine & "Pay (per hour):  £" & otPay
+        End If
+
     End Sub
 
     Private Sub Applybtn_Click(sender As Object, e As EventArgs) Handles applybtn.Click
