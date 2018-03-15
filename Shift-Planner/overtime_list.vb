@@ -12,7 +12,7 @@
     Private Sub Overtime_list_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         'Gets the employee ID of the user that is currently logged on and sets the label to the users ID
-        currentUser = currentEmployeeID
+        currentUser = currentEmployeeName
         currentUserLabel.Text = "Logged in as: " & currentUser
 
 

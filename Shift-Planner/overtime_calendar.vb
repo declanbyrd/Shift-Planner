@@ -18,7 +18,7 @@
         Me.calendar.ShowToday = False
 
         'Gets the employee ID of the user that is currently logged on and sets the label to the users ID
-        currentUser = currentEmployeeID
+        currentUser = currentEmployeeName
         currentUserLabel.Text = "Logged in as: " & currentUser
 
 
