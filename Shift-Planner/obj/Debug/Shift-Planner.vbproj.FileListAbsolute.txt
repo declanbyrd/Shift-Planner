@@ -101,3 +101,7 @@ C:\Users\JOE\Documents\GitHub\Shift-Planner\Shift-Planner\bin\Debug\Shift-Planne
 C:\Users\JOE\Documents\GitHub\Shift-Planner\Shift-Planner\bin\Debug\Shift-Planner.xml
 C:\Users\User\Documents\GitHub\Shift-Planner\Shift-Planner\obj\Debug\Shift_Planner.btnDash.resources
 C:\Users\User\Documents\GitHub\Shift-Planner\Shift-Planner\obj\Debug\Shift_Planner.l.resources
+C:\Users\Declan\Documents\GitHub\Shift-Planner\Shift-Planner\obj\Debug\Shift_Planner.l.resources
+C:\Users\Declan\Documents\GitHub\Shift-Planner\Shift-Planner\obj\Debug\Shift_Planner.frmNewEmp.resources
+C:\Users\Declan\Documents\GitHub\Shift-Planner\Shift-Planner\obj\Debug\Shift_Planner.btnDash.resources
+C:\Users\Declan\Documents\GitHub\Shift-Planner\Shift-Planner\obj\Debug\Shift_Planner.frmViewHol.resources
