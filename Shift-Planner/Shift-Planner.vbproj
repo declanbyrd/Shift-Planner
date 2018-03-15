@@ -116,6 +116,7 @@
     <Compile Include="frmViewHol.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="globalSettings.vb" />
     <Compile Include="Holiday.Designer.vb">
       <DependentUpon>Holiday.vb</DependentUpon>
     </Compile>
@@ -140,7 +141,10 @@
     <Compile Include="LoginRegister.vb">
       <SubType>Form</SubType>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="globalSettings.vb" />
+=======
+>>>>>>> 616596932bdfd19ea0f9b0a2b35f4c885f797929
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
