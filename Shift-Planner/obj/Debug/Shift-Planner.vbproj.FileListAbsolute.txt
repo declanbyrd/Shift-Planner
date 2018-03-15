@@ -55,3 +55,6 @@ C:\Users\User\Documents\GitHub\Shift-Planner\Shift-Planner\obj\Debug\Shift-Plann
 C:\Users\User\Documents\GitHub\Shift-Planner\Shift-Planner\obj\Debug\Shift-Planner.pdb
 C:\Users\User\Documents\GitHub\Shift-Planner\Shift-Planner\obj\Debug\Shift-Planner.vbprojResolveAssemblyReference.cache
 C:\Users\User\Documents\GitHub\Shift-Planner\Shift-Planner\obj\Debug\Shift_Planner.frmViewHol.resources
+C:\Users\alexg\Documents\GitHub\Shift-Planner\Shift-Planner\obj\Debug\Shift_Planner.frmAddOT.resources
+C:\Users\alexg\Documents\GitHub\Shift-Planner\Shift-Planner\obj\Debug\Shift_Planner.frmNewEmp.resources
+C:\Users\alexg\Documents\GitHub\Shift-Planner\Shift-Planner\obj\Debug\Shift_Planner.frmViewHol.resources
