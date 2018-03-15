@@ -12,7 +12,7 @@
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Load
         'go to database and fetch user's current shifts
-        sql = "SELECT * FROM SHIFT where employeeID = " & currentEmployeeID
+        sql = "SELECT * FROM SHIFT WHERE employeeID = " & currentEmployeeID
 
         da = New OleDb.OleDbDataAdapter(sql, con)
         da.Fill(ds, "tblShift")
@@ -35,6 +35,28 @@
         'populate the calendar and listbox with the shift data
         'go to database and fetch announcements
         'populate the listbox with announcements
+        'ovetime available
+        sql = "SELECT * FROM CREATEOVERTIME WHERE taken = no"
+
+        da = New OleDb.OleDbDataAdapter(sql, con)
+        da.Fill(ds, "tblOvertimeAn")
+        con.Close()
+
+        If ds.Tables("tblOvertimeAn").Rows.Count > 0 Then
+            lstAnnouncements.Items.Add("New overtime is available")
+        End If
+
+        'approved holidays :
+        sql = "SELECT * FROM TIMEOFF WHERE employeeID = " & currentEmployeeID & " AND seen = no AND approved = yes"
+
+        da = New OleDb.OleDbDataAdapter(sql, con)
+        da.Fill(ds, "tblTimeoff")
+        con.Close()
+
+        For i = 0 To ds.Tables("tblTimeoff").Rows.Count - 1
+            lstAnnouncements.Items.Add("Your holiday from " & ds.Tables("tblTimeoff").Rows(i).Item("timeOffStartDate") &
+                                " to " & ds.Tables("tblTimeoff").Rows(i).Item("timeOffEndDate") & " has been approved")
+        Next
     End Sub
 
     Private Sub btnChangePass_Click(sender As Object, e As EventArgs) Handles btnChangePass.Click
