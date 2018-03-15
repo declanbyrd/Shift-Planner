@@ -1,11 +1,11 @@
-﻿Public Class frmAddOT
+﻿Public Class l
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnAddOvertime.Click
 
         sql = "INSERT INTO CREATEOVERTIME (overtimeType, overtimeDate, overtimeStartTime, overtimeEndTime, overtimePay) VALUES ("
         sql &= "'" & txtOType.Text & "',"
         sql &= "'" & dtODate.Value.Date & "',"
-        sql &= "'" & txtOSTime.Text & "',"
-        sql &= "'" & txtOETime.Text & "',"
+        sql &= "'" & cmbH1.Text & ":" & cmbM1.Text & "',"
+        sql &= "'" & CmbH2.Text & ":" & cmbM2.Text & "',"
         sql &= "'" & txtOPay.Text & "')"
 
         da = New OleDb.OleDbDataAdapter(sql, con)

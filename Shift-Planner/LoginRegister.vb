@@ -34,7 +34,7 @@ Public Class LoginRegister
                     End If
                     firstLogin = True
                     PasswordChange.Show()
-                    currentEmployeeID = ds.Tables("tblLogOn").Rows(0).Item("employeeID")
+                    'currentEmployeeID = ds.Tables("tblLogOn").Rows(0).Item("employeeID")
                     MsgBox("Change your password from the default value.")
                     Me.Close()
                 ElseIf currentAdmin Then

@@ -110,6 +110,12 @@
     <Compile Include="frmNewEmp.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmShift.Designer.vb">
+      <DependentUpon>frmShift.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmShift.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmViewHol.Designer.vb">
       <DependentUpon>frmViewHol.vb</DependentUpon>
     </Compile>
@@ -175,6 +181,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmNewEmp.resx">
       <DependentUpon>frmNewEmp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmShift.resx">
+      <DependentUpon>frmShift.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmViewHol.resx">
       <DependentUpon>frmViewHol.vb</DependentUpon>

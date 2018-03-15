@@ -10,7 +10,7 @@
 
 
         'SQL statement that gets the information on pending holidays
-        sql = "SELECT * FROM TIMEOFF where approved = 2"
+        sql = "SELECT * FROM TIMEOFF where status = 2"
 
         da = New OleDb.OleDbDataAdapter(sql, con)
         da.Fill(ds, "tblHol")
@@ -37,27 +37,46 @@
 
         'Only enables the the accept holiday button to be anabled if the agree to holiday is checked
         If chkBoxAcc.Checked = True Then
-            btnAccHol.Enabled = True
-        Else
-            btnAccHol.Enabled = False
+            ChkDeny.Checked = False
         End If
     End Sub
 
-    Private Sub btnAccHol_Click(sender As Object, e As EventArgs) Handles btnAccHol.Click
+    Private Sub btnAccHol_Click(sender As Object, e As EventArgs) Handles btnResp.Click
 
-        'SQL statement to update the selected pending holiday to now being accepted
-        sql = "UPDATE TIMEOFF SET approved = yes WHERE employeeID = " & ds.Tables("tblHol").Rows(row).Item("employeeID") & " and timeOffReason = '" & ds.Tables("tblHol").Rows(row).Item("timeOffReason") & "'"
+        If chkBoxAcc.Checked = False And ChkDeny.Checked = False Then
+            MessageBox.Show("Please either accept or deny the holiday")
+        ElseIf chkBoxAcc.Checked = True Then
+            'SQL statement to update the selected pending holiday to now being accepted
+            sql = "UPDATE TIMEOFF SET status = 1 WHERE employeeID = " & ds.Tables("tblHol").Rows(row).Item("employeeID") & " and timeOffReason = '" & ds.Tables("tblHol").Rows(row).Item("timeOffReason") & "'"
 
-        da = New OleDb.OleDbDataAdapter(sql, con)
-        da.Fill(ds, "tblApproveHol")
-        con.Close()
+            da = New OleDb.OleDbDataAdapter(sql, con)
+            da.Fill(ds, "tblApproveHol")
+            con.Close()
 
-        MessageBox.Show("Holiday has been accepted.")
+            MessageBox.Show("Holiday has been accepted.")
+        ElseIf ChkDeny.Checked = True Then
+            'SQL statement to update the selected pending holiday to now being accepted
+            sql = "UPDATE TIMEOFF SET status = 0 WHERE employeeID = " & ds.Tables("tblHol").Rows(row).Item("employeeID") & " and timeOffReason = '" & ds.Tables("tblHol").Rows(row).Item("timeOffReason") & "'"
+
+            da = New OleDb.OleDbDataAdapter(sql, con)
+            da.Fill(ds, "tblApproveHol")
+            con.Close()
+
+            MessageBox.Show("Holiday has denied")
+        End If
+
 
     End Sub
 
     Private Sub btnDashboard_Click(sender As Object, e As EventArgs) Handles btnDashboard.Click
         Me.Hide()
         AdminDashboard.Show()
+    End Sub
+
+    Private Sub ChkDeny_CheckedChanged(sender As Object, e As EventArgs) Handles ChkDeny.CheckedChanged
+        'Only enables the the accept holiday button to be enabled if the deny to holiday is checked
+        If ChkDeny.Checked = True Then
+            chkBoxAcc.Checked = False
+        End If
     End Sub
 End Class

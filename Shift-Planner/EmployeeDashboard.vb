@@ -26,7 +26,7 @@
         con.Close()
 
         For i = 0 To ds.Tables("tblShift").Rows.Count - 1
-            lstShifts.Items.Add(ds.Tables("tblShift").Rows(i).Item("Shift"))
+            lstShifts.Items.Add("Date: " & ds.Tables("tblShift").Rows(i).Item("shiftDate") & "     " & "Start Time: " & ds.Tables("tblShift").Rows(i).Item("startTime") & "     " & "End Time: " & ds.Tables("tblShift").Rows(i).Item("endTime"))
         Next
 
         sql = "SELECT * FROM OVERTIME where employeeID = " & currentEmployeeID

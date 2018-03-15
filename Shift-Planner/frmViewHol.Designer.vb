@@ -26,8 +26,9 @@ Partial Class frmViewHol
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtHolInfo = New System.Windows.Forms.TextBox()
         Me.chkBoxAcc = New System.Windows.Forms.CheckBox()
-        Me.btnAccHol = New System.Windows.Forms.Button()
+        Me.btnResp = New System.Windows.Forms.Button()
         Me.btnDashboard = New System.Windows.Forms.Button()
+        Me.ChkDeny = New System.Windows.Forms.CheckBox()
         Me.SuspendLayout()
         '
         'lstBoxHol
@@ -66,15 +67,14 @@ Partial Class frmViewHol
         Me.chkBoxAcc.Text = "Agree to Holiday"
         Me.chkBoxAcc.UseVisualStyleBackColor = True
         '
-        'btnAccHol
+        'btnResp
         '
-        Me.btnAccHol.Enabled = False
-        Me.btnAccHol.Location = New System.Drawing.Point(483, 215)
-        Me.btnAccHol.Name = "btnAccHol"
-        Me.btnAccHol.Size = New System.Drawing.Size(106, 23)
-        Me.btnAccHol.TabIndex = 4
-        Me.btnAccHol.Text = "Accept Holiday"
-        Me.btnAccHol.UseVisualStyleBackColor = True
+        Me.btnResp.Location = New System.Drawing.Point(483, 215)
+        Me.btnResp.Name = "btnResp"
+        Me.btnResp.Size = New System.Drawing.Size(106, 23)
+        Me.btnResp.TabIndex = 4
+        Me.btnResp.Text = "Respond"
+        Me.btnResp.UseVisualStyleBackColor = True
         '
         'btnDashboard
         '
@@ -85,13 +85,24 @@ Partial Class frmViewHol
         Me.btnDashboard.Text = "Dashboard"
         Me.btnDashboard.UseVisualStyleBackColor = True
         '
+        'ChkDeny
+        '
+        Me.ChkDeny.AutoSize = True
+        Me.ChkDeny.Location = New System.Drawing.Point(483, 191)
+        Me.ChkDeny.Name = "ChkDeny"
+        Me.ChkDeny.Size = New System.Drawing.Size(89, 17)
+        Me.ChkDeny.TabIndex = 6
+        Me.ChkDeny.Text = "Deny Holiday"
+        Me.ChkDeny.UseVisualStyleBackColor = True
+        '
         'frmViewHol
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(601, 450)
+        Me.Controls.Add(Me.ChkDeny)
         Me.Controls.Add(Me.btnDashboard)
-        Me.Controls.Add(Me.btnAccHol)
+        Me.Controls.Add(Me.btnResp)
         Me.Controls.Add(Me.chkBoxAcc)
         Me.Controls.Add(Me.txtHolInfo)
         Me.Controls.Add(Me.Label1)
@@ -108,6 +119,7 @@ Partial Class frmViewHol
     Friend WithEvents Label1 As Label
     Friend WithEvents txtHolInfo As TextBox
     Friend WithEvents chkBoxAcc As CheckBox
-    Friend WithEvents btnAccHol As Button
+    Friend WithEvents btnResp As Button
     Friend WithEvents btnDashboard As Button
+    Friend WithEvents ChkDeny As CheckBox
 End Class

@@ -34,7 +34,7 @@ Partial Class PasswordChange
         'btnChange
         '
         Me.btnChange.Location = New System.Drawing.Point(164, 117)
-        Me.btnChange.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnChange.Margin = New System.Windows.Forms.Padding(2)
         Me.btnChange.Name = "btnChange"
         Me.btnChange.Size = New System.Drawing.Size(95, 21)
         Me.btnChange.TabIndex = 14
@@ -44,7 +44,7 @@ Partial Class PasswordChange
         'txtNewPass
         '
         Me.txtNewPass.Location = New System.Drawing.Point(111, 54)
-        Me.txtNewPass.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtNewPass.Margin = New System.Windows.Forms.Padding(2)
         Me.txtNewPass.Name = "txtNewPass"
         Me.txtNewPass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtNewPass.Size = New System.Drawing.Size(149, 20)
@@ -52,8 +52,9 @@ Partial Class PasswordChange
         '
         'txtCurrentPass
         '
+        Me.txtCurrentPass.Enabled = False
         Me.txtCurrentPass.Location = New System.Drawing.Point(111, 20)
-        Me.txtCurrentPass.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtCurrentPass.Margin = New System.Windows.Forms.Padding(2)
         Me.txtCurrentPass.Name = "txtCurrentPass"
         Me.txtCurrentPass.Size = New System.Drawing.Size(149, 20)
         Me.txtCurrentPass.TabIndex = 11
@@ -81,7 +82,7 @@ Partial Class PasswordChange
         'txtConfirmPass
         '
         Me.txtConfirmPass.Location = New System.Drawing.Point(111, 89)
-        Me.txtConfirmPass.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtConfirmPass.Margin = New System.Windows.Forms.Padding(2)
         Me.txtConfirmPass.Name = "txtConfirmPass"
         Me.txtConfirmPass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtConfirmPass.Size = New System.Drawing.Size(149, 20)
@@ -109,7 +110,7 @@ Partial Class PasswordChange
         Me.Controls.Add(Me.txtCurrentPass)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label4)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "PasswordChange"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "PasswordChange"

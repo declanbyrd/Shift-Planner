@@ -20,7 +20,7 @@ Public Class Holiday
         txtEmployeeID.Text = employeeID
 
         'SQL statement that gets the information on pending holidays
-        sql = "SELECT timeOffStartDate, timeOffEndDate, timeOffReason FROM TIMEOFF where employeeID = " & employeeID & " and approved = no"
+        sql = "SELECT timeOffStartDate, timeOffEndDate, timeOffReason FROM TIMEOFF where employeeID = " & employeeID & " and status = 2"
 
         da = New OleDb.OleDbDataAdapter(sql, con)
         da.Fill(ds, "tblPendHol")
@@ -31,7 +31,7 @@ Public Class Holiday
         Next
 
         'SQL statement that gets the information on pending holidays
-        sql = "SELECT timeOffStartDate, timeOffEndDate, timeOffReason FROM TIMEOFF where employeeID = " & employeeID & " and approved = yes"
+        sql = "SELECT timeOffStartDate, timeOffEndDate, timeOffReason FROM TIMEOFF where employeeID = " & employeeID & " and status = 1"
 
         da = New OleDb.OleDbDataAdapter(sql, con)
         da.Fill(ds, "tblAccHol")
@@ -53,11 +53,13 @@ Public Class Holiday
 
         'Creates a new holiday request
 
-        sql = "INSERT INTO TIMEOFF (employeeID, timeOffStartDate, timeOffEndDate, timeOffReason) VALUES ("
+        sql = "INSERT INTO TIMEOFF (employeeID, timeOffStartDate, timeOffEndDate, timeOffReason, Seen, status) VALUES ("
         sql &= "'" & txtEmployeeID.Text & "',"
         sql &= "'" & dtStart.Value.Date & "',"
         sql &= "'" & dtEnd.Value.Date & "',"
-        sql &= "'" & txtReason.Text & "')"
+        sql &= "'" & txtReason.Text & "',"
+        sql &= "no, "
+        sql &= "2)"
 
         da = New OleDb.OleDbDataAdapter(sql, con)
         da.Fill(ds, "tblAddHoliday")
@@ -66,7 +68,7 @@ Public Class Holiday
         MessageBox.Show("Holiday has been sent for approval")
 
         'SQL statement that gets the information on pending holidays
-        sql = "SELECT timeOffStartDate, timeOffEndDate, timeOffReason FROM TIMEOFF where employeeID = " & employeeID & " and approved = no"
+        sql = "SELECT timeOffStartDate, timeOffEndDate, timeOffReason FROM TIMEOFF where employeeID = " & employeeID & " and status = 2"
 
         da = New OleDb.OleDbDataAdapter(sql, con)
         da.Fill(ds, "tblPendHol")

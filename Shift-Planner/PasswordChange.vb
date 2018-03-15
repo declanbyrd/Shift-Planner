@@ -5,6 +5,8 @@ Public Class PasswordChange
         If firstLogin Then
             txtCurrentPass.Enabled = False
         End If
+
+        txtCurrentPass.Text = currentEmployeeID
     End Sub
     Private Sub btnChange_Click(sender As Object, e As EventArgs) Handles btnChange.Click
         Dim currentPassword As String = txtCurrentPass.Text

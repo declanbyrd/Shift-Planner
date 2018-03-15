@@ -16,7 +16,7 @@
 
     Private Sub btnAddOT_Click(sender As Object, e As EventArgs) Handles btnAddOT.Click
         Me.Hide()
-        frmAddOT.Show()
+        l.Show()
     End Sub
 
     Private Sub AdminDashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -25,5 +25,10 @@
         da = New OleDb.OleDbDataAdapter(sql, con)
         da.Fill(ds, "tblShift")
         con.Close()
+    End Sub
+
+    Private Sub btnShift_Click(sender As Object, e As EventArgs) Handles btnShift.Click
+        Me.Hide()
+        btnDash.Show()
     End Sub
 End Class
