@@ -54,7 +54,6 @@ C:\Users\User\Documents\GitHub\Shift-Planner\Shift-Planner\obj\Debug\Shift-Plann
 C:\Users\User\Documents\GitHub\Shift-Planner\Shift-Planner\obj\Debug\Shift-Planner.pdb
 C:\Users\User\Documents\GitHub\Shift-Planner\Shift-Planner\obj\Debug\Shift-Planner.vbprojResolveAssemblyReference.cache
 C:\Users\User\Documents\GitHub\Shift-Planner\Shift-Planner\obj\Debug\Shift_Planner.frmViewHol.resources
-C:\Users\alexg\Documents\GitHub\Shift-Planner\Shift-Planner\obj\Debug\Shift_Planner.frmAddOT.resources
 C:\Users\alexg\Documents\GitHub\Shift-Planner\Shift-Planner\obj\Debug\Shift_Planner.frmNewEmp.resources
 C:\Users\alexg\Documents\GitHub\Shift-Planner\Shift-Planner\obj\Debug\Shift_Planner.frmViewHol.resources
 C:\Users\ximas\Documents\GitHub\Shift-Planner\Shift-Planner\Shift-Planner\bin\Debug\Shift-Planner.exe.config
@@ -101,3 +100,5 @@ C:\Users\JOE\Documents\GitHub\Shift-Planner\Shift-Planner\bin\Debug\Shift-Planne
 C:\Users\JOE\Documents\GitHub\Shift-Planner\Shift-Planner\bin\Debug\Shift-Planner.xml
 C:\Users\User\Documents\GitHub\Shift-Planner\Shift-Planner\obj\Debug\Shift_Planner.btnDash.resources
 C:\Users\User\Documents\GitHub\Shift-Planner\Shift-Planner\obj\Debug\Shift_Planner.l.resources
+C:\Users\alexg\Documents\GitHub\Shift-Planner\Shift-Planner\obj\Debug\Shift_Planner.l.resources
+C:\Users\alexg\Documents\GitHub\Shift-Planner\Shift-Planner\obj\Debug\Shift_Planner.btnDash.resources

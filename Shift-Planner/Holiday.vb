@@ -1,22 +1,22 @@
 ﻿' Holiday class - this form allows employees to
 ' apply for time off and see any pending and
-' aproved time off.
+' approved time off.
 Public Class Holiday
+    Dim employeeID As Integer
+
     ' Form load function, will connect to the database,
     ' take the employeeID of the currently logged in
     ' employee and store it in a variable. Will then
     ' populate 2 list boxes with timeoff data from the db
     ' for that particular employee.
-    ' @params test
-    Dim employeeID As Integer
+    ' @params sender
+    ' @params e
     Private Sub Holiday_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         'Gets the employee ID of the user that Is currently logged on
-
-        'employeeID = ds.Tables("tblLogOn").Rows(0).Item("employeeID")
         employeeID = currentEmployeeID
 
-
+        'shows the currently logged in employeeID in the form
         txtEmployeeID.Text = employeeID
 
         'SQL statement that gets the information on pending holidays
@@ -46,6 +46,8 @@ Public Class Holiday
     ' employees to send timeoff requests for admins to review
     ' Data will be taken from inputs and be sent to the db
     ' upon clicking "Apply"
+    ' @params sender
+    ' @params e
     Private Sub btnAddTimeOff_Click(sender As Object, e As EventArgs) Handles btnAddTimeOff.Click
 
         ds.Clear()
