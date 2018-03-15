@@ -10,7 +10,7 @@
 
 
         'SQL statement that gets the information on pending holidays
-        sql = "SELECT * FROM TIMEOFF where approved = no"
+        sql = "SELECT * FROM TIMEOFF where approved = 2"
 
         da = New OleDb.OleDbDataAdapter(sql, con)
         da.Fill(ds, "tblHol")

@@ -18,4 +18,12 @@
         Me.Hide()
         frmAddOT.Show()
     End Sub
+
+    Private Sub AdminDashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        sql = "SELECT * FROM SHIFT where employeeID = " & currentEmployeeID
+
+        da = New OleDb.OleDbDataAdapter(sql, con)
+        da.Fill(ds, "tblShift")
+        con.Close()
+    End Sub
 End Class

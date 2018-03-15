@@ -54,16 +54,18 @@
             overtimeAnnouncement = True
         End If
 
-        'approved holidays :
-        sql = "SELECT * FROM TIMEOFF WHERE employeeID = " & currentEmployeeID & " AND seen = no AND approved = yes"
+        'approved / not approved holidays :
+        Dim approvalString As String = ""
+        sql = "SELECT * FROM TIMEOFF WHERE employeeID = " & currentEmployeeID & " AND seen = no AND (status = 1 OR status = 0)"
 
         da = New OleDb.OleDbDataAdapter(sql, con)
         da.Fill(ds, "tblTimeoff")
         con.Close()
 
         For i = 0 To ds.Tables("tblTimeoff").Rows.Count - 1
+            approvalString = If(ds.Tables("tblTimeoff").Rows(i).Item("status") = 1, "", "not")
             lstAnnouncements.Items.Add("Your holiday from " & ds.Tables("tblTimeoff").Rows(i).Item("timeOffStartDate") &
-                                " to " & ds.Tables("tblTimeoff").Rows(i).Item("timeOffEndDate") & " has been approved")
+                    " to " & ds.Tables("tblTimeoff").Rows(i).Item("timeOffEndDate") & " has " & approvalString & " been approved")
             holidayIndexes(i) = ds.Tables("tblTimeoff").Rows(i).Item("timeOffID")
         Next
 
