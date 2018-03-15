@@ -76,6 +76,7 @@ Partial Class AdminDashboard
         Me.Controls.Add(Me.btnLogout)
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "AdminDashboard"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "AdminDashboard"
         Me.ResumeLayout(False)
 

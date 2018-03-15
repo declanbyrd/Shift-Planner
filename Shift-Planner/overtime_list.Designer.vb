@@ -125,6 +125,7 @@ Partial Class overtime_list
         Me.Controls.Add(Me.listLabel)
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "overtime_list"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Overtime Shifts"
         Me.ResumeLayout(False)
         Me.PerformLayout()

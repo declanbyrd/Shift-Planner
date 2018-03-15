@@ -37,7 +37,8 @@ Partial Class Overtime_calendar
         'calendar
         '
         Me.calendar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.calendar.Location = New System.Drawing.Point(18, 60)
+        Me.calendar.Location = New System.Drawing.Point(14, 49)
+        Me.calendar.Margin = New System.Windows.Forms.Padding(7, 7, 7, 7)
         Me.calendar.MaxSelectionCount = 1
         Me.calendar.Name = "calendar"
         Me.calendar.TabIndex = 3
@@ -46,11 +47,12 @@ Partial Class Overtime_calendar
         '
         Me.listOfShifts.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.listOfShifts.FormattingEnabled = True
-        Me.listOfShifts.ItemHeight = 25
-        Me.listOfShifts.Location = New System.Drawing.Point(423, 60)
+        Me.listOfShifts.ItemHeight = 20
+        Me.listOfShifts.Location = New System.Drawing.Point(317, 49)
+        Me.listOfShifts.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.listOfShifts.Name = "listOfShifts"
         Me.listOfShifts.ScrollAlwaysVisible = True
-        Me.listOfShifts.Size = New System.Drawing.Size(618, 229)
+        Me.listOfShifts.Size = New System.Drawing.Size(464, 184)
         Me.listOfShifts.TabIndex = 4
         '
         'currentUserLabel
@@ -58,9 +60,10 @@ Partial Class Overtime_calendar
         Me.currentUserLabel.AutoSize = True
         Me.currentUserLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.currentUserLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.currentUserLabel.Location = New System.Drawing.Point(18, 9)
+        Me.currentUserLabel.Location = New System.Drawing.Point(14, 7)
+        Me.currentUserLabel.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.currentUserLabel.Name = "currentUserLabel"
-        Me.currentUserLabel.Size = New System.Drawing.Size(102, 27)
+        Me.currentUserLabel.Size = New System.Drawing.Size(81, 22)
         Me.currentUserLabel.TabIndex = 7
         Me.currentUserLabel.Text = "Welcome "
         '
@@ -70,47 +73,52 @@ Partial Class Overtime_calendar
         Me.shiftDetailsTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.shiftDetailsTxtBox.Enabled = False
         Me.shiftDetailsTxtBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.shiftDetailsTxtBox.Location = New System.Drawing.Point(62, 310)
+        Me.shiftDetailsTxtBox.Location = New System.Drawing.Point(46, 252)
+        Me.shiftDetailsTxtBox.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.shiftDetailsTxtBox.Multiline = True
         Me.shiftDetailsTxtBox.Name = "shiftDetailsTxtBox"
         Me.shiftDetailsTxtBox.ReadOnly = True
-        Me.shiftDetailsTxtBox.Size = New System.Drawing.Size(537, 280)
+        Me.shiftDetailsTxtBox.Size = New System.Drawing.Size(403, 228)
         Me.shiftDetailsTxtBox.TabIndex = 8
         '
         'selectedDate
         '
         Me.selectedDate.AutoSize = True
         Me.selectedDate.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.selectedDate.Location = New System.Drawing.Point(418, 32)
+        Me.selectedDate.Location = New System.Drawing.Point(314, 26)
+        Me.selectedDate.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.selectedDate.Name = "selectedDate"
-        Me.selectedDate.Size = New System.Drawing.Size(17, 25)
+        Me.selectedDate.Size = New System.Drawing.Size(13, 20)
         Me.selectedDate.TabIndex = 9
         Me.selectedDate.Text = " "
         '
         'applyForShiftBtn
         '
         Me.applyForShiftBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.applyForShiftBtn.Location = New System.Drawing.Point(795, 605)
+        Me.applyForShiftBtn.Location = New System.Drawing.Point(596, 492)
+        Me.applyForShiftBtn.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.applyForShiftBtn.Name = "applyForShiftBtn"
-        Me.applyForShiftBtn.Size = New System.Drawing.Size(153, 45)
+        Me.applyForShiftBtn.Size = New System.Drawing.Size(115, 37)
         Me.applyForShiftBtn.TabIndex = 10
         Me.applyForShiftBtn.Text = "Apply for Shift"
         Me.applyForShiftBtn.UseVisualStyleBackColor = True
         '
         'changeView
         '
-        Me.changeView.Location = New System.Drawing.Point(72, 330)
+        Me.changeView.Location = New System.Drawing.Point(54, 268)
+        Me.changeView.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.changeView.Name = "changeView"
-        Me.changeView.Size = New System.Drawing.Size(138, 42)
+        Me.changeView.Size = New System.Drawing.Size(104, 34)
         Me.changeView.TabIndex = 11
         Me.changeView.Text = "CHANGE TO LIST VIEW"
         Me.changeView.UseVisualStyleBackColor = True
         '
         'rtrnToDshBtn
         '
-        Me.rtrnToDshBtn.Location = New System.Drawing.Point(72, 399)
+        Me.rtrnToDshBtn.Location = New System.Drawing.Point(54, 324)
+        Me.rtrnToDshBtn.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.rtrnToDshBtn.Name = "rtrnToDshBtn"
-        Me.rtrnToDshBtn.Size = New System.Drawing.Size(138, 49)
+        Me.rtrnToDshBtn.Size = New System.Drawing.Size(104, 40)
         Me.rtrnToDshBtn.TabIndex = 12
         Me.rtrnToDshBtn.Text = "Return to Dashboard"
         Me.rtrnToDshBtn.UseVisualStyleBackColor = True
@@ -118,17 +126,18 @@ Partial Class Overtime_calendar
         'Panel1
         '
         Me.Panel1.Controls.Add(Me.shiftDetailsTxtBox)
-        Me.Panel1.Location = New System.Drawing.Point(361, 9)
+        Me.Panel1.Location = New System.Drawing.Point(271, 7)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(711, 651)
+        Me.Panel1.Size = New System.Drawing.Size(533, 529)
         Me.Panel1.TabIndex = 13
         '
         'Overtime_calendar
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1084, 672)
+        Me.ClientSize = New System.Drawing.Size(813, 546)
         Me.Controls.Add(Me.rtrnToDshBtn)
         Me.Controls.Add(Me.changeView)
         Me.Controls.Add(Me.applyForShiftBtn)
@@ -137,7 +146,9 @@ Partial Class Overtime_calendar
         Me.Controls.Add(Me.listOfShifts)
         Me.Controls.Add(Me.calendar)
         Me.Controls.Add(Me.Panel1)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "Overtime_calendar"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Overtime Shifts"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()

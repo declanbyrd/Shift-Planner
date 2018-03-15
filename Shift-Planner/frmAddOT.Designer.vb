@@ -152,6 +152,7 @@ Partial Class frmAddOT
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Name = "frmAddOT"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Add Overtime"
         Me.ResumeLayout(False)
         Me.PerformLayout()

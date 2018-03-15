@@ -97,6 +97,7 @@ Partial Class frmViewHol
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.lstBoxHol)
         Me.Name = "frmViewHol"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "View Holiday"
         Me.ResumeLayout(False)
         Me.PerformLayout()
