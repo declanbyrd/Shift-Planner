@@ -9,6 +9,8 @@ Module Module1
     Public sql As String
     Public filepath As String
 
+
+
     Public Sub DBConnect()
 
         'note - comment the other lines and leave the line for your machine uncommented when testing
@@ -28,4 +30,7 @@ Module Module1
         MessageBox.Show("Connected to database.")
 
     End Sub
+
+
+
 End Module

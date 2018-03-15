@@ -48,7 +48,7 @@ Partial Class overtime_list
         Me.listOfShifts2.FormattingEnabled = True
         Me.listOfShifts2.ItemHeight = 17
         Me.listOfShifts2.Location = New System.Drawing.Point(14, 69)
-        Me.listOfShifts2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.listOfShifts2.Margin = New System.Windows.Forms.Padding(2)
         Me.listOfShifts2.MultiColumn = True
         Me.listOfShifts2.Name = "listOfShifts2"
         Me.listOfShifts2.Size = New System.Drawing.Size(498, 497)
@@ -61,7 +61,7 @@ Partial Class overtime_list
         Me.shiftDetailsTxtBox.Enabled = False
         Me.shiftDetailsTxtBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.shiftDetailsTxtBox.Location = New System.Drawing.Point(556, 69)
-        Me.shiftDetailsTxtBox.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.shiftDetailsTxtBox.Margin = New System.Windows.Forms.Padding(2)
         Me.shiftDetailsTxtBox.Multiline = True
         Me.shiftDetailsTxtBox.Name = "shiftDetailsTxtBox"
         Me.shiftDetailsTxtBox.ReadOnly = True
@@ -71,7 +71,7 @@ Partial Class overtime_list
         'applybtn
         '
         Me.applybtn.Location = New System.Drawing.Point(822, 254)
-        Me.applybtn.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.applybtn.Margin = New System.Windows.Forms.Padding(2)
         Me.applybtn.Name = "applybtn"
         Me.applybtn.Size = New System.Drawing.Size(91, 33)
         Me.applybtn.TabIndex = 7
@@ -93,7 +93,7 @@ Partial Class overtime_list
         'changeView
         '
         Me.changeView.Location = New System.Drawing.Point(688, 439)
-        Me.changeView.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.changeView.Margin = New System.Windows.Forms.Padding(2)
         Me.changeView.Name = "changeView"
         Me.changeView.Size = New System.Drawing.Size(102, 45)
         Me.changeView.TabIndex = 9
@@ -103,7 +103,7 @@ Partial Class overtime_list
         'rtrnToDshBtn
         '
         Me.rtrnToDshBtn.Location = New System.Drawing.Point(686, 503)
-        Me.rtrnToDshBtn.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.rtrnToDshBtn.Margin = New System.Windows.Forms.Padding(2)
         Me.rtrnToDshBtn.Name = "rtrnToDshBtn"
         Me.rtrnToDshBtn.Size = New System.Drawing.Size(104, 40)
         Me.rtrnToDshBtn.TabIndex = 13
@@ -123,7 +123,7 @@ Partial Class overtime_list
         Me.Controls.Add(Me.shiftDetailsTxtBox)
         Me.Controls.Add(Me.listOfShifts2)
         Me.Controls.Add(Me.listLabel)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "overtime_list"
         Me.Text = "Overtime Shifts"
         Me.ResumeLayout(False)

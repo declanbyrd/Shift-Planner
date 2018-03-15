@@ -83,4 +83,9 @@
     Private Sub shiftDetailsTxtBox_TextChanged(sender As Object, e As EventArgs) Handles shiftDetailsTxtBox.TextChanged
 
     End Sub
+
+    Private Sub rtrnToDshBtn_Click(sender As Object, e As EventArgs) Handles rtrnToDshBtn.Click
+        Me.Hide()
+        EmployeeDashboard.Show()
+    End Sub
 End Class
