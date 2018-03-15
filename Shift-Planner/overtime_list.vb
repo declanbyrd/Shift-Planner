@@ -61,7 +61,7 @@
 
         'Updates the table with the sql query. Closes connection to database.
         da = New OleDb.OleDbDataAdapter(sqlQuery, con)
-        da.Fill(ds, "tblOvertime")
+        da.Fill(ds, "tblOT")
         con.Close()
 
         MessageBox.Show("Your response to this shift has been sent.")
