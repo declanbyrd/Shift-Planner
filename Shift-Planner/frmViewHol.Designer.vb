@@ -27,6 +27,7 @@ Partial Class frmViewHol
         Me.txtHolInfo = New System.Windows.Forms.TextBox()
         Me.chkBoxAcc = New System.Windows.Forms.CheckBox()
         Me.btnAccHol = New System.Windows.Forms.Button()
+        Me.btnDashboard = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'lstBoxHol
@@ -75,11 +76,21 @@ Partial Class frmViewHol
         Me.btnAccHol.Text = "Accept Holiday"
         Me.btnAccHol.UseVisualStyleBackColor = True
         '
+        'btnDashboard
+        '
+        Me.btnDashboard.Location = New System.Drawing.Point(515, 415)
+        Me.btnDashboard.Name = "btnDashboard"
+        Me.btnDashboard.Size = New System.Drawing.Size(75, 23)
+        Me.btnDashboard.TabIndex = 5
+        Me.btnDashboard.Text = "Dashboard"
+        Me.btnDashboard.UseVisualStyleBackColor = True
+        '
         'frmViewHol
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(601, 450)
+        Me.Controls.Add(Me.btnDashboard)
         Me.Controls.Add(Me.btnAccHol)
         Me.Controls.Add(Me.chkBoxAcc)
         Me.Controls.Add(Me.txtHolInfo)
@@ -97,4 +108,5 @@ Partial Class frmViewHol
     Friend WithEvents txtHolInfo As TextBox
     Friend WithEvents chkBoxAcc As CheckBox
     Friend WithEvents btnAccHol As Button
+    Friend WithEvents btnDashboard As Button
 End Class

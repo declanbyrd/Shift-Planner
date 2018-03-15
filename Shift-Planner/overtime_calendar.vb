@@ -8,8 +8,10 @@
     Private otEnd As String
     Private otPay As Decimal
     Private calendarDate As String
+    Dim overtimeID As Integer
 
     Private Sub Overtime_calendar_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
 
         calendarDate = calendar.SelectionRange.Start.ToShortDateString
         selectedDate.Text = calendar.SelectionRange.Start.ToLongDateString
@@ -21,7 +23,7 @@
 
 
         'Sql query to get the required values from the overtime table
-        sqlQuery = "SELECT * FROM OVERTIME WHERE overtimeDate = " & calendarDate & ""
+        sqlQuery = "SELECT * FROM CREATEOVERTIME WHERE overtimeDate = " & calendarDate & ""
 
         'Creates a dataset with the results of the query. Closes database connection.
         da = New OleDb.OleDbDataAdapter(sqlQuery, con)
@@ -47,8 +49,8 @@
             'Stores properties of the selected shift as local variables.
             otType = ds.Tables("tblOvertime").Rows(listOfShifts.SelectedIndex).Item("overtimeType")
             otDate = ds.Tables("tblOvertime").Rows(listOfShifts.SelectedIndex).Item("overtimeDate")
-            otStart = ds.Tables("tblOvertime").Rows(listOfShifts.SelectedIndex).Item("overtimeStart")
-            otEnd = ds.Tables("tblOvertime").Rows(listOfShifts.SelectedIndex).Item("overtimeEnd")
+            otStart = ds.Tables("tblOvertime").Rows(listOfShifts.SelectedIndex).Item("overtimeStartTime")
+            otEnd = ds.Tables("tblOvertime").Rows(listOfShifts.SelectedIndex).Item("overtimeEndTime")
             otPay = ds.Tables("tblOvertime").Rows(listOfShifts.SelectedIndex).Item("overtimePay")
 
             'Updates text box to show the details of the selected shift.
@@ -71,7 +73,7 @@
 
 
         'Sql query to get the required values from the overtime table
-        sqlQuery = "SELECT * FROM OVERTIME WHERE overtimeDate = #" & calendarDate & "#"
+        sqlQuery = "SELECT * FROM CREATEOVERTIME WHERE overtimeDate = #" & calendarDate & "# and taken = no"
 
         'Creates a dataset with the results of the query. Closes database connection.
         da = New OleDb.OleDbDataAdapter(sqlQuery, con)
@@ -85,29 +87,33 @@
 
         'Populate the list box with overtime shifts from the database
         For i = 0 To ds.Tables("tblOvertime").Rows.Count() - 1
-            listOfShifts.Items.Add("Date:   " + ds.Tables("tblOvertime").Rows(i).Item("overtimeDate") + "    " + "Start: " + ds.Tables("tblOvertime").Rows(i).Item("overtimeStart") + "    " + "Finish:   " + ds.Tables("tblOvertime").Rows(i).Item("overtimeEnd"))
+            listOfShifts.Items.Add("Date:   " + ds.Tables("tblOvertime").Rows(i).Item("overtimeDate") + "    " + "Start: " + ds.Tables("tblOvertime").Rows(i).Item("overtimeStartTime") + "    " + "Finish:   " + ds.Tables("tblOvertime").Rows(i).Item("overtimeEndTime"))
         Next
     End Sub
 
     Private Sub ApplyForShiftBtn_Click(sender As Object, e As EventArgs) Handles applyForShiftBtn.Click
-        'connect to the database
-        DBConnect()
+
 
         'Insert query to allow the current user to apply for the selected shift.
-        sqlQuery = "INSERT INTO tblovertime (employeeID, overtimeType, overtimeDate, overTimePay, overtimeStart, overtimeEnd) VALUES ("
-        sql& = "'" & currentUser & "',"
-        sql& = "'" & otType & "',"
-        sql& = "'" & otDate & "',"
-        sql& = "'" & otStart & "',"
-        sql& = "'" & otEnd & "',"
-        sql& = "'" & otPay & "')"
+        sql = "INSERT INTO OVERTIME (employeeID, overtimeType, overtimeDate, overtimeStartTime, overtimeEndTime, overtimePay) VALUES ("
+        sql &= "'" & currentUser & "',"
+        sql &= "'" & otType & "',"
+        sql &= "'" & otDate & "',"
+        sql &= "'" & otStart & "',"
+        sql &= "'" & otEnd & "',"
+        sql &= "'" & otPay & "')"
 
         'Updates the table with the sql query. Closes connection to database.
-        da = New OleDb.OleDbDataAdapter(sqlQuery, con)
-        da.Fill(ds, "tblOvertime")
+        da = New OleDb.OleDbDataAdapter(sql, con)
+        da.Fill(ds, "tblOT")
         con.Close()
 
-        MessageBox.Show("Your response to this shift has been sent.")
+        MessageBox.Show("You have now applied for this shift. It is your responsibility to turn up to this shift.")
+
+        sql = "UPDATE CREATEOVERTIME set taken = yes where ID = " & ds.Tables("tblOvertime").Rows(0).Item("ID") & ""
+
+        da = New OleDb.OleDbDataAdapter(sql, con)
+        da.Fill(ds, "tblUpdateOT")
     End Sub
 
     Private Sub changeView_Click(sender As Object, e As EventArgs) Handles changeView.Click

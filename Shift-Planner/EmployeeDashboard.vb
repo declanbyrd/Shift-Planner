@@ -12,6 +12,15 @@
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Load
         'go to database and fetch user's current shifts
+        sql = "SELECT * FROM SHIFT where employeeID = " & currentEmployeeID
+
+        da = New OleDb.OleDbDataAdapter(sql, con)
+        da.Fill(ds, "tblShift")
+
+        For i = 0 To ds.Tables("tblShift").Rows.Count - 1
+            lstShifts.Items.Add(ds.Tables("tblShift").Rows(i).Item("Shift"))
+        Next
+
         'populate the calendar and listbox with the shift data
         'go to database and fetch announcements
         'populate the listbox with announcements

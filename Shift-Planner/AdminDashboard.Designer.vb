@@ -24,12 +24,14 @@ Partial Class AdminDashboard
     Private Sub InitializeComponent()
         Me.btnLogout = New System.Windows.Forms.Button()
         Me.bntAccHol = New System.Windows.Forms.Button()
+        Me.btnAddEmp = New System.Windows.Forms.Button()
+        Me.btnAddOT = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'btnLogout
         '
-        Me.btnLogout.Location = New System.Drawing.Point(175, 491)
-        Me.btnLogout.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnLogout.Location = New System.Drawing.Point(107, 67)
+        Me.btnLogout.Margin = New System.Windows.Forms.Padding(2)
         Me.btnLogout.Name = "btnLogout"
         Me.btnLogout.Size = New System.Drawing.Size(149, 27)
         Me.btnLogout.TabIndex = 7
@@ -38,21 +40,41 @@ Partial Class AdminDashboard
         '
         'bntAccHol
         '
-        Me.bntAccHol.Location = New System.Drawing.Point(140, 112)
+        Me.bntAccHol.Location = New System.Drawing.Point(12, 12)
         Me.bntAccHol.Name = "bntAccHol"
-        Me.bntAccHol.Size = New System.Drawing.Size(149, 23)
+        Me.bntAccHol.Size = New System.Drawing.Size(100, 50)
         Me.bntAccHol.TabIndex = 8
         Me.bntAccHol.Text = "Accept Holiday"
         Me.bntAccHol.UseVisualStyleBackColor = True
+        '
+        'btnAddEmp
+        '
+        Me.btnAddEmp.Location = New System.Drawing.Point(132, 12)
+        Me.btnAddEmp.Name = "btnAddEmp"
+        Me.btnAddEmp.Size = New System.Drawing.Size(100, 50)
+        Me.btnAddEmp.TabIndex = 9
+        Me.btnAddEmp.Text = "Add Employee"
+        Me.btnAddEmp.UseVisualStyleBackColor = True
+        '
+        'btnAddOT
+        '
+        Me.btnAddOT.Location = New System.Drawing.Point(252, 12)
+        Me.btnAddOT.Name = "btnAddOT"
+        Me.btnAddOT.Size = New System.Drawing.Size(100, 50)
+        Me.btnAddOT.TabIndex = 10
+        Me.btnAddOT.Text = "Add Overtime"
+        Me.btnAddOT.UseVisualStyleBackColor = True
         '
         'AdminDashboard
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(739, 524)
+        Me.ClientSize = New System.Drawing.Size(367, 106)
+        Me.Controls.Add(Me.btnAddOT)
+        Me.Controls.Add(Me.btnAddEmp)
         Me.Controls.Add(Me.bntAccHol)
         Me.Controls.Add(Me.btnLogout)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "AdminDashboard"
         Me.Text = "AdminDashboard"
         Me.ResumeLayout(False)
@@ -61,4 +83,6 @@ Partial Class AdminDashboard
 
     Friend WithEvents btnLogout As Button
     Friend WithEvents bntAccHol As Button
+    Friend WithEvents btnAddEmp As Button
+    Friend WithEvents btnAddOT As Button
 End Class

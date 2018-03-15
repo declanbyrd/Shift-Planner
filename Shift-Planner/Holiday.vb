@@ -46,6 +46,10 @@ Public Class Holiday
     ' Data will be taken from inputs and be sent to the db
     ' upon clicking "Apply"
     Private Sub btnAddTimeOff_Click(sender As Object, e As EventArgs) Handles btnAddTimeOff.Click
+
+        ds.Clear()
+        lstBoxPendHol.Items.Clear()
+
         'Creates a new holiday request
 
         sql = "INSERT INTO TIMEOFF (employeeID, timeOffStartDate, timeOffEndDate, timeOffReason) VALUES ("
@@ -59,6 +63,17 @@ Public Class Holiday
         con.Close()
 
         MessageBox.Show("Holiday has been sent for approval")
+
+        'SQL statement that gets the information on pending holidays
+        sql = "SELECT timeOffStartDate, timeOffEndDate, timeOffReason FROM TIMEOFF where employeeID = " & employeeID & " and approved = no"
+
+        da = New OleDb.OleDbDataAdapter(sql, con)
+        da.Fill(ds, "tblPendHol")
+
+        'populate listbox with pending timeoff data
+        For i = 0 To ds.Tables("tblPendHol").Rows.Count - 1
+            lstBoxPendHol.Items.Add("Reason: " + ds.Tables("tblPendHol").Rows(i).Item("timeOffReason") + "     Start Date: " + ds.Tables("tblPendHol").Rows(i).Item("timeOffStartDate") + "     End Date: " + ds.Tables("tblPendHol").Rows(i).Item("timeOffEndDate"))
+        Next
     End Sub
 
     Private Sub lstBoxAccHoll_SelectedIndexChanged(sender As Object, e As EventArgs) Handles lstBoxAccHoll.SelectedIndexChanged

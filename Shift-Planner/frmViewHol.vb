@@ -46,7 +46,7 @@
     Private Sub btnAccHol_Click(sender As Object, e As EventArgs) Handles btnAccHol.Click
 
         'SQL statement to update the selected pending holiday to now being accepted
-        sql = "UPDATE TIMEOFF SET approved = yes WHERE employeeID = " & ds.Tables("tblHol").Rows(row).Item("employeeID") & ""
+        sql = "UPDATE TIMEOFF SET approved = yes WHERE employeeID = " & ds.Tables("tblHol").Rows(row).Item("employeeID") & " and timeOffReason = '" & ds.Tables("tblHol").Rows(row).Item("timeOffReason") & "'"
 
         da = New OleDb.OleDbDataAdapter(sql, con)
         da.Fill(ds, "tblApproveHol")
@@ -54,5 +54,10 @@
 
         MessageBox.Show("Holiday has been accepted.")
 
+    End Sub
+
+    Private Sub btnDashboard_Click(sender As Object, e As EventArgs) Handles btnDashboard.Click
+        Me.Hide()
+        AdminDashboard.Show()
     End Sub
 End Class

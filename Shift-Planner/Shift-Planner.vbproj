@@ -98,6 +98,18 @@
     <Compile Include="EmployeeDashboard.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmAddOT.Designer.vb">
+      <DependentUpon>frmAddOT.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddOT.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNewEmp.Designer.vb">
+      <DependentUpon>frmNewEmp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmNewEmp.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmViewHol.Designer.vb">
       <DependentUpon>frmViewHol.vb</DependentUpon>
     </Compile>
@@ -158,6 +170,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EmployeeDashboard.resx">
       <DependentUpon>EmployeeDashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddOT.resx">
+      <DependentUpon>frmAddOT.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNewEmp.resx">
+      <DependentUpon>frmNewEmp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmViewHol.resx">
+      <DependentUpon>frmViewHol.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Holiday.resx">
       <DependentUpon>Holiday.vb</DependentUpon>
