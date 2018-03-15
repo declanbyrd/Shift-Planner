@@ -39,9 +39,9 @@ Partial Class LoginRegister
         Me.grpLogin.Controls.Add(Me.Label2)
         Me.grpLogin.Controls.Add(Me.Label1)
         Me.grpLogin.Location = New System.Drawing.Point(9, 10)
-        Me.grpLogin.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.grpLogin.Margin = New System.Windows.Forms.Padding(2)
         Me.grpLogin.Name = "grpLogin"
-        Me.grpLogin.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.grpLogin.Padding = New System.Windows.Forms.Padding(2)
         Me.grpLogin.Size = New System.Drawing.Size(263, 155)
         Me.grpLogin.TabIndex = 0
         Me.grpLogin.TabStop = False
@@ -50,7 +50,7 @@ Partial Class LoginRegister
         'btnSignin
         '
         Me.btnSignin.Location = New System.Drawing.Point(154, 107)
-        Me.btnSignin.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnSignin.Margin = New System.Windows.Forms.Padding(2)
         Me.btnSignin.Name = "btnSignin"
         Me.btnSignin.Size = New System.Drawing.Size(95, 21)
         Me.btnSignin.TabIndex = 4
@@ -60,7 +60,7 @@ Partial Class LoginRegister
         'txtLPass
         '
         Me.txtLPass.Location = New System.Drawing.Point(101, 77)
-        Me.txtLPass.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtLPass.Margin = New System.Windows.Forms.Padding(2)
         Me.txtLPass.Name = "txtLPass"
         Me.txtLPass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtLPass.Size = New System.Drawing.Size(149, 20)
@@ -69,7 +69,7 @@ Partial Class LoginRegister
         'txtLUser
         '
         Me.txtLUser.Location = New System.Drawing.Point(101, 43)
-        Me.txtLUser.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtLUser.Margin = New System.Windows.Forms.Padding(2)
         Me.txtLUser.Name = "txtLUser"
         Me.txtLUser.Size = New System.Drawing.Size(149, 20)
         Me.txtLUser.TabIndex = 2
@@ -100,8 +100,9 @@ Partial Class LoginRegister
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(281, 175)
         Me.Controls.Add(Me.grpLogin)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "LoginRegister"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "LoginRegister"
         Me.grpLogin.ResumeLayout(False)
         Me.grpLogin.PerformLayout()
