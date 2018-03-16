@@ -33,76 +33,73 @@ Partial Class PasswordChange
         '
         'btnChange
         '
-        Me.btnChange.Location = New System.Drawing.Point(164, 117)
-        Me.btnChange.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnChange.Location = New System.Drawing.Point(219, 144)
+        Me.btnChange.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnChange.Name = "btnChange"
-        Me.btnChange.Size = New System.Drawing.Size(95, 21)
+        Me.btnChange.Size = New System.Drawing.Size(127, 26)
         Me.btnChange.TabIndex = 14
         Me.btnChange.Text = "change password"
         Me.btnChange.UseVisualStyleBackColor = True
         '
         'txtNewPass
         '
-        Me.txtNewPass.Location = New System.Drawing.Point(111, 54)
-        Me.txtNewPass.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtNewPass.Location = New System.Drawing.Point(148, 66)
+        Me.txtNewPass.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtNewPass.Name = "txtNewPass"
         Me.txtNewPass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtNewPass.Size = New System.Drawing.Size(149, 20)
+        Me.txtNewPass.Size = New System.Drawing.Size(197, 22)
         Me.txtNewPass.TabIndex = 12
         '
         'txtCurrentPass
         '
-        Me.txtCurrentPass.Enabled = False
-        Me.txtCurrentPass.Location = New System.Drawing.Point(111, 20)
-        Me.txtCurrentPass.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtCurrentPass.Location = New System.Drawing.Point(148, 25)
+        Me.txtCurrentPass.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtCurrentPass.Name = "txtCurrentPass"
-        Me.txtCurrentPass.Size = New System.Drawing.Size(149, 20)
+        Me.txtCurrentPass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.txtCurrentPass.Size = New System.Drawing.Size(197, 22)
         Me.txtCurrentPass.TabIndex = 11
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(14, 57)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label3.Location = New System.Drawing.Point(19, 70)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(53, 13)
+        Me.Label3.Size = New System.Drawing.Size(69, 17)
         Me.Label3.TabIndex = 10
         Me.Label3.Text = "Password"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(14, 23)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label4.Location = New System.Drawing.Point(19, 28)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(89, 13)
+        Me.Label4.Size = New System.Drawing.Size(119, 17)
         Me.Label4.TabIndex = 9
         Me.Label4.Text = "Current password"
         '
         'txtConfirmPass
         '
-        Me.txtConfirmPass.Location = New System.Drawing.Point(111, 89)
-        Me.txtConfirmPass.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtConfirmPass.Location = New System.Drawing.Point(148, 110)
+        Me.txtConfirmPass.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtConfirmPass.Name = "txtConfirmPass"
         Me.txtConfirmPass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtConfirmPass.Size = New System.Drawing.Size(149, 20)
+        Me.txtConfirmPass.Size = New System.Drawing.Size(197, 22)
         Me.txtConfirmPass.TabIndex = 13
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(14, 91)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label1.Location = New System.Drawing.Point(19, 112)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(90, 13)
+        Me.Label1.Size = New System.Drawing.Size(120, 17)
         Me.Label1.TabIndex = 14
         Me.Label1.Text = "Confirm password"
         '
         'PasswordChange
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(274, 148)
+        Me.ClientSize = New System.Drawing.Size(365, 182)
         Me.Controls.Add(Me.txtConfirmPass)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnChange)
@@ -110,7 +107,7 @@ Partial Class PasswordChange
         Me.Controls.Add(Me.txtCurrentPass)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label4)
-        Me.Margin = New System.Windows.Forms.Padding(2)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "PasswordChange"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "PasswordChange"

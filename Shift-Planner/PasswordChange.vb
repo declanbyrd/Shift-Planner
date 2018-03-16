@@ -5,6 +5,7 @@ Public Class PasswordChange
         If firstLogin Then
             'user doesn't need to enter current password if it is their first login
             txtCurrentPass.Enabled = False
+            txtCurrentPass.Text = "changeme"
         End If
     End Sub
     Private Sub btnChange_Click(sender As Object, e As EventArgs) Handles btnChange.Click
@@ -16,7 +17,13 @@ Public Class PasswordChange
         Dim matchCap As Boolean = Regex.IsMatch(newPassword, patternCap)
         Dim matchNum As Boolean = Regex.IsMatch(newPassword, patternNum)
 
-        If newPassword.Length < 6 Or newPassword.Length > 16 Then
+        sql = "SELECT * FROM EMPLOYEE WHERE employeeID = " & currentEmployeeID & " AND password = '" & currentPassword & "'"
+        da = New OleDb.OleDbDataAdapter(sql, con)
+        da.Fill(ds, "tblCorrectLogin")
+
+        If ds.Tables("tblCorrectLogin").Rows.Count < 1 Then
+            MsgBox("Current password incorrect, try again")
+        ElseIf newPassword.Length < 6 Or newPassword.Length > 16 Then
             MsgBox("Enter a password between 6 and 16 characters long.")
         ElseIf Not matchCap Then
             MsgBox("Enter a password which contains at least one capital letter.")
@@ -26,9 +33,7 @@ Public Class PasswordChange
             MsgBox("Passwords do not match")
         Else
 
-
             sql = "UPDATE [EMPLOYEE] SET [password] = '" & newPassword & "' WHERE [employeeID] = " & currentEmployeeID & ""
-
             da = New OleDb.OleDbDataAdapter(sql, con)
             da.Fill(ds, "EMPLOYEE")
             firstLogin = False
