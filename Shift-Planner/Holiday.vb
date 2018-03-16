@@ -51,21 +51,11 @@ Public Class Holiday
         ds.Clear()
         lstBoxPendHol.Items.Clear()
 
-        'Creates a new holiday request
+        Dim startDate As Date = dtStart.Value.Date
+        Dim endDate As Date = dtEnd.Value.Date
+        Dim reason As String = txtReason.Text
 
-        sql = "INSERT INTO TIMEOFF (employeeID, timeOffStartDate, timeOffEndDate, timeOffReason, Seen, status) VALUES ("
-        sql &= "'" & txtEmployeeID.Text & "',"
-        sql &= "'" & dtStart.Value.Date & "',"
-        sql &= "'" & dtEnd.Value.Date & "',"
-        sql &= "'" & txtReason.Text & "',"
-        sql &= "no, "
-        sql &= "2)"
-
-        da = New OleDb.OleDbDataAdapter(sql, con)
-        da.Fill(ds, "tblAddHoliday")
-        con.Close()
-
-        MessageBox.Show("Holiday has been sent for approval")
+        NewHolidayRequest(employeeID, startDate, endDate, reason)
 
         'SQL statement that gets the information on pending holidays
         sql = "SELECT timeOffStartDate, timeOffEndDate, timeOffReason FROM TIMEOFF where employeeID = " & employeeID & " and status = 2"
@@ -77,7 +67,33 @@ Public Class Holiday
         For i = 0 To ds.Tables("tblPendHol").Rows.Count - 1
             lstBoxPendHol.Items.Add("Reason: " + ds.Tables("tblPendHol").Rows(i).Item("timeOffReason") + "     Start Date: " + ds.Tables("tblPendHol").Rows(i).Item("timeOffStartDate") + "     End Date: " + ds.Tables("tblPendHol").Rows(i).Item("timeOffEndDate"))
         Next
+
     End Sub
+
+    Public Shared Function NewHolidayRequest(currentEmployeeID, startDate, endDate, reason)
+
+        Dim success As Boolean = False
+
+        'Creates a new holiday request
+
+        sql = "INSERT INTO TIMEOFF (employeeID, timeOffStartDate, timeOffEndDate, timeOffReason, Seen, status) VALUES ("
+        sql &= "'" & currentEmployeeID & "',"
+        sql &= "'" & startDate & "',"
+        sql &= "'" & endDate & "',"
+        sql &= "'" & reason & "',"
+        sql &= "no, "
+        sql &= "2)"
+
+        da = New OleDb.OleDbDataAdapter(sql, con)
+        da.Fill(ds, "tblAddHoliday")
+        con.Close()
+
+        MessageBox.Show("Holiday has been sent for approval")
+        success = True
+
+        Return success
+
+    End Function
 
     Private Sub lstBoxAccHoll_SelectedIndexChanged(sender As Object, e As EventArgs) Handles lstBoxAccHoll.SelectedIndexChanged
 
