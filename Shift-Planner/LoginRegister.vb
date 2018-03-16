@@ -25,40 +25,36 @@ Public Class LoginRegister
             da = New OleDb.OleDbDataAdapter(sql, con)
             da.Fill(ds, "tblLogOn")
 
-            'Checks to see if there is an employee with that username and password
+            'Checks to see if there is an employee with the entered username and password
             If ds.Tables("tblLogOn").Rows.Count > 0 Then
-                'Checks to see whether the user is an admin or employee.
+                'Set to true if current user is an admin, false if they are not
                 currentAdmin = If(ds.Tables("tblLogOn").Rows(0).Item("admin") = True, True, False)
+                currentEmployeeID = ds.Tables("tblLogOn").Rows(0).Item("employeeID")
                 If ds.Tables("tblLogOn").Rows(0).Item("password") = "changeme" Then
+                    'password is changeme so this is the first login
                     If currentAdmin Then
-                        currentEmployeeID = ds.Tables("tblLogOn").Rows(0).Item("employeeID")
                         AdminDashboard.Show()
                         AdminDashboard.Enabled = False
                         success = True
                     Else
-                        currentEmployeeID = ds.Tables("tblLogOn").Rows(0).Item("employeeID")
                         EmployeeDashboard.Show()
                         EmployeeDashboard.Enabled = False
                         success = True
                     End If
                     firstLogin = True
                     PasswordChange.Show()
-                    'currentEmployeeID = ds.Tables("tblLogOn").Rows(0).Item("employeeID")
                     MsgBox("Change your password from the default value.")
                     LoginRegister.Close()
                 ElseIf currentAdmin Then
                     MessageBox.Show("Log on successful as admin.")
-                    currentEmployeeID = ds.Tables("tblLogOn").Rows(0).Item("employeeID")
                     AdminDashboard.Show()
                     LoginRegister.Close()
                     success = True
                 Else
                     MessageBox.Show("Log on successful as employee.")
-                    currentEmployeeID = ds.Tables("tblLogOn").Rows(0).Item("employeeID")
                     EmployeeDashboard.Show()
                     LoginRegister.Close()
                     success = True
-
                 End If
 
             Else

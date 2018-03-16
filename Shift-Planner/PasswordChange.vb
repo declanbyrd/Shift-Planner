@@ -3,10 +3,9 @@
 Public Class PasswordChange
     Private Sub PasswordChange_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         If firstLogin Then
+            'user doesn't need to enter current password if it is their first login
             txtCurrentPass.Enabled = False
         End If
-
-        txtCurrentPass.Text = currentEmployeeID
     End Sub
     Private Sub btnChange_Click(sender As Object, e As EventArgs) Handles btnChange.Click
         Dim currentPassword As String = txtCurrentPass.Text
@@ -30,7 +29,6 @@ Public Class PasswordChange
 
             sql = "UPDATE [EMPLOYEE] SET [password] = '" & newPassword & "' WHERE [employeeID] = " & currentEmployeeID & ""
 
-            'Console.WriteLine(sql)
             da = New OleDb.OleDbDataAdapter(sql, con)
             da.Fill(ds, "EMPLOYEE")
             firstLogin = False

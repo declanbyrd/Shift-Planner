@@ -20,10 +20,14 @@
     End Sub
 
     Private Sub AdminDashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        sql = "SELECT * FROM SHIFT where employeeID = " & currentEmployeeID
+        sql = "SELECT * FROM TIMEOFF where status = 2"
 
         da = New OleDb.OleDbDataAdapter(sql, con)
-        da.Fill(ds, "tblShift")
+        da.Fill(ds, "tblPendingHol")
+
+        If ds.Tables("tblPendingHol").Rows.Count > 0 Then
+            lblAnnouncements.Text = "You have pending holiday requests"
+        End If
         con.Close()
     End Sub
 

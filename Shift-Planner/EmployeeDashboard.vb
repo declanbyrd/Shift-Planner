@@ -1,10 +1,9 @@
 ﻿Public Class EmployeeDashboard
-    'when this is set to True, the first index of the listbox will always be an overtime announcement
+    'when this is set to True, the first index of the announcement listbox will always be an overtime announcement
     Dim overtimeAnnouncement As Boolean = False
     'each item will correspond to an approved holiday which hasn't been seen
     Dim holidayIndexes(100) As Integer
     Private Sub btnOvertime_Click(sender As Object, e As EventArgs) Handles btnOvertime.Click
-        'open overtime form
         Overtime_calendar.Show()
         Me.Hide()
     End Sub
@@ -18,7 +17,7 @@
         lstAnnouncements.Items.Clear()
         lstShifts.Items.Clear()
 
-        'go to database and fetch user's current shifts
+        'get current user's shifts
         sql = "SELECT * FROM SHIFT where employeeID = " & currentEmployeeID
 
         da = New OleDb.OleDbDataAdapter(sql, con)
@@ -92,6 +91,7 @@
         Dim timeOffIndexAddition As Integer = If(overtimeAnnouncement, 1, 0)
         Dim result As Integer
         If lstAnnouncements.SelectedIndex > timeOffIndexAddition - 1 Then
+            'i.e. if a holiday announcement is selected
             result = MessageBox.Show("Remove this announcement?", "caption", MessageBoxButtons.OKCancel)
             If result = DialogResult.OK Then
                 sql = "UPDATE TIMEOFF set seen = yes WHERE timeOffID =" &

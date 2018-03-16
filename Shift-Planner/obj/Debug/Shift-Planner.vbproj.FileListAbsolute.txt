@@ -64,7 +64,6 @@ C:\Users\ximas\Documents\GitHub\Shift-Planner\Shift-Planner\Shift-Planner\bin\De
 C:\Users\ximas\Documents\GitHub\Shift-Planner\Shift-Planner\Shift-Planner\obj\Debug\Shift-Planner.vbprojResolveAssemblyReference.cache
 C:\Users\ximas\Documents\GitHub\Shift-Planner\Shift-Planner\Shift-Planner\obj\Debug\Shift_Planner.AdminDashboard.resources
 C:\Users\ximas\Documents\GitHub\Shift-Planner\Shift-Planner\Shift-Planner\obj\Debug\Shift_Planner.EmployeeDashboard.resources
-C:\Users\ximas\Documents\GitHub\Shift-Planner\Shift-Planner\Shift-Planner\obj\Debug\Shift_Planner.frmAddOT.resources
 C:\Users\ximas\Documents\GitHub\Shift-Planner\Shift-Planner\Shift-Planner\obj\Debug\Shift_Planner.frmNewEmp.resources
 C:\Users\ximas\Documents\GitHub\Shift-Planner\Shift-Planner\Shift-Planner\obj\Debug\Shift_Planner.frmViewHol.resources
 C:\Users\ximas\Documents\GitHub\Shift-Planner\Shift-Planner\Shift-Planner\obj\Debug\Shift_Planner.Holiday.resources
@@ -105,3 +104,5 @@ C:\Users\Declan\Documents\GitHub\Shift-Planner\Shift-Planner\obj\Debug\Shift_Pla
 C:\Users\Declan\Documents\GitHub\Shift-Planner\Shift-Planner\obj\Debug\Shift_Planner.frmNewEmp.resources
 C:\Users\Declan\Documents\GitHub\Shift-Planner\Shift-Planner\obj\Debug\Shift_Planner.btnDash.resources
 C:\Users\Declan\Documents\GitHub\Shift-Planner\Shift-Planner\obj\Debug\Shift_Planner.frmViewHol.resources
+C:\Users\ximas\Documents\GitHub\Shift-Planner\Shift-Planner\Shift-Planner\obj\Debug\Shift_Planner.L.resources
+C:\Users\ximas\Documents\GitHub\Shift-Planner\Shift-Planner\Shift-Planner\obj\Debug\Shift_Planner.BtnDash.resources
