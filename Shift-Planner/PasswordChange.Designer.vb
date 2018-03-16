@@ -38,7 +38,7 @@ Partial Class PasswordChange
         Me.btnChange.Name = "btnChange"
         Me.btnChange.Size = New System.Drawing.Size(95, 21)
         Me.btnChange.TabIndex = 14
-        Me.btnChange.Text = "Change"
+        Me.btnChange.Text = "change password"
         Me.btnChange.UseVisualStyleBackColor = True
         '
         'txtNewPass

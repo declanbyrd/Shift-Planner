@@ -3,17 +3,24 @@
 Imports System.Text.RegularExpressions
 
 Public Class LoginRegister
-    Private Sub btnSignin_Click(sender As Object, e As EventArgs) Handles btnSignin.Click
+    Private Sub BtnSignin_Click(sender As Object, e As EventArgs) Handles btnSignin.Click
 
-        If String.IsNullOrEmpty(txtLUser.Text) Or String.IsNullOrEmpty(txtLUser.Text) Then
+        Dim employeeID As Integer = CUInt(txtLUser.Text)
+        Dim password As String = txtLPass.Text
+
+        Signin(employeeID, password)
+
+    End Sub
+
+    Public Shared Function Signin(employeeID, password)
+        Dim success As Boolean
+        If String.IsNullOrEmpty(employeeID) Or String.IsNullOrEmpty(employeeID) Then
             MessageBox.Show("Do not leave either field blank")
-        ElseIf IsNumeric(txtLUser.text) = False Then
+            success = False
+        ElseIf IsNumeric(employeeID) = False Then
             MessageBox.Show("The Username nust be an integer")
+            success = False
         Else
-
-            Dim employeeID As Integer = CUInt(txtLUser.Text)
-            Dim password As String = txtLPass.Text
-
             sql = "SELECT employeeID, password, admin FROM EMPLOYEE WHERE employeeID = " & employeeID & " and password = '" + password + "'"
             da = New OleDb.OleDbDataAdapter(sql, con)
             da.Fill(ds, "tblLogOn")
@@ -27,39 +34,45 @@ Public Class LoginRegister
                         currentEmployeeID = ds.Tables("tblLogOn").Rows(0).Item("employeeID")
                         AdminDashboard.Show()
                         AdminDashboard.Enabled = False
+                        success = True
                     Else
                         currentEmployeeID = ds.Tables("tblLogOn").Rows(0).Item("employeeID")
                         EmployeeDashboard.Show()
                         EmployeeDashboard.Enabled = False
+                        success = True
                     End If
                     firstLogin = True
                     PasswordChange.Show()
                     'currentEmployeeID = ds.Tables("tblLogOn").Rows(0).Item("employeeID")
                     MsgBox("Change your password from the default value.")
-                    Me.Close()
+                    LoginRegister.Close()
                 ElseIf currentAdmin Then
                     MessageBox.Show("Log on successful as admin.")
                     currentEmployeeID = ds.Tables("tblLogOn").Rows(0).Item("employeeID")
                     AdminDashboard.Show()
-                    Me.Close()
+                    LoginRegister.Close()
+                    success = True
                 Else
                     MessageBox.Show("Log on successful as employee.")
                     currentEmployeeID = ds.Tables("tblLogOn").Rows(0).Item("employeeID")
                     EmployeeDashboard.Show()
-                    Me.Close()
+                    LoginRegister.Close()
+                    success = True
 
                 End If
 
             Else
                 MessageBox.Show("Incorrect username and/or password, try again.")
+                success = False
 
             End If
         End If
 
+        Return success
+
         con.Close()
         ds.Clear()
-    End Sub
-
+    End Function
 
     Private Sub LoginRegister_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         DBConnect()
