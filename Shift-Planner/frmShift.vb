@@ -5,6 +5,8 @@
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+
+        'Puts all of the text box data into variables
         Dim employeeID As Integer = txtEmpID.Text
         Dim shiftDate As Date = dtSDate.Value.Date
         Dim startTimeHour As Integer = cmbH1.Text
@@ -19,6 +21,7 @@
 
         Dim success As Boolean = False
 
+        'Inserts the information from the textboxes into the shift table
         sql = "INSERT INTO SHIFT (employeeID, startTime, endTime, shiftDate) VALUES ("
         sql &= "'" & employeeID & "',"
         sql &= "'" & shiftDate & "',"

@@ -1,5 +1,7 @@
 ﻿Public Class frmNewEmp
     Private Sub BtnNewEmp_Click(sender As Object, e As EventArgs) Handles btnNewEmp.Click
+
+        'Puts the inputted data from the text boxes into variables
         Dim fName As String = txtFName.Text
         Dim sName As String = txtSName.Text
         Dim tempPwd As String = txtPass.Text
@@ -11,6 +13,7 @@
 
         Dim success As Boolean = False
 
+        'Inserts the details of the employees into the EMPLOYEE table
         sql = "INSERT INTO [EMPLOYEE] ([FName], [SName], [password]) VALUES ("
         sql &= "'" & fName & "',"
         sql &= "'" & sName & "',"
@@ -20,6 +23,7 @@
         da.Fill(ds, "newEmployee")
         con.Close()
 
+        'Retrieves the password and employee ID of that user
         sql = "SELECT EmployeeId FROM EMPLOYEE where FName = '" & fName & "' and SName = '" & sName & "'"
         da = New OleDb.OleDbDataAdapter(sql, con)
         da.Fill(ds, "newEmployeeID")

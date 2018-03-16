@@ -14,6 +14,7 @@
     End Sub
 
     Private Sub refreshPage()
+        ds.Clear()
         lstAnnouncements.Items.Clear()
         lstShifts.Items.Clear()
 

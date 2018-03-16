@@ -5,7 +5,9 @@ Imports System.Text.RegularExpressions
 Public Class LoginRegister
     Private Sub BtnSignin_Click(sender As Object, e As EventArgs) Handles btnSignin.Click
 
+        'Holds the variable for the current user that is logged into the program
         Dim employeeID As Integer = CUInt(txtLUser.Text)
+        'Holds the password
         Dim password As String = txtLPass.Text
 
         Signin(employeeID, password)
@@ -41,16 +43,19 @@ Public Class LoginRegister
                         EmployeeDashboard.Enabled = False
                         success = True
                     End If
+                    'Prompts the user to change their password if it is their first log in
                     firstLogin = True
                     PasswordChange.Show()
                     MsgBox("Change your password from the default value.")
                     LoginRegister.Close()
                 ElseIf currentAdmin Then
+                    'If the user that has logged in is an admion, then the admin form will load
                     MessageBox.Show("Log on successful as admin.")
                     AdminDashboard.Show()
                     LoginRegister.Close()
                     success = True
                 Else
+                    'If the user that has logged in is and employee, then the employee form will load
                     MessageBox.Show("Log on successful as employee.")
                     EmployeeDashboard.Show()
                     LoginRegister.Close()
@@ -58,6 +63,7 @@ Public Class LoginRegister
                 End If
 
             Else
+                'Error message displays if the username or password is incorrect
                 MessageBox.Show("Incorrect username and/or password, try again.")
                 success = False
 

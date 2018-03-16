@@ -1,6 +1,6 @@
 ﻿Public Class L
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnAddOvertime.Click
-
+        'Declares each of the data inputted into the textbox into a variable
         Dim type As String = txtOType.Text
         Dim shiftDate As Date = dtODate.Value.Date
         Dim startTimeHour As Integer = cmbH1.Text
@@ -18,6 +18,7 @@
 
         Dim success As Boolean = False
 
+        'Inserts the details of the overtime shift into the table "CREATEOVERTIME"
         sql = "INSERT INTO CREATEOVERTIME (overtimeType, overtimeDate, overtimeStartTime, overtimeEndTime, overtimePay) VALUES ("
         sql &= "'" & type & "',"
         sql &= "'" & shiftDate & "',"
